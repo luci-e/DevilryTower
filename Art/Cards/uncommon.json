@@ -35,8 +35,7 @@
       "uses": 3,
       "ticks": 1,
       "damage": 1,
-      "range": 2,
-      "description": "Does not count as a ranged weapon.",
+      "description": "Range 2. Does not count as a ranged weapon.",
       "note": "Don’t make me run bitte. I’m full of chocolate."
     },
     {

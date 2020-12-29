@@ -1,5 +1,5 @@
 {
-  "items": [
+  "weapon": [
     {
       "name": "Stick",
       "uses": 3,
@@ -57,7 +57,9 @@
       "damage": 1,
       "description": "Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.",
       "note": "Give ‘em the old 1-2!"
-    },
+    }
+  ],
+  "armour": [
     {
       "name": "Cup-head helmet",
       "hits": 1,
@@ -118,7 +120,9 @@
       "ticks": 1,
       "description": "Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.",
       "note": "I’m an old man. I’m an old human!"
-    },
+    }
+  ],
+  "spell": [
     {
       "name": "Tele Chinesis",
       "uses": 3,
@@ -171,7 +175,9 @@
       "ticks": 1,
       "description": "Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.",
       "note": "Prepare to meet Mr angry eyes!"
-    },
+    }
+  ],
+  "misc": [
     {
       "name": "Out of tune bell",
       "uses": 3,
@@ -216,6 +222,50 @@
       "ticks": 1,
       "description": "Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.",
       "note": "Particularly effective against flying saucers."
+    }
+  ],
+  "role_change": [
+    {
+      "name": "Yer a wizard, Harry",
+      "uses": 1,
+      "description": "Enchanter role change card",
+      "note": "I’m a what?"
+    },
+    {
+      "name": "Legolas, what do your elf-eyes see?",
+      "uses": 1,
+      "description": "Explorer role change card",
+      "note": "Same as yours! What the fork do you think they see?"
+    },
+    {
+      "name": "Well hello my name is Sona",
+      "uses": 1,
+      "description": "Support role change card",
+      "note": "And I’m a special supp!"
+    },
+    {
+      "name": "That’s a big spiky meatball",
+      "uses": 1,
+      "description": "Tank role change card",
+      "note": "Oke."
+    },
+    {
+      "name": "Leeroy Jenkins!",
+      "uses": 1,
+      "description": "Fighter role change card",
+      "note": "Goddammit Leeroy!"
+    },
+    {
+      "name": "Are you gonna use that?",
+      "uses": 1,
+      "description": "Swap role with another player",
+      "note": "Change now!"
+    },
+    {
+      "name": "Everybody panic!",
+      "uses": 1,
+      "description": "You must shuffle all your team’ roles NOW!",
+      "note": "I am Abaddon the destroyer and I will be your support today!"
     }
   ]
 }

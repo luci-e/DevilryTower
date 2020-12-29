@@ -2,68 +2,13 @@ import json
 import math
 from multiprocessing import Process
 
-files = ["common", "uncommon", "rare", "epic", "legendary"]
-copies = [3, 2, 1, 1, 1, 4]
+files = ["common"]
+copies = [3, 2, 1, 1, 1, 1, 3]
 
 webPageHeader = """ <!DOCTYPE html>
 <html>
 <head>
-    <style>
-
-        @page{
-            size: A4 portrait;
-        }
-
-        .page{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            page-break-after : always;
-        }
-
-        .item-row{
-            display: flex;
-            justify-content: space-evenly;
-            width: 210mm;
-            background-color: green;
-            border: 1px solid black;
-        }
-
-
-        .item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            justify-content: space-around;
-            height: 67mm;
-            width: 47mm;
-            background-color: red;
-            border: 1px solid black;
-        }
-
-        .item-title{
-            width: 85%;
-            flex-grow: 0;
-            margin: 1mm;
-            border: 1px solid black;
-            padding: 1mm;
-        }
-
-        .item-description{
-            font-size: 3.5mm;
-            width: 85%;
-            margin: 1mm;
-            border: 1px solid black;
-            flex-grow: 2;
-            padding: 1mm;
-        }
-
-        body {
-            background-color: linen;
-        }
-
-    </style>
+<link rel="stylesheet" href="cardsStyle.css">
 </head>
 <body>
 """
@@ -71,14 +16,27 @@ webPageHeader = """ <!DOCTYPE html>
 webPageFooter = """     </body>
 </html>"""
 
+
+def getIconOpeningTag(iconName):
+    iconPaths = {
+        "melee" : "./icons/melee.svg",
+        "ranged" : "./icons/ranged.svg",
+        "armour" : "./icons/armour.svg",
+        "spell": "./icons/spell.svg",
+        "misc": "./icons/misc.svg",
+        "role_change": "./icons/shuffle.svg",
+        "filler" : "./icons/misc.svg"
+    }
+
+    return f'<div class="item-icon" style="background-image:url({iconPaths[iconName]})">\n'
+
+
 def generate(i):
-    processes = []
     file = files[i]
 
     page = webPageHeader
 
     openPage = """<div class="page">\n"""
-    openRow = """<div class="item-row">\n"""
     openItem = """<div class="item">\n"""
     openTitle = """<div class="item-title">"""
     openDescription = """<div class="item-description">\n"""
@@ -87,58 +45,64 @@ def generate(i):
 
     with open(f'./{file}.json', encoding='utf-8', mode='r') as cardsFileJ:
         data = json.load(cardsFileJ)
-        items = data["items"]*copies[i]
 
-        if(i == 0):
-            with open(f'./role_change.json', encoding='utf-8', mode='r') as role_changeJ:
-                roles = json.load(role_changeJ)
-                items += roles["items"]
+        for k,v in data.items():
+            if k != "role_change":
+                data[k]*= copies[i]
 
-        itemsNo = len(items)
+        itemsNo = 0
+        for _k,v in data.items():
+            itemsNo+=len(v)
 
         if( (itemsNo%4) != 0):
-            items += (4-(itemsNo%4)) * [{"name":"PlaceHolder", "description":"None", "note":"None"}]
+            data["filler"] = (4-(itemsNo%4)) * [{"name":"PlaceHolder", "description":"None", "note":"None"}]
 
-        itemsNo = len(items)
-
-        pagesNo = math.ceil(itemsNo/16)
-        rowsNo = math.ceil(itemsNo/4)
+        itemsNo = 0
+        for _k,v in data.items():
+            itemsNo+=len(v)
 
         currentItem = 0
-        currentRow = 0
 
-        for _pageno in range(pagesNo):
-            page += openPage
-            for r in range(4):
-                if currentRow+1 <= rowsNo and currentItem+1 < itemsNo:
-                    page += openRow
-                    currentRow += 1
-                    for i in range(4):
-                        if currentItem+1 <= itemsNo:
-                            item = items[currentItem]
-                            page += openItem + openTitle
-                            page += f'{item["name"]}' + closeDiv
-                            page += openDescription
+        page += openPage
 
-                            for k,v in item.items():
-                                if (k != "name") and (k != "description") and (k != "note"):
-                                    page += f'{k}: {v} '
-                            if "description" in item.keys():
-                                page += item["description"] + "<br>"
-                            page += item["note"] + "<br>"
+        for category, itemList in data.items():
 
-                            currentItem += 1
-                            page += closeDiv + closeDiv
-                    page += closeDiv
-            currentRow = 0
-            page += closeDiv
+            for item in itemList:
+                page += openItem
+
+                itemIcon = category
+
+                if category == "weapon":
+                    if "range" in item:
+                        itemIcon = "ranged"
+                    else:
+                        itemIcon = "melee"
+
+                page += getIconOpeningTag(itemIcon) + closeDiv
+                page += openTitle + f'{item["name"]}' + closeDiv
+                page += openDescription
+
+                for k,v in item.items():
+                    if (k != "name") and (k != "description") and (k != "note"):
+                        page += f'{k}: {v} '
+                if "description" in item.keys():
+                    page += item["description"] + "<br>"
+                page += item["note"] + "<br>"
+                
+                page += closeDiv
+
+                page += closeDiv
+
+                if currentItem%16 == 15 and currentItem != 0 and currentItem != itemsNo-1:
+                    page += closeDiv + openPage
+
+                currentItem += 1
+
+        page += closeDiv
         page += webPageFooter
 
         with open(f'./{file}.html', encoding='utf-8', mode='w') as htmlFile:
             htmlFile.write(page)
-            
-    for p in processes:
-        p.join()
 
 if __name__ == '__main__':
     processes = []

@@ -1,0 +1,64 @@
+@page {
+    size: A4 portrait;
+}
+
+@media print {}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 210mm;
+    justify-content: space-evenly;
+    page-break-after: always;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    page-break-inside: avoid;
+    justify-content: space-around;
+    height: 67mm;
+    width: 47mm;
+    background-color: linen;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.item-icon {
+    position: absolute;
+    background-size: 100% 100%;
+    width: 10mm;
+    height: 10mm;
+    right: 0;
+    top: 0;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.item-title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 37mm;
+    height: 10mm;
+    flex-grow: 0;
+    border: 1px solid black;
+    padding: 1mm;
+    box-sizing: border-box;
+}
+
+.item-description {
+    position: absolute;
+    font-size: 3.5mm;
+    width: 47mm;
+    height: 57mm;
+    top: 10mm;
+    border: 1px solid black;
+    padding: 1mm;
+    box-sizing: border-box;
+    flex-grow: 2;
+}

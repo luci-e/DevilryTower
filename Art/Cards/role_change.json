@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "name": "Yer a wizard, Harry",
+      "uses": 1,
+      "description": "Enchanter role change card",
+      "note": "I’m a what?"
+    },
+    {
+      "name": "Legolas, what do your elf-eyes see?",
+      "uses": 1,
+      "description": "Explorer role change card",
+      "note": "Same as yours! What the fork do you think they see?"
+    },
+    {
+      "name": "Well hello my name is Sona",
+      "uses": 1,
+      "description": "Support role change card",
+      "note": "And I’m a special supp!"
+    },
+    {
+      "name": "That’s a big spiky meatball",
+      "uses": 1,
+      "description": "Tank role change card",
+      "note": "Oke."
+    },
+    {
+      "name": "Leeroy Jenkins!",
+      "uses": 1,
+      "description": "Fighter role change card",
+      "note": "Goddammit Leeroy!"
+    },
+    {
+      "name": "Are you gonna use that?",
+      "uses": 1,
+      "description": "Swap role with another player",
+      "note": "Change now!"
+    },
+    {
+      "name": "Everybody panic!",
+      "uses": 1,
+      "description": "You must shuffle all your team’ roles NOW!",
+      "note": "I am Abaddon the destroyer and I will be your support today!"
+    }
+  ]
+}
