@@ -2,8 +2,8 @@ import json
 import math
 from multiprocessing import Process
 
-files = ["common"]
-copies = [3, 2, 1, 1, 1, 1, 3]
+files = ["common", "uncommon", "rare", "epic", "legendary", "special"]
+copies = [3, 2, 1, 1, 1, 3]
 
 webPageHeader = """ <!DOCTYPE html>
 <html>
@@ -19,16 +19,32 @@ webPageFooter = """     </body>
 
 def getIconOpeningTag(iconName):
     iconPaths = {
-        "melee" : "./icons/melee.svg",
-        "ranged" : "./icons/ranged.svg",
-        "armour" : "./icons/armour.svg",
+        "melee": "./icons/melee.svg",
+        "ranged": "./icons/ranged.svg",
+        "armour": "./icons/armour.svg",
         "spell": "./icons/spell.svg",
         "misc": "./icons/misc.svg",
         "role_change": "./icons/shuffle.svg",
-        "filler" : "./icons/misc.svg"
+        "filler": "./icons/misc.svg"
     }
 
     return f'<div class="item-icon" style="background-image:url({iconPaths[iconName]})">\n'
+
+
+def getStatIcon(statName, statValue):
+    iconPaths = {
+        "slots": "./icons/slots.svg",
+        "uses": "./icons/uses.svg",
+        "hits": "./icons/hits.svg",
+        "ticks": "./icons/ticks.svg",
+        "range": "./icons/range.svg",
+        "mana": "./icons/mana.svg",
+        "damage": "./icons/damage.svg",
+        "resistance": "./icons/resistance.svg"
+    }
+
+    if statName in iconPaths:
+        return f'<div class="stat"><img class="stat-icon" src="{iconPaths[statName]}">:{statValue}&nbsp;</div>\n'
 
 
 def generate(i):
@@ -40,26 +56,28 @@ def generate(i):
     openItem = """<div class="item">\n"""
     openTitle = """<div class="item-title">"""
     openDescription = """<div class="item-description">\n"""
+    openStats = """<div class="item-stats">\n"""
 
     closeDiv = """</div>\n"""
 
     with open(f'./{file}.json', encoding='utf-8', mode='r') as cardsFileJ:
         data = json.load(cardsFileJ)
 
-        for k,v in data.items():
+        for k, v in data.items():
             if k != "role_change":
-                data[k]*= copies[i]
+                data[k] *= copies[i]
 
         itemsNo = 0
-        for _k,v in data.items():
-            itemsNo+=len(v)
+        for _k, v in data.items():
+            itemsNo += len(v)
 
-        if( (itemsNo%4) != 0):
-            data["filler"] = (4-(itemsNo%4)) * [{"name":"PlaceHolder", "description":"None", "note":"None"}]
+        if((itemsNo % 4) != 0):
+            data["filler"] = (
+                4-(itemsNo % 4)) * [{"name": "PlaceHolder", "description": "None", "note": "None"}]
 
         itemsNo = 0
-        for _k,v in data.items():
-            itemsNo+=len(v)
+        for _k, v in data.items():
+            itemsNo += len(v)
 
         currentItem = 0
 
@@ -80,20 +98,38 @@ def generate(i):
 
                 page += getIconOpeningTag(itemIcon) + closeDiv
                 page += openTitle + f'{item["name"]}' + closeDiv
+
                 page += openDescription
+                if "description" in item:
+                    page += item["description"] + "<br><br>"
 
-                for k,v in item.items():
-                    if (k != "name") and (k != "description") and (k != "note"):
-                        page += f'{k}: {v} '
-                if "description" in item.keys():
-                    page += item["description"] + "<br>"
-                page += item["note"] + "<br>"
-                
+                page += f'<i>{item["note"]}</i>'
+                page += closeDiv
+
+                page += openStats
+
+                if "slots" in item:
+                    page += getStatIcon("slots", item["slots"])
+                if "uses" in item:
+                    page += getStatIcon("uses", item["uses"])
+                if "hits" in item:
+                    page += getStatIcon("hits", item["hits"])
+                if "ticks" in item:
+                    page += getStatIcon("ticks", item["ticks"])
+                if "range" in item:
+                    page += getStatIcon("range", item["range"])
+                if "mana" in item:
+                    page += getStatIcon("mana", item["mana"])
+                if "damage" in item:
+                    page += getStatIcon("damage", item["damage"])
+                if "resistance" in item:
+                    page += getStatIcon("resistance", item["resistance"])
+
                 page += closeDiv
 
                 page += closeDiv
 
-                if currentItem%16 == 15 and currentItem != 0 and currentItem != itemsNo-1:
+                if currentItem % 16 == 15 and currentItem != 0 and currentItem != itemsNo-1:
                     page += closeDiv + openPage
 
                 currentItem += 1
@@ -104,6 +140,7 @@ def generate(i):
         with open(f'./{file}.html', encoding='utf-8', mode='w') as htmlFile:
             htmlFile.write(page)
 
+
 if __name__ == '__main__':
     processes = []
 
@@ -111,6 +148,6 @@ if __name__ == '__main__':
         p = Process(target=generate, args=(i,))
         p.start()
         processes.append(p)
-            
+
     for p in processes:
         p.join()

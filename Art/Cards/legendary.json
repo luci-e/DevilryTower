@@ -1,5 +1,5 @@
 {
-  "items": [
+  "weapon": [
     {
       "name": "Debugging wand",
       "uses": "Infinity",
@@ -59,7 +59,7 @@
       "range": "Infinity",
       "description": "Lets you shoot multiple targets at once or the same target multiple times up to 5 arrows. Cooldown of 10 ticks.   Occupy 1 slot in the backpack.",
       "note": "That still only counts as one!"
-    },
+    }],"armour": [
     {
       "name": "Robert’s Breastplate",
       "hits": "Infinity",
@@ -97,7 +97,7 @@
       "resistance": 10,
       "description": "You lose your AG. You can't perform movement abilities and you cannot wear other armour items. Your melee attacks deal 6 additional damage.",
       "note": "Demaciaaaa!"
-    },
+    }],"spell": [
     {
       "name": "ZA WARUDO!",
       "mana": 11,
@@ -151,7 +151,7 @@
       ],
       "description": "A magical wall of fire of radius 3 surrounds the caster for 7 ticks. The wall deals 3 fire damage per tick to anyone standing in it. Furthermore any projectile passing through the wall directed to the caster is incinerated, however any projectile coming from inside the wall is engulfed in flames, giving it 1 additional fire damage.",
       "note": "Can’t we just point it at the bad guys?"
-    },
+    }],"misc": [
     {
       "name": "Liquid luck",
       "uses": 1,

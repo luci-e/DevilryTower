@@ -1,5 +1,5 @@
 {
-  "items": [
+  "weapon": [
     {
       "name": "Excalibur",
       "uses": "Infinity",
@@ -34,7 +34,7 @@
       "damage": 3,
       "description": "The Magical mop can clean up any over time spell in a 1 tick action. WIth a 1 tick action you can create a 2 hexes radius slippery zone. Walking a hex in the slippery zone carries a 20% of slipping and taking 1 damage.",
       "note": "I’m Dr Itor: Jan Itor."
-    },
+    }],"armour": [
     {
       "name": "Baby seal leather boots",
       "hits": 10,
@@ -64,7 +64,7 @@
       "resistance": 1,
       "description": "You are immune to Let it snow! This item can be found on minions.",
       "note": "What are you doing? I’m freezing! You should wear something under that shirt!"
-    },
+    }],"spell": [
     {
       "name": "Open Sesame",
       "uses": "3",
@@ -80,7 +80,7 @@
       "ticks": 1,
       "description": "This spell makes old depressing songs resonate into any unit’s head within 5 hexes for the duration of 4 ticks. They all lose 2 damage from their attacks, while spells obtain a 20% chance to fail. Earplugs do not negate this effect. If a Bard casts this spell with their instrument the damage lost is 3 instead, while the failing chance of other spells is 30%.",
       "note": "How the hell do you know Claudio Lolli!?"
-    },
+    }],"misc": [
     {
       "name": "Toxic mixture",
       "uses": 1,

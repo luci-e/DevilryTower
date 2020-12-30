@@ -1,5 +1,5 @@
 {
-  "items": [
+  "weapon": [
     {
       "name": "Forget-me-stick",
       "uses": 1,
@@ -54,7 +54,7 @@
       "range": 10,
       "description": "Multiple item loot.",
       "note": "So many ninja stars in the sky."
-    },
+    }],"armour": [
     {
       "name": "Lucky charm helmet",
       "hits": 2,
@@ -101,7 +101,7 @@
       "resistance": 3,
       "description": "You have no AG. Not so great as armour, but can be used as a bribing tool.",
       "note": "Those dwarves have too much gold for their own good!"
-    },
+    }],"spell": [
     {
       "name": "Wait and see!",
       "uses": 2,
@@ -160,7 +160,7 @@
       "note": "OUR equipment!"
     },
     {
-      "name": "Yeet!!",
+      "name": "Yeet!",
       "uses": 3,
       "mana": 2,
       "ticks": 1,
@@ -171,7 +171,7 @@
       ],
       "description": "Throw a weapon to a target. If the target is friendly, they have a 60% chance to catch it, otherwise it drops in front of them on the line of throw. If the target is hostile they take the damage from the weapon without consuming uses. Does not apply special effects.",
       "note": "This bitch for ‘nother class! YEET!"
-    },
+    }],"misc": [
     {
       "name": "Jean-Paul Gaultier's pour homme",
       "uses": 1,

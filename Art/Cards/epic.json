@@ -1,5 +1,5 @@
 {
-  "items": [
+  "weapon": [
     {
       "name": "Long sword-nothing-special",
       "uses": 15,
@@ -50,7 +50,7 @@
       ],
       "description": "You can consume 3 uses of the Cotton Candy Mace as a bribe or consume 4 hits to restore 3 HPs. Hitting a minion with this weapon makes them sticky. They have to spend 1 tick cleaning themselves up or they are stuck in place. If you get hit with water when holding the Cotton Candy Mace, it melts.",
       "note": "Thousands of clouds are killed every year to make cotton candy."
-    },
+    }],"armour": [
     {
       "name": "Invisibility clock",
       "hits": 5,
@@ -93,7 +93,7 @@
       "resistance": 4,
       "description": "The ugliest holiday’s  sweater itches like crazy making you lose your AG. However, if you’re also wearing La maglia della salute, you lose this debuff.",
       "note": "I’m wearing a shirt under it, how does it still itch?!"
-    },
+    }],"spell": [
     {
       "name": "Fire Bowl!",
       "uses": 2,
@@ -142,7 +142,7 @@
       "ticks": 1,
       "description": "Select a target within 3 hexes, transform it into a neat little cube for up to 5 ticks or until you splash it with water.",
       "note": "Sir, you really need to empty your pockets more often!"
-    },
+    }],"misc": [
     {
       "name": "Fireworks",
       "uses": 1,

@@ -1,5 +1,5 @@
 {
-  "items": [
+  "weapon": [
     {
       "name": "Crossbow-nothing-special",
       "uses": 10,
@@ -79,7 +79,7 @@
       ],
       "description": "Makes a deafening sound that deals 2 sound damage in a 3 hexes radius area. Alternatively, you can consume 1 use to follow a target adjacent to you for the duration of 3 ticks, dealing 2 sound damage to him each tick. Tuba counts as an instrument for a Bard. Occupy 1 slot in the backpack.",
       "note": "Pom pom pom po pom."
-    },
+    }],"armour": [
     {
       "name": "Black Mambaaaaa",
       "hits": 10,
@@ -129,7 +129,7 @@
       "resistance": 5,
       "description": "Any time you are dealt fire damage, you suffer 1 additional damage. Lose 10% AG.",
       "note": "No iron golem was hurt to make this."
-    },
+    }],"spell": [
     {
       "name": "Encouraging compliments",
       "uses": 3,
@@ -206,7 +206,7 @@
       ],
       "description": "You gain ludicrous speed: in the next tick you can perform up to 5 ticks of movement actions (non damaging abilities are also fine) and gain 45% AG.",
       "note": "My brains… are going into my feet!"
-    },
+    }],"misc": [
     {
       "name": "Dandelion",
       "uses": 1,
