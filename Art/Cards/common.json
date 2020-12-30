@@ -112,7 +112,8 @@
       "resistance": 1,
       "description": "When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.",
       "note": "I say good sir, this investment turned out quite profitable!"
-    },
+    }  ],
+  "spell": [
     {
       "name": "Senility",
       "uses": 2,
@@ -120,9 +121,7 @@
       "ticks": 1,
       "description": "Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.",
       "note": "I’m an old man. I’m an old human!"
-    }
-  ],
-  "spell": [
+    },
     {
       "name": "Tele Chinesis",
       "uses": 3,

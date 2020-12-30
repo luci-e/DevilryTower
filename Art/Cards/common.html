@@ -1,16 +1,34 @@
  <!DOCTYPE html>
 <html>
 <head>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="cardsStyle.css">
 </head>
 <body>
+<script type="text/javascript">
+
+$(document).ready( function() {
+    $(".item-description").each( function(){
+        let descriptionDiv = $(this);
+        let descriptionText = descriptionDiv.children("p").first();
+
+        while( descriptionText.height() > descriptionDiv.height() ){
+            let currentHeight = parseFloat(descriptionText.css("font-size"));
+            descriptionText.css("font-size", currentHeight - 0.5);
+        }
+    } )
+});
+</script>
 <div class="page">
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Stick</div>
-<div class="item-description">
-Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny.</i></div>
+<div class="item-description"><p>Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -21,8 +39,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Coconut</div>
-<div class="item-description">
-<i>The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut).</i></div>
+<div class="item-description"><p><i>The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut).</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -34,8 +51,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Blunt tip scissors</div>
-<div class="item-description">
-<i>Non pointed: Muciaccia approved.</i></div>
+<div class="item-description"><p><i>Non pointed: Muciaccia approved.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -46,8 +62,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Very small rock</div>
-<div class="item-description">
-Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.<br><br><i>Can also be used to make strange noises resembling a BOAR!</i></div>
+<div class="item-description"><p>Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.<br><br><i>Can also be used to make strange noises resembling a BOAR!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -59,8 +74,7 @@ Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">3-Tines fork</div>
-<div class="item-description">
-Multiple item loot<br><br><i>A very small trident to rule the seven forking seas.</i></div>
+<div class="item-description"><p>Multiple item loot<br><br><i>A very small trident to rule the seven forking seas.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -71,8 +85,7 @@ Multiple item loot<br><br><i>A very small trident to rule the seven forking seas
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Throwing knife</div>
-<div class="item-description">
-Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.<br><br><i>MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!</i></div>
+<div class="item-description"><p>Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.<br><br><i>MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -84,8 +97,7 @@ Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Boxing Gloves</div>
-<div class="item-description">
-Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.<br><br><i>Give ‘em the old 1-2!</i></div>
+<div class="item-description"><p>Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.<br><br><i>Give ‘em the old 1-2!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
@@ -97,8 +109,7 @@ Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Stick</div>
-<div class="item-description">
-Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny.</i></div>
+<div class="item-description"><p>Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -109,8 +120,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Coconut</div>
-<div class="item-description">
-<i>The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut).</i></div>
+<div class="item-description"><p><i>The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut).</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -122,8 +132,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Blunt tip scissors</div>
-<div class="item-description">
-<i>Non pointed: Muciaccia approved.</i></div>
+<div class="item-description"><p><i>Non pointed: Muciaccia approved.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -134,8 +143,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Very small rock</div>
-<div class="item-description">
-Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.<br><br><i>Can also be used to make strange noises resembling a BOAR!</i></div>
+<div class="item-description"><p>Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.<br><br><i>Can also be used to make strange noises resembling a BOAR!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -147,8 +155,7 @@ Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">3-Tines fork</div>
-<div class="item-description">
-Multiple item loot<br><br><i>A very small trident to rule the seven forking seas.</i></div>
+<div class="item-description"><p>Multiple item loot<br><br><i>A very small trident to rule the seven forking seas.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -159,8 +166,7 @@ Multiple item loot<br><br><i>A very small trident to rule the seven forking seas
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Throwing knife</div>
-<div class="item-description">
-Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.<br><br><i>MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!</i></div>
+<div class="item-description"><p>Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.<br><br><i>MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -172,8 +178,7 @@ Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Boxing Gloves</div>
-<div class="item-description">
-Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.<br><br><i>Give ‘em the old 1-2!</i></div>
+<div class="item-description"><p>Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.<br><br><i>Give ‘em the old 1-2!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
@@ -185,8 +190,7 @@ Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Stick</div>
-<div class="item-description">
-Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny.</i></div>
+<div class="item-description"><p>Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -197,8 +201,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Coconut</div>
-<div class="item-description">
-<i>The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut).</i></div>
+<div class="item-description"><p><i>The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut).</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -212,8 +215,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Blunt tip scissors</div>
-<div class="item-description">
-<i>Non pointed: Muciaccia approved.</i></div>
+<div class="item-description"><p><i>Non pointed: Muciaccia approved.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -224,8 +226,7 @@ Multiple item loot.<br><br><i>By the shape you can tell that it’s the humerus 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Very small rock</div>
-<div class="item-description">
-Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.<br><br><i>Can also be used to make strange noises resembling a BOAR!</i></div>
+<div class="item-description"><p>Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.<br><br><i>Can also be used to make strange noises resembling a BOAR!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -237,8 +238,7 @@ Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex 
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">3-Tines fork</div>
-<div class="item-description">
-Multiple item loot<br><br><i>A very small trident to rule the seven forking seas.</i></div>
+<div class="item-description"><p>Multiple item loot<br><br><i>A very small trident to rule the seven forking seas.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -249,8 +249,7 @@ Multiple item loot<br><br><i>A very small trident to rule the seven forking seas
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Throwing knife</div>
-<div class="item-description">
-Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.<br><br><i>MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!</i></div>
+<div class="item-description"><p>Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.<br><br><i>MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -262,8 +261,7 @@ Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Boxing Gloves</div>
-<div class="item-description">
-Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.<br><br><i>Give ‘em the old 1-2!</i></div>
+<div class="item-description"><p>Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. Occupy only 1 slot in the backpack.<br><br><i>Give ‘em the old 1-2!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
@@ -275,8 +273,7 @@ Spend 1 EP to attack twice the same target in the same tick with Boxing Gloves. 
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cup-head helmet</div>
-<div class="item-description">
-Spend 1 additional EP after jumping to do a double jump. Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage<br><br><i>Do not deal with the Devil!</i></div>
+<div class="item-description"><p>Spend 1 additional EP after jumping to do a double jump. Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage<br><br><i>Do not deal with the Devil!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
@@ -286,8 +283,7 @@ Spend 1 additional EP after jumping to do a double jump. Instead of landing in t
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Earplugs</div>
-<div class="item-description">
-Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of Earplugs by 1.<br><br><i>Deaf people do not understand the effort.</i></div>
+<div class="item-description"><p>Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of Earplugs by 1.<br><br><i>Deaf people do not understand the effort.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
@@ -297,8 +293,7 @@ Multiple item loot. Ignore the sound damage or effects that you could suffer and
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cotton T-Shirt</div>
-<div class="item-description">
-With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard Cotton T-Shirt if the action was successful.<br><br><i>T pose to assert dominance.</i></div>
+<div class="item-description"><p>With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard Cotton T-Shirt if the action was successful.<br><br><i>T pose to assert dominance.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -309,8 +304,7 @@ With a 1 tick action T-pose in front of a minion for a 50% chance to stun them i
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Oven mittens</div>
-<div class="item-description">
-Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in the backpack<br><br><i>Watch it! They’re still hot!</i></div>
+<div class="item-description"><p>Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in the backpack<br><br><i>Watch it! They’re still hot!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -321,8 +315,7 @@ Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Fashionable cloak</div>
-<div class="item-description">
-Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO CAPES!</i></div>
+<div class="item-description"><p>Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO CAPES!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -333,8 +326,7 @@ Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO 
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cool shades</div>
-<div class="item-description">
-If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard Cool Shades.<br><br><i>YEAAAAAAAAAAAAH!</i></div>
+<div class="item-description"><p>If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard Cool Shades.<br><br><i>YEAAAAAAAAAAAAH!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -345,8 +337,7 @@ If you can come up with a witty pun when an enemy is defeated, gain 5 XP and dis
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Bowler hat</div>
-<div class="item-description">
-When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.<br><br><i>I say good sir, this investment turned out quite profitable!</i></div>
+<div class="item-description"><p>When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.<br><br><i>I say good sir, this investment turned out quite profitable!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
@@ -355,21 +346,8 @@ When you loot, if it’s a multiple item loot of rarity uncommon or common, loot
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
-<div class="item-title">Senility</div>
-<div class="item-description">
-Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.<br><br><i>I’m an old man. I’m an old human!</i></div>
-<div class="item-stats">
-<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/mana.svg">:1&nbsp;</div>
-</div>
-</div>
-<div class="item">
-<div class="item-icon" style="background-image:url(./icons/armour.svg)">
-</div>
 <div class="item-title">Cup-head helmet</div>
-<div class="item-description">
-Spend 1 additional EP after jumping to do a double jump. Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage<br><br><i>Do not deal with the Devil!</i></div>
+<div class="item-description"><p>Spend 1 additional EP after jumping to do a double jump. Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage<br><br><i>Do not deal with the Devil!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
@@ -379,8 +357,7 @@ Spend 1 additional EP after jumping to do a double jump. Instead of landing in t
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Earplugs</div>
-<div class="item-description">
-Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of Earplugs by 1.<br><br><i>Deaf people do not understand the effort.</i></div>
+<div class="item-description"><p>Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of Earplugs by 1.<br><br><i>Deaf people do not understand the effort.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
@@ -390,10 +367,20 @@ Multiple item loot. Ignore the sound damage or effects that you could suffer and
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cotton T-Shirt</div>
-<div class="item-description">
-With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard Cotton T-Shirt if the action was successful.<br><br><i>T pose to assert dominance.</i></div>
+<div class="item-description"><p>With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard Cotton T-Shirt if the action was successful.<br><br><i>T pose to assert dominance.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Oven mittens</div>
+<div class="item-description"><p>Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in the backpack<br><br><i>Watch it! They’re still hot!</i></p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
 </div>
@@ -403,21 +390,8 @@ With a 1 tick action T-pose in front of a minion for a 50% chance to stun them i
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
-<div class="item-title">Oven mittens</div>
-<div class="item-description">
-Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in the backpack<br><br><i>Watch it! They’re still hot!</i></div>
-<div class="item-stats">
-<div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
-</div>
-</div>
-<div class="item">
-<div class="item-icon" style="background-image:url(./icons/armour.svg)">
-</div>
 <div class="item-title">Fashionable cloak</div>
-<div class="item-description">
-Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO CAPES!</i></div>
+<div class="item-description"><p>Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO CAPES!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -428,8 +402,7 @@ Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO 
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cool shades</div>
-<div class="item-description">
-If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard Cool Shades.<br><br><i>YEAAAAAAAAAAAAH!</i></div>
+<div class="item-description"><p>If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard Cool Shades.<br><br><i>YEAAAAAAAAAAAAH!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -440,8 +413,7 @@ If you can come up with a witty pun when an enemy is defeated, gain 5 XP and dis
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Bowler hat</div>
-<div class="item-description">
-When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.<br><br><i>I say good sir, this investment turned out quite profitable!</i></div>
+<div class="item-description"><p>When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.<br><br><i>I say good sir, this investment turned out quite profitable!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
@@ -450,21 +422,8 @@ When you loot, if it’s a multiple item loot of rarity uncommon or common, loot
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
-<div class="item-title">Senility</div>
-<div class="item-description">
-Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.<br><br><i>I’m an old man. I’m an old human!</i></div>
-<div class="item-stats">
-<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/mana.svg">:1&nbsp;</div>
-</div>
-</div>
-<div class="item">
-<div class="item-icon" style="background-image:url(./icons/armour.svg)">
-</div>
 <div class="item-title">Cup-head helmet</div>
-<div class="item-description">
-Spend 1 additional EP after jumping to do a double jump. Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage<br><br><i>Do not deal with the Devil!</i></div>
+<div class="item-description"><p>Spend 1 additional EP after jumping to do a double jump. Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage<br><br><i>Do not deal with the Devil!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
@@ -474,8 +433,7 @@ Spend 1 additional EP after jumping to do a double jump. Instead of landing in t
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Earplugs</div>
-<div class="item-description">
-Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of Earplugs by 1.<br><br><i>Deaf people do not understand the effort.</i></div>
+<div class="item-description"><p>Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of Earplugs by 1.<br><br><i>Deaf people do not understand the effort.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
@@ -485,8 +443,7 @@ Multiple item loot. Ignore the sound damage or effects that you could suffer and
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cotton T-Shirt</div>
-<div class="item-description">
-With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard Cotton T-Shirt if the action was successful.<br><br><i>T pose to assert dominance.</i></div>
+<div class="item-description"><p>With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard Cotton T-Shirt if the action was successful.<br><br><i>T pose to assert dominance.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -497,8 +454,7 @@ With a 1 tick action T-pose in front of a minion for a 50% chance to stun them i
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Oven mittens</div>
-<div class="item-description">
-Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in the backpack<br><br><i>Watch it! They’re still hot!</i></div>
+<div class="item-description"><p>Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in the backpack<br><br><i>Watch it! They’re still hot!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -509,8 +465,7 @@ Oven mittens absorb 1 additional fire damage. Oven mittens occupy only 1 slot in
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Fashionable cloak</div>
-<div class="item-description">
-Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO CAPES!</i></div>
+<div class="item-description"><p>Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO CAPES!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -521,8 +476,7 @@ Fashionable cloak absorbs 1 additional damage from ranged attacks.<br><br><i>NO 
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cool shades</div>
-<div class="item-description">
-If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard Cool Shades.<br><br><i>YEAAAAAAAAAAAAH!</i></div>
+<div class="item-description"><p>If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard Cool Shades.<br><br><i>YEAAAAAAAAAAAAH!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -533,19 +487,17 @@ If you can come up with a witty pun when an enemy is defeated, gain 5 XP and dis
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Bowler hat</div>
-<div class="item-description">
-When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.<br><br><i>I say good sir, this investment turned out quite profitable!</i></div>
+<div class="item-description"><p>When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat Bowler hat to heal 1 HP.<br><br><i>I say good sir, this investment turned out quite profitable!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
 </div>
 </div>
 <div class="item">
-<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+<div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Senility</div>
-<div class="item-description">
-Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.<br><br><i>I’m an old man. I’m an old human!</i></div>
+<div class="item-description"><p>Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.<br><br><i>I’m an old man. I’m an old human!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -556,8 +508,7 @@ Transfigure yourself in an innocent old man for the duration of 5 ticks. You can
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Tele Chinesis</div>
-<div class="item-description">
-Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<br><br><i>你可以搬家吗?</i></div>
+<div class="item-description"><p>Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<br><br><i>你可以搬家吗?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -568,8 +519,7 @@ Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Magical spitball</div>
-<div class="item-description">
-<i>A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!</i></div>
+<div class="item-description"><p><i>A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -582,8 +532,7 @@ Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Wingardium Heliosà</div>
-<div class="item-description">
-Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br><br><i>It’s HeliÒsa, not Heliosàààà.</i></div>
+<div class="item-description"><p>Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br><br><i>It’s HeliÒsa, not Heliosàààà.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -591,14 +540,11 @@ Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br
 <div class="stat"><img class="stat-icon" src="./icons/mana.svg">:1&nbsp;</div>
 </div>
 </div>
-</div>
-<div class="page">
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Magical Bandaid</div>
-<div class="item-description">
-Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></div>
+<div class="item-description"><p>Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:2&nbsp;</div>
@@ -610,8 +556,7 @@ Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></div>
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Aurora borealis</div>
-<div class="item-description">
-Magical flames start dancing over the head of the target dealing 2 fire damage.<br><br><i>Just the northern lights.</i></div>
+<div class="item-description"><p>Magical flames start dancing over the head of the target dealing 2 fire damage.<br><br><i>Just the northern lights.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -619,12 +564,13 @@ Magical flames start dancing over the head of the target dealing 2 fire damage.<
 <div class="stat"><img class="stat-icon" src="./icons/mana.svg">:1&nbsp;</div>
 </div>
 </div>
+</div>
+<div class="page">
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Intimidating appearance</div>
-<div class="item-description">
-Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.<br><br><i>Prepare to meet Mr angry eyes!</i></div>
+<div class="item-description"><p>Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.<br><br><i>Prepare to meet Mr angry eyes!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -634,9 +580,19 @@ Your face turns terribly twisted with anger: minions in a 2 hexes radius area ha
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
+<div class="item-title">Senility</div>
+<div class="item-description"><p>Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.<br><br><i>I’m an old man. I’m an old human!</i></p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/mana.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/spell.svg)">
+</div>
 <div class="item-title">Tele Chinesis</div>
-<div class="item-description">
-Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<br><br><i>你可以搬家吗?</i></div>
+<div class="item-description"><p>Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<br><br><i>你可以搬家吗?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -647,8 +603,7 @@ Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Magical spitball</div>
-<div class="item-description">
-<i>A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!</i></div>
+<div class="item-description"><p><i>A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -661,8 +616,7 @@ Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Wingardium Heliosà</div>
-<div class="item-description">
-Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br><br><i>It’s HeliÒsa, not Heliosàààà.</i></div>
+<div class="item-description"><p>Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br><br><i>It’s HeliÒsa, not Heliosàààà.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -674,8 +628,7 @@ Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Magical Bandaid</div>
-<div class="item-description">
-Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></div>
+<div class="item-description"><p>Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:2&nbsp;</div>
@@ -687,8 +640,7 @@ Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></div>
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Aurora borealis</div>
-<div class="item-description">
-Magical flames start dancing over the head of the target dealing 2 fire damage.<br><br><i>Just the northern lights.</i></div>
+<div class="item-description"><p>Magical flames start dancing over the head of the target dealing 2 fire damage.<br><br><i>Just the northern lights.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -700,8 +652,7 @@ Magical flames start dancing over the head of the target dealing 2 fire damage.<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Intimidating appearance</div>
-<div class="item-description">
-Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.<br><br><i>Prepare to meet Mr angry eyes!</i></div>
+<div class="item-description"><p>Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.<br><br><i>Prepare to meet Mr angry eyes!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -711,9 +662,19 @@ Your face turns terribly twisted with anger: minions in a 2 hexes radius area ha
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
+<div class="item-title">Senility</div>
+<div class="item-description"><p>Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.<br><br><i>I’m an old man. I’m an old human!</i></p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/mana.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/spell.svg)">
+</div>
 <div class="item-title">Tele Chinesis</div>
-<div class="item-description">
-Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<br><br><i>你可以搬家吗?</i></div>
+<div class="item-description"><p>Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<br><br><i>你可以搬家吗?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -724,8 +685,7 @@ Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Magical spitball</div>
-<div class="item-description">
-<i>A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!</i></div>
+<div class="item-description"><p><i>A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -738,8 +698,7 @@ Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Wingardium Heliosà</div>
-<div class="item-description">
-Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br><br><i>It’s HeliÒsa, not Heliosàààà.</i></div>
+<div class="item-description"><p>Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br><br><i>It’s HeliÒsa, not Heliosàààà.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -751,8 +710,7 @@ Make the target fly for 3 ticks. Additionally make their voices high-pitched.<br
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Magical Bandaid</div>
-<div class="item-description">
-Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></div>
+<div class="item-description"><p>Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:2&nbsp;</div>
@@ -764,8 +722,7 @@ Heal a target by 2 HPs.<br><br><i>Woosh your wound gone.</i></div>
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Aurora borealis</div>
-<div class="item-description">
-Magical flames start dancing over the head of the target dealing 2 fire damage.<br><br><i>Just the northern lights.</i></div>
+<div class="item-description"><p>Magical flames start dancing over the head of the target dealing 2 fire damage.<br><br><i>Just the northern lights.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -777,8 +734,7 @@ Magical flames start dancing over the head of the target dealing 2 fire damage.<
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Intimidating appearance</div>
-<div class="item-description">
-Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.<br><br><i>Prepare to meet Mr angry eyes!</i></div>
+<div class="item-description"><p>Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.<br><br><i>Prepare to meet Mr angry eyes!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -789,8 +745,7 @@ Your face turns terribly twisted with anger: minions in a 2 hexes radius area ha
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Out of tune bell</div>
-<div class="item-description">
-You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a Bard.<br><br><i>Hope the toss of your coin doesn’t lead you to madness.</i></div>
+<div class="item-description"><p>You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a Bard.<br><br><i>Hope the toss of your coin doesn’t lead you to madness.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 </div>
@@ -801,8 +756,7 @@ You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Shabby harp</div>
-<div class="item-description">
-It counts as an instrument for a Bard.<br><br><i>Warning: find something better to put an infernal hound to sleep.</i></div>
+<div class="item-description"><p>It counts as an instrument for a Bard.<br><br><i>Warning: find something better to put an infernal hound to sleep.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 </div>
@@ -811,8 +765,7 @@ It counts as an instrument for a Bard.<br><br><i>Warning: find something better 
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cute little cactus</div>
-<div class="item-description">
-Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></div>
+<div class="item-description"><p>Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></p></div>
 <div class="item-stats">
 </div>
 </div>
@@ -820,8 +773,7 @@ Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></div>
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cute bandaid</div>
-<div class="item-description">
-Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.<br><br><i>Kiss the wound cause saliva has antimicrobial properties.</i></div>
+<div class="item-description"><p>Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.<br><br><i>Kiss the wound cause saliva has antimicrobial properties.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -831,8 +783,7 @@ Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cup of Tea</div>
-<div class="item-description">
-Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Tea can only be consumed when the ticker ends in 5.<br><br><i>There’s always time for a cup of tea!</i></div>
+<div class="item-description"><p>Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Tea can only be consumed when the ticker ends in 5.<br><br><i>There’s always time for a cup of tea!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -842,8 +793,7 @@ Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Scones</div>
-<div class="item-description">
-Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Scones can only be consumed when the ticker ends in 5.<br><br><i>Delicious scones with jam and clotted cream.</i></div>
+<div class="item-description"><p>Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Scones can only be consumed when the ticker ends in 5.<br><br><i>Delicious scones with jam and clotted cream.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -853,8 +803,7 @@ Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone s
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cheese</div>
-<div class="item-description">
-Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.<br><br><i>Particularly effective against flying saucers.</i></div>
+<div class="item-description"><p>Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.<br><br><i>Particularly effective against flying saucers.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -864,8 +813,7 @@ Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Out of tune bell</div>
-<div class="item-description">
-You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a Bard.<br><br><i>Hope the toss of your coin doesn’t lead you to madness.</i></div>
+<div class="item-description"><p>You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a Bard.<br><br><i>Hope the toss of your coin doesn’t lead you to madness.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 </div>
@@ -874,8 +822,7 @@ You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Shabby harp</div>
-<div class="item-description">
-It counts as an instrument for a Bard.<br><br><i>Warning: find something better to put an infernal hound to sleep.</i></div>
+<div class="item-description"><p>It counts as an instrument for a Bard.<br><br><i>Warning: find something better to put an infernal hound to sleep.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 </div>
@@ -884,8 +831,7 @@ It counts as an instrument for a Bard.<br><br><i>Warning: find something better 
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cute little cactus</div>
-<div class="item-description">
-Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></div>
+<div class="item-description"><p>Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></p></div>
 <div class="item-stats">
 </div>
 </div>
@@ -893,8 +839,7 @@ Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></div>
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cute bandaid</div>
-<div class="item-description">
-Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.<br><br><i>Kiss the wound cause saliva has antimicrobial properties.</i></div>
+<div class="item-description"><p>Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.<br><br><i>Kiss the wound cause saliva has antimicrobial properties.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -904,8 +849,7 @@ Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cup of Tea</div>
-<div class="item-description">
-Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Tea can only be consumed when the ticker ends in 5.<br><br><i>There’s always time for a cup of tea!</i></div>
+<div class="item-description"><p>Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Tea can only be consumed when the ticker ends in 5.<br><br><i>There’s always time for a cup of tea!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -915,8 +859,7 @@ Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Scones</div>
-<div class="item-description">
-Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Scones can only be consumed when the ticker ends in 5.<br><br><i>Delicious scones with jam and clotted cream.</i></div>
+<div class="item-description"><p>Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Scones can only be consumed when the ticker ends in 5.<br><br><i>Delicious scones with jam and clotted cream.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -926,8 +869,7 @@ Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone s
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cheese</div>
-<div class="item-description">
-Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.<br><br><i>Particularly effective against flying saucers.</i></div>
+<div class="item-description"><p>Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.<br><br><i>Particularly effective against flying saucers.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -937,8 +879,7 @@ Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Out of tune bell</div>
-<div class="item-description">
-You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a Bard.<br><br><i>Hope the toss of your coin doesn’t lead you to madness.</i></div>
+<div class="item-description"><p>You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a Bard.<br><br><i>Hope the toss of your coin doesn’t lead you to madness.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 </div>
@@ -947,8 +888,7 @@ You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Shabby harp</div>
-<div class="item-description">
-It counts as an instrument for a Bard.<br><br><i>Warning: find something better to put an infernal hound to sleep.</i></div>
+<div class="item-description"><p>It counts as an instrument for a Bard.<br><br><i>Warning: find something better to put an infernal hound to sleep.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 </div>
@@ -957,8 +897,7 @@ It counts as an instrument for a Bard.<br><br><i>Warning: find something better 
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cute little cactus</div>
-<div class="item-description">
-Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></div>
+<div class="item-description"><p>Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></p></div>
 <div class="item-stats">
 </div>
 </div>
@@ -968,8 +907,7 @@ Multiple item loot.<br><br><i>Did you ask for a fiery sword?</i></div>
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cute bandaid</div>
-<div class="item-description">
-Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.<br><br><i>Kiss the wound cause saliva has antimicrobial properties.</i></div>
+<div class="item-description"><p>Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.<br><br><i>Kiss the wound cause saliva has antimicrobial properties.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -979,8 +917,7 @@ Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cup of Tea</div>
-<div class="item-description">
-Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Tea can only be consumed when the ticker ends in 5.<br><br><i>There’s always time for a cup of tea!</i></div>
+<div class="item-description"><p>Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Tea can only be consumed when the ticker ends in 5.<br><br><i>There’s always time for a cup of tea!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -990,8 +927,7 @@ Heal for 1 HP. If you also have Scones you can call for tea time. Everyone stops
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Scones</div>
-<div class="item-description">
-Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Scones can only be consumed when the ticker ends in 5.<br><br><i>Delicious scones with jam and clotted cream.</i></div>
+<div class="item-description"><p>Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone stops what they’re doing and restores 2 HP, MP and EP. Scones can only be consumed when the ticker ends in 5.<br><br><i>Delicious scones with jam and clotted cream.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -1001,8 +937,7 @@ Heal for 1 HP. If you also have Cup of tea you can call for tea time. Everyone s
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Cheese</div>
-<div class="item-description">
-Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.<br><br><i>Particularly effective against flying saucers.</i></div>
+<div class="item-description"><p>Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks Cheese ages and restores 3 additional HP or deals 3 more damage.<br><br><i>Particularly effective against flying saucers.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -1012,8 +947,7 @@ Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">Yer a wizard, Harry</div>
-<div class="item-description">
-Enchanter role change card<br><br><i>I’m a what?</i></div>
+<div class="item-description"><p>Enchanter role change card<br><br><i>I’m a what?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1022,8 +956,7 @@ Enchanter role change card<br><br><i>I’m a what?</i></div>
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">Legolas, what do your elf-eyes see?</div>
-<div class="item-description">
-Explorer role change card<br><br><i>Same as yours! What the fork do you think they see?</i></div>
+<div class="item-description"><p>Explorer role change card<br><br><i>Same as yours! What the fork do you think they see?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1032,8 +965,7 @@ Explorer role change card<br><br><i>Same as yours! What the fork do you think th
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">Well hello my name is Sona</div>
-<div class="item-description">
-Support role change card<br><br><i>And I’m a special supp!</i></div>
+<div class="item-description"><p>Support role change card<br><br><i>And I’m a special supp!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1042,8 +974,7 @@ Support role change card<br><br><i>And I’m a special supp!</i></div>
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">That’s a big spiky meatball</div>
-<div class="item-description">
-Tank role change card<br><br><i>Oke.</i></div>
+<div class="item-description"><p>Tank role change card<br><br><i>Oke.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1052,8 +983,7 @@ Tank role change card<br><br><i>Oke.</i></div>
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">Leeroy Jenkins!</div>
-<div class="item-description">
-Fighter role change card<br><br><i>Goddammit Leeroy!</i></div>
+<div class="item-description"><p>Fighter role change card<br><br><i>Goddammit Leeroy!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1062,8 +992,7 @@ Fighter role change card<br><br><i>Goddammit Leeroy!</i></div>
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">Are you gonna use that?</div>
-<div class="item-description">
-Swap role with another player<br><br><i>Change now!</i></div>
+<div class="item-description"><p>Swap role with another player<br><br><i>Change now!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1072,8 +1001,7 @@ Swap role with another player<br><br><i>Change now!</i></div>
 <div class="item-icon" style="background-image:url(./icons/shuffle.svg)">
 </div>
 <div class="item-title">Everybody panic!</div>
-<div class="item-description">
-You must shuffle all your team’ roles NOW!<br><br><i>I am Abaddon the destroyer and I will be your support today!</i></div>
+<div class="item-description"><p>You must shuffle all your team’ roles NOW!<br><br><i>I am Abaddon the destroyer and I will be your support today!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -1082,8 +1010,7 @@ You must shuffle all your team’ roles NOW!<br><br><i>I am Abaddon the destroye
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">PlaceHolder</div>
-<div class="item-description">
-None<br><br><i>None</i></div>
+<div class="item-description"><p>None<br><br><i>None</i></p></div>
 <div class="item-stats">
 </div>
 </div>

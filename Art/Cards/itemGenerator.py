@@ -8,9 +8,28 @@ copies = [3, 2, 1, 1, 1, 3]
 webPageHeader = """ <!DOCTYPE html>
 <html>
 <head>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="cardsStyle.css">
 </head>
 <body>
+<script type="text/javascript">
+
+$(document).ready( function() {
+    $(".item-description").each( function(){
+        let descriptionDiv = $(this);
+        let descriptionText = descriptionDiv.children("p").first();
+
+        while( descriptionText.height() > descriptionDiv.height() ){
+            let currentHeight = parseFloat(descriptionText.css("font-size"));
+            descriptionText.css("font-size", currentHeight - 0.5);
+        }
+    } )
+});
+</script>
 """
 
 webPageFooter = """     </body>
@@ -43,6 +62,9 @@ def getStatIcon(statName, statValue):
         "resistance": "./icons/resistance.svg"
     }
 
+    if statValue == "Infinity":
+        statValue = "&infin;"
+
     if statName in iconPaths:
         return f'<div class="stat"><img class="stat-icon" src="{iconPaths[statName]}">:{statValue}&nbsp;</div>\n'
 
@@ -55,7 +77,7 @@ def generate(i):
     openPage = """<div class="page">\n"""
     openItem = """<div class="item">\n"""
     openTitle = """<div class="item-title">"""
-    openDescription = """<div class="item-description">\n"""
+    openDescription = """<div class="item-description"><p>"""
     openStats = """<div class="item-stats">\n"""
 
     closeDiv = """</div>\n"""
@@ -103,7 +125,7 @@ def generate(i):
                 if "description" in item:
                     page += item["description"] + "<br><br>"
 
-                page += f'<i>{item["note"]}</i>'
+                page += f'<i>{item["note"]}</i></p>'
                 page += closeDiv
 
                 page += openStats

@@ -1,16 +1,34 @@
  <!DOCTYPE html>
 <html>
 <head>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="cardsStyle.css">
 </head>
 <body>
+<script type="text/javascript">
+
+$(document).ready( function() {
+    $(".item-description").each( function(){
+        let descriptionDiv = $(this);
+        let descriptionText = descriptionDiv.children("p").first();
+
+        while( descriptionText.height() > descriptionDiv.height() ){
+            let currentHeight = parseFloat(descriptionText.css("font-size"));
+            descriptionText.css("font-size", currentHeight - 0.5);
+        }
+    } )
+});
+</script>
 <div class="page">
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Crossbow-nothing-special</div>
-<div class="item-description">
-One tick to load the crossbow. One to fire.<br><br><i>Beware about the safety of your ol' Betsy.</i></div>
+<div class="item-description"><p>One tick to load the crossbow. One to fire.<br><br><i>Beware about the safety of your ol' Betsy.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:10&nbsp;</div>
@@ -23,8 +41,7 @@ One tick to load the crossbow. One to fire.<br><br><i>Beware about the safety of
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Sword in the stone</div>
-<div class="item-description">
-The sword is still stuck in the stone... So basically, you hit your enemies with the stone.<br><br><i>A sword! Archimedes, a sword!</i></div>
+<div class="item-description"><p>The sword is still stuck in the stone... So basically, you hit your enemies with the stone.<br><br><i>A sword! Archimedes, a sword!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
@@ -36,8 +53,7 @@ The sword is still stuck in the stone... So basically, you hit your enemies with
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Evergreen staff</div>
-<div class="item-description">
-Consume 1 use of Evergreen staff as an instantaneous action to increase the damage dealt by a damaging spell cast within 2 hexes.<br><br><i>You would not part an old man from his walking stick?</i></div>
+<div class="item-description"><p>Consume 1 use of Evergreen staff as an instantaneous action to increase the damage dealt by a damaging spell cast within 2 hexes.<br><br><i>You would not part an old man from his walking stick?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -48,8 +64,7 @@ Consume 1 use of Evergreen staff as an instantaneous action to increase the dama
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Poisonous blowgun</div>
-<div class="item-description">
-The target suffers 2 additional poison damage.<br><br><i>That’s gotta sting.</i></div>
+<div class="item-description"><p>The target suffers 2 additional poison damage.<br><br><i>That’s gotta sting.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -61,8 +76,7 @@ The target suffers 2 additional poison damage.<br><br><i>That’s gotta sting.</
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">YOU-are-coming Spear</div>
-<div class="item-description">
-Any time you throw this spear you are teleported in a random free adjacent tile to the one in which the spear landed, at the end of the tick. If there are no available tiles, you remain in your position and take 1 magic damage.<br><br><i>You can feel some sort of attachment.</i></div>
+<div class="item-description"><p>Any time you throw this spear you are teleported in a random free adjacent tile to the one in which the spear landed, at the end of the tick. If there are no available tiles, you remain in your position and take 1 magic damage.<br><br><i>You can feel some sort of attachment.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -74,8 +88,7 @@ Any time you throw this spear you are teleported in a random free adjacent tile 
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Bow and sparrow</div>
-<div class="item-description">
-After you hit a target Jack the sparrow pecks anyone in a 2 hexes radius area around the target, dealing 1 damage each. Occupy 1 slot in the backpack.<br><br><i>You are without doubt the worst ranged weapon I’ve ever heard of.</i></div>
+<div class="item-description"><p>After you hit a target Jack the sparrow pecks anyone in a 2 hexes radius area around the target, dealing 1 damage each. Occupy 1 slot in the backpack.<br><br><i>You are without doubt the worst ranged weapon I’ve ever heard of.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
@@ -88,8 +101,7 @@ After you hit a target Jack the sparrow pecks anyone in a 2 hexes radius area ar
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Tuba</div>
-<div class="item-description">
-Makes a deafening sound that deals 2 sound damage in a 3 hexes radius area. Alternatively, you can consume 1 use to follow a target adjacent to you for the duration of 3 ticks, dealing 2 sound damage to him each tick. Tuba counts as an instrument for a Bard. Occupy 1 slot in the backpack.<br><br><i>Pom pom pom po pom.</i></div>
+<div class="item-description"><p>Makes a deafening sound that deals 2 sound damage in a 3 hexes radius area. Alternatively, you can consume 1 use to follow a target adjacent to you for the duration of 3 ticks, dealing 2 sound damage to him each tick. Tuba counts as an instrument for a Bard. Occupy 1 slot in the backpack.<br><br><i>Pom pom pom po pom.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
@@ -100,8 +112,7 @@ Makes a deafening sound that deals 2 sound damage in a 3 hexes radius area. Alte
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Black Mambaaaaa</div>
-<div class="item-description">
-You can take a 1 tick action to argue with an enemy about being a villain. There is a 50% chance they reply and lose their actions in the current tick.<br><br><i>The best presentation!</i></div>
+<div class="item-description"><p>You can take a 1 tick action to argue with an enemy about being a villain. There is a 50% chance they reply and lose their actions in the current tick.<br><br><i>The best presentation!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:2&nbsp;</div>
@@ -111,8 +122,7 @@ You can take a 1 tick action to argue with an enemy about being a villain. There
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Plot armor</div>
-<div class="item-description">
-If you would take damage that reduces you to 0 HP, dodge that attack or effect and discard Plot armor.<br><br><i>Oh my, 20 dollars!</i></div>
+<div class="item-description"><p>If you would take damage that reduces you to 0 HP, dodge that attack or effect and discard Plot armor.<br><br><i>Oh my, 20 dollars!</i></p></div>
 <div class="item-stats">
 </div>
 </div>
@@ -120,8 +130,7 @@ If you would take damage that reduces you to 0 HP, dodge that attack or effect a
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Ring mail leggings-nothing-special</div>
-<div class="item-description">
-<i>Absolutely noteworthy.</i></div>
+<div class="item-description"><p><i>Absolutely noteworthy.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:15&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:2&nbsp;</div>
@@ -131,8 +140,7 @@ If you would take damage that reduces you to 0 HP, dodge that attack or effect a
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Cousin Itt’s fluff</div>
-<div class="item-description">
-You are immune to ranged attacks, but you suffer twice the fire damage. Lose 5% AG.<br><br><i>Can you hear me down there?</i></div>
+<div class="item-description"><p>You are immune to ranged attacks, but you suffer twice the fire damage. Lose 5% AG.<br><br><i>Can you hear me down there?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:3&nbsp;</div>
@@ -142,8 +150,7 @@ You are immune to ranged attacks, but you suffer twice the fire damage. Lose 5% 
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Viking helmet</div>
-<div class="item-description">
-You can consume a hit of Viking helmet to perform a 1 tick action to head an adjacent target dealing 2 damage with a 20% chance they stay stunned the next tick.<br><br><i>Evening brother!</i></div>
+<div class="item-description"><p>You can consume a hit of Viking helmet to perform a 1 tick action to head an adjacent target dealing 2 damage with a 20% chance they stay stunned the next tick.<br><br><i>Evening brother!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:2&nbsp;</div>
@@ -153,8 +160,7 @@ You can consume a hit of Viking helmet to perform a 1 tick action to head an adj
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Beekeeper's vest</div>
-<div class="item-description">
-You are immune to Poisonous blowgun. You lose 5% AG and gain the ability Not the bees, not the bees! : With a 1 tick action you can pull out your personal beehive. Then, a swarm of loyal bees buzz around you dealing 1 poison damage to anyone that would enter in contact with you. With another 1 tick action you can put away the beehive and call back the bees.<br><br><i>Bee our vest, bee our vest, bee our vest!</i></div>
+<div class="item-description"><p>You are immune to Poisonous blowgun. You lose 5% AG and gain the ability Not the bees, not the bees! : With a 1 tick action you can pull out your personal beehive. Then, a swarm of loyal bees buzz around you dealing 1 poison damage to anyone that would enter in contact with you. With another 1 tick action you can put away the beehive and call back the bees.<br><br><i>Bee our vest, bee our vest, bee our vest!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:2&nbsp;</div>
@@ -164,8 +170,7 @@ You are immune to Poisonous blowgun. You lose 5% AG and gain the ability Not the
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Iron chestplate-nothing-special</div>
-<div class="item-description">
-Any time you are dealt fire damage, you suffer 1 additional damage. Lose 10% AG.<br><br><i>No iron golem was hurt to make this.</i></div>
+<div class="item-description"><p>Any time you are dealt fire damage, you suffer 1 additional damage. Lose 10% AG.<br><br><i>No iron golem was hurt to make this.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:5&nbsp;</div>
@@ -175,8 +180,7 @@ Any time you are dealt fire damage, you suffer 1 additional damage. Lose 10% AG.
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Encouraging compliments</div>
-<div class="item-description">
-Target ally increases the damage they deal in the next tick by 2. Also, their LK grows by 1 for their next looting (no more than 1 LK can be given with this spell before the next looting).<br><br><i>You are not quite a complete failure!</i></div>
+<div class="item-description"><p>Target ally increases the damage they deal in the next tick by 2. Also, their LK grows by 1 for their next looting (no more than 1 LK can be given with this spell before the next looting).<br><br><i>You are not quite a complete failure!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -187,8 +191,7 @@ Target ally increases the damage they deal in the next tick by 2. Also, their LK
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">It was him!</div>
-<div class="item-description">
-Target minion is convinced they have been hit by another minion, becoming hostile to him next tick. There is a 10% chance a feud begins and they will remain permanently hostile to each other.<br><br><i>It’s treason, then.</i></div>
+<div class="item-description"><p>Target minion is convinced they have been hit by another minion, becoming hostile to him next tick. There is a 10% chance a feud begins and they will remain permanently hostile to each other.<br><br><i>It’s treason, then.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -201,8 +204,7 @@ Target minion is convinced they have been hit by another minion, becoming hostil
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Left alone</div>
-<div class="item-description">
-Target minion stinks so badly in this tick so that anyone in a 2 hexes radius area loses their action and spends this tick walking away in disgust. The smelly one also loses their action crying with shame.<br><br><i>Why doesn’t anyone love me?</i></div>
+<div class="item-description"><p>Target minion stinks so badly in this tick so that anyone in a 2 hexes radius area loses their action and spends this tick walking away in disgust. The smelly one also loses their action crying with shame.<br><br><i>Why doesn’t anyone love me?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -213,8 +215,7 @@ Target minion stinks so badly in this tick so that anyone in a 2 hexes radius ar
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Spicy meatball!</div>
-<div class="item-description">
-Lob a giant spicy meatball to a target. Target takes 2 additional fire damage.<br><br><i>Mamma mia! That’s a spicy meatball.</i></div>
+<div class="item-description"><p>Lob a giant spicy meatball to a target. Target takes 2 additional fire damage.<br><br><i>Mamma mia! That’s a spicy meatball.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -227,8 +228,7 @@ Lob a giant spicy meatball to a target. Target takes 2 additional fire damage.<b
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Harden</div>
-<div class="item-description">
-An armor piece of your choice gains 3 additional resistance and an extra hit.<br><br><i>Go Tankapod, use Harden!</i></div>
+<div class="item-description"><p>An armor piece of your choice gains 3 additional resistance and an extra hit.<br><br><i>Go Tankapod, use Harden!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -239,8 +239,7 @@ An armor piece of your choice gains 3 additional resistance and an extra hit.<br
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Scale along Z</div>
-<div class="item-description">
-A melee weapon of your choice gains 2 range and 2 damage for the duration of 4 ticks.<br><br><i>Behold my scaling matrices!</i></div>
+<div class="item-description"><p>A melee weapon of your choice gains 2 range and 2 damage for the duration of 4 ticks.<br><br><i>Behold my scaling matrices!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -251,8 +250,7 @@ A melee weapon of your choice gains 2 range and 2 damage for the duration of 4 t
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Quicksilver</div>
-<div class="item-description">
-You gain ludicrous speed: in the next tick you can perform up to 5 ticks of movement actions (non damaging abilities are also fine) and gain 45% AG.<br><br><i>My brains… are going into my feet!</i></div>
+<div class="item-description"><p>You gain ludicrous speed: in the next tick you can perform up to 5 ticks of movement actions (non damaging abilities are also fine) and gain 45% AG.<br><br><i>My brains… are going into my feet!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -263,8 +261,7 @@ You gain ludicrous speed: in the next tick you can perform up to 5 ticks of move
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Dandelion</div>
-<div class="item-description">
-Eat it to heal 2 HP. Consuming Dandelion while looting increases your LK by 2.<br><br><i>Must be the last one of the season!</i></div>
+<div class="item-description"><p>Eat it to heal 2 HP. Consuming Dandelion while looting increases your LK by 2.<br><br><i>Must be the last one of the season!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -274,8 +271,7 @@ Eat it to heal 2 HP. Consuming Dandelion while looting increases your LK by 2.<b
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Gargaleo’s flute</div>
-<div class="item-description">
-Summon a rainy cloud in a target hex. Anyone in the cloud cannot see anything or ignite any flame. Furthermore, they lose their AG. A dehydrated unit can be rehydrated with this effect. This item counts as an instrument for a Bard. Occupy 1 slot in the backpack.<br><br><i>Once belonged to the famous enchanter flutist Gargaleo.</i></div>
+<div class="item-description"><p>Summon a rainy cloud in a target hex. Anyone in the cloud cannot see anything or ignite any flame. Furthermore, they lose their AG. A dehydrated unit can be rehydrated with this effect. This item counts as an instrument for a Bard. Occupy 1 slot in the backpack.<br><br><i>Once belonged to the famous enchanter flutist Gargaleo.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:10&nbsp;</div>
@@ -286,8 +282,7 @@ Summon a rainy cloud in a target hex. Anyone in the cloud cannot see anything or
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Forget-me-spray</div>
-<div class="item-description">
-Target minion falls asleep the next tick for a duration of 5 ticks. If the target is a hostile minion, they turn neutral as they wake up, but you have to convince them that you’re not hostile otherwise they’ll turn back to hostile.<br><br><i>Yeah, I'm like your space Dad!</i></div>
+<div class="item-description"><p>Target minion falls asleep the next tick for a duration of 5 ticks. If the target is a hostile minion, they turn neutral as they wake up, but you have to convince them that you’re not hostile otherwise they’ll turn back to hostile.<br><br><i>Yeah, I'm like your space Dad!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -297,8 +292,7 @@ Target minion falls asleep the next tick for a duration of 5 ticks. If the targe
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Fire extinguisher</div>
-<div class="item-description">
-Negate a fire effect or extinguish a burning flame.<br><br><i>Seymour! The house is on fire!</i></div>
+<div class="item-description"><p>Negate a fire effect or extinguish a burning flame.<br><br><i>Seymour! The house is on fire!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -309,8 +303,7 @@ Negate a fire effect or extinguish a burning flame.<br><br><i>Seymour! The house
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Extract of llama</div>
-<div class="item-description">
-Turn into a llama for 5 ticks. You keep your armour but your only attack is replaced by Magical Spitball at no mana cost<br><br><i>A llama? He’s supposed to be dead!</i></div>
+<div class="item-description"><p>Turn into a llama for 5 ticks. You keep your armour but your only attack is replaced by Magical Spitball at no mana cost<br><br><i>A llama? He’s supposed to be dead!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -320,8 +313,7 @@ Turn into a llama for 5 ticks. You keep your armour but your only attack is repl
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Strong black potion</div>
-<div class="item-description">
-Multiple item loot. You get 1 additional damage in your melee attacks for 5 ticks.<br><br><i>Can you feel its dark power?</i></div>
+<div class="item-description"><p>Multiple item loot. You get 1 additional damage in your melee attacks for 5 ticks.<br><br><i>Can you feel its dark power?</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 </div>
@@ -330,8 +322,7 @@ Multiple item loot. You get 1 additional damage in your melee attacks for 5 tick
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Werehorn</div>
-<div class="item-description">
-This item makes you emulate a wolf’s call: for any minion in a 5 hexes radius area, there is a 25% chance they lose their action in this tick. Werehorn counts as an instrument for a Bard.<br><br><i>There horn. There castle.</i></div>
+<div class="item-description"><p>This item makes you emulate a wolf’s call: for any minion in a 5 hexes radius area, there is a 25% chance they lose their action in this tick. Werehorn counts as an instrument for a Bard.<br><br><i>There horn. There castle.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
