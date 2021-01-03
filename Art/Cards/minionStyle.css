@@ -1,0 +1,92 @@
+@page {
+    size: A4 landscape;
+}
+
+*{
+	font-size: 3mm;
+}
+
+.pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.sheet {
+    display: flex;
+    height: 195mm;
+    page-break-after: always;
+}
+
+
+.minion {
+	position: relative;
+    height: 195mm;
+    width: 96mm;
+    padding: 2mm;
+    background-color: linen;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+.minion-title {
+	position: absolute;
+    width: 75mm;
+    height: 15mm;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 2mm;
+}
+
+.minion-icon {
+	position: absolute;
+    width: 15mm;
+    height: 15mm;
+    right: 2mm;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-size: 90% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.minion-stats{
+	position: absolute;
+    width: 91mm;
+    height: 15mm;
+    top: calc(2mm + 15mm + 2mm);
+    border: 1px solid black;
+}
+
+.minion-description {
+	position: absolute;
+	top: calc(2mm + 15mm + 2mm + 15mm + 2mm);
+    width: 91mm;
+    height: calc(195mm - (36mm + 2mm) );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.minion-department{
+    width: 100%;
+    height: 10mm;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.minion-atk-abl{
+    width: 100%;
+    height: 130mm;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.minion-note{
+    width: 100%;
+    height: 10mm;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
