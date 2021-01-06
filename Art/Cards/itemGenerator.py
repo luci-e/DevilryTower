@@ -40,9 +40,9 @@ def getIconOpeningTag(iconName):
         "melee": "./icons/melee.svg",
         "ranged": "./icons/ranged.svg",
         "armour": "./icons/armour.svg",
-        "spell": "./icons/spell.svg",
-        "misc": "./icons/misc.svg",
-        "role_change": "./icons/shuffle.svg",
+        "spells": "./icons/spell.svg",
+        "miscellaneous": "./icons/misc.svg",
+        "role change": "./icons/shuffle.svg",
         "filler": "./icons/misc.svg"
     }
 
@@ -96,9 +96,7 @@ def generate(i):
             data["filler"] = (
                 4-(itemsNo % 4)) * [{"name": "PlaceHolder", "description": "None", "note": "None"}]
 
-        itemsNo = 0
-        for _k, v in data.items():
-            itemsNo += len(v)
+        itemsNo += (4-(itemsNo % 4))
 
         currentItem = 0
 
@@ -111,7 +109,7 @@ def generate(i):
 
                 itemIcon = category
 
-                if category == "weapon":
+                if category == "weapons":
                     if "range" in item:
                         itemIcon = "ranged"
                     else:

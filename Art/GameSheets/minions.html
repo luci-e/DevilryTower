@@ -1,0 +1,222 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="minionStyle.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function adjustTextSize(textElement, containingElement) {
+        while (textElement.height() > containingElement.height()) {
+            let currentHeight = parseFloat(textElement.css("font-size"));
+            console.log(currentHeight);
+            textElement.css("font-size", currentHeight - 0.1);
+        }
+    };
+
+    $(document).ready(function() {
+        $(".minion-atk-abl-note").each(function() {
+            let descriptionDiv = $(this);
+            let descriptions = descriptionDiv.children("p");
+            descriptions.each( function() { 
+                adjustTextSize( $(this), descriptionDiv); 
+                }
+            );
+        });
+    });
+    </script>
+    </head>
+
+    <body>
+<div class="sheet">
+<div class="minion">
+<div class="minion-title">Assistant Coordinator</div>
+<div class="minion-icon" style="background-image:url(./icons/coordinator.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to the <i>Villain</i>, <i>Hostile</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Administration and Finance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Smash them with a hammer!: </b>As a 1 tick action, deal 1 damage to a single adjacent target.<br><b>Put them in a box: </b>As a 1 tick action, select an adjacent target to <i>put them in a box</i>. For the duration of 3 ticks, they take 2 additional damage from <i>Smash them with a hammer!</i>.<br><b>Or… to save on postage: </b>As a 1 tick action, poison an adjacent target for 1 poison damage, 15% chance they turn into a llama instead as if they drank <i>Extract of Llama</i>.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Very good! Here, get the snack (passive): </b>Any minion within 5 hexes, gain 1 additional hex of movement per tick.<br><b>Very well, Mr. Wu kærs: </b>With a 1 tick action, a target minion within 5 hexes gains permanently 1 additional damage. Cooldown of 10 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Assistant Coordinators</i> all start with <i>Baby seal leather boots</i> and <i>Extract of llama</i>.<br></p><p class="minion-note">
+<i>The Boss can be very busy sometimes… that’s why the Assistant Coordinators has been invented! Everybody knows they are running the hut.</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Accountant</div>
+<div class="minion-icon" style="background-image:url(./icons/accountant.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">2 + 1d3</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>No One</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Administration and Finance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Get anxious with me: </b>An <i>Accountant</i> can use a calculator to show all the financial problems they have to solve, dealing 1 sound damage to any adventurer within 3 hexes.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Time is money (passive): </b>Every 10 ticks <i>Accountants</i> get more nervous, gaining 1 additional damage with their attacks and abilities.<br><b>Oh… it’s only a dime: </b>Dart across the room as a 1 tick action, dealing 1 damage and knocking aside by 1 hex every entity on the line. Cooldown of 10 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Accountants</i> all start with <i>Peter Parker’s glasses</i> and a <i>Work uniform</i>.<br></p><p class="minion-note">
+<i>Even villains need to keep their finances in order. The accountant’s job may seem tedious but it is a vital one. Villains don’t fear heroes nearly as much as they do the Evil Revenue Agency. Accountants make sure they never have to deal with the latter by guaranteeing all their taxes and fees are regularly paid.</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Market Master</div>
+<div class="minion-icon" style="background-image:url(./icons/market.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">4 + 1d6</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>No One</i>, <i>Friendly</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Administration and Finance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Untrained: </b><i>Market masters</i> do not attend any fight course, hence they cannot perform attacks.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Free market (passive): </b>You can trade items with these felons, but watch out for their prices. The adventurers can exchange 6 unique items of any rarity for 1 item which rarity is up to 1 tier higher than the mode of the traded items (e.g. if you exchange 3 rare items, 2 uncommon and 1 common you can get 1 epic item, in case of ties the mode of the lowest tier item counts). However the <i>Market Master</i> does not trade <i>Legendary</i> Items. When trading for an item labeled as <i>Multiple item loot</i>, apply the same rules as looting.<br><b>Spread peak: </b>As a 1 tick action, an unpleased (mocked or robbed) <i>Market Master</i> can cry so loud their disappointment that any non-loyal to <i>No One</i> Minion in the floor, that is not in the adventurers' party, is instantly recalled next to them and turn <i>Hostile</i> to the adventurers.<br><b style="font-variant: small-caps;">Equipment</b><br>All <i>Market Masters</i> start with a <i>Precious</i>.<br></p><p class="minion-note">
+<i>My precioussssss... </i></p></div>
+</div>
+</div>
+</div>
+<div class="sheet">
+<div class="minion">
+<div class="minion-title">Minion Resources</div>
+<div class="minion-icon" style="background-image:url(./icons/minion_resources.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">4 + 1d6</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to the <i>Villain</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Administration and Finance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Intern Throw: </b><i>Minion Resources</i> can yeet any <i>Intern</i> or <i>Lost Soul</i> adjacent to them to a target between 2 and 3 hexes away. The target takes as much damage as the maximum HPs of the poor soul that was thrown, but the projectile also takes 1 damage.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Recruitment Season: </b><i>Minion Resources</i> can hire new <i>Interns</i> straight out of Evil University. <i>Minion Resources</i> must choose a free tile within 2 hexes of themselves where the new <i>Intern</i> is teleported to start working immediately (a task is given as an instantaneous action). Once defeated, there’s a 10% chance that all remaining <i>Interns</i> summoned this way will join you, if they don't, they'll use this chance to go back to Uni to get their master's degree, leaving behind <i>Nothing</i>. Cooldown of 10 ticks.<br><b>A work opportunity you cannot miss: </b><i>Minion Resources</i> can ask you with a 1 tick action to join their cause with a 10% chance of succeeding. You then work for Evil Villainy Inc. for the duration of 3 ticks as an <i>Intern</i> loyal to the <i>Villain</i> and with <i>Neutral</i> attitude. Unpaid, of course. Cooldown of 10 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Minion Resources</i> all start with a <i>Cup of coffee</i> and a <i>Work uniform</i>.<br></p><p class="minion-note">
+<i>We are looking for interested newcomers fresh out of villain university with at least 5 years of  experience for an intern job paid in 'e x p e r i e n c e'.</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Potion Seller</div>
+<div class="minion-icon" style="background-image:url(./icons/cauldron.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">2 + 1d3</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>No One</i>, <i>Hostile</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Magic</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>To win, you must attack!: </b><i>Potion Sellers</i> can throw their potions up to 3 hexes away as a 1 tick action, in order to give the effects of the thrown potion.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Turn to page 394 (passive): </b><i>Potion Sellers</i> produce 1 <i>Strongest Potion</i> every 10 ticks.<br><b>Bertie Bott's every flavour pots: </b>As a 1 tick action, a <i>Potion seller</i> can add to their inventory any potion they want, but the <i>Strongest potion</i>. Cooldown of 5 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Potion sellers</i> can start with up to 3 potions of any kind, 3 <i>Toxic mixtures</i> and 1 <i>Strongest potion</i>.<br></p><p class="minion-note">
+<i>Don’t ask them to sell you their strongest potion.</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Information Wizard</div>
+<div class="minion-icon" style="background-image:url(./icons/wizard.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">2 + 1d3</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">5 + 1d8</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to the <i>Villain</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Magic</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Ping: </b>Ping a target within 3 hexes for 1 magic damage. The ping then comes back to the <i>Information Wizard</i> dealing 1 magic damage to all entities in the line.<br><b>Traceroute: </b>Select a target on the floor. The <i>Information WIzard</i> launches a projectile to a target within 2 hexes. Each tick the projectile jumps to a new unvisited target within 2 hexes, prioritizing the selected target, and deals 1 damage. If the projectile can't jump it's destroyed. If <i>Traceroute</i> hits successfully the target, they take as damage the number of jumps the projectile did. The <i>Information Wizard</i> cannot use <i>Traceroute</i> while another one is active.<br><b style="font-variant: small-caps;">Abilities</b><br><b>You have no power here (passive): </b>All adventurers’ damaging spells deal 1 less damage when you're in fight with an <i>Information Wizard</i>.<br><b>kill -STOP %WIZARD: </b>With a 1 tick action, a target <i>Wizard</i> within 3 hexes can’t cast spells or use their abilities for 3 ticks. Cooldown of 5 ticks.<br><b>Rewrite from scratch: </b>As an instantaneous action, interrupt all spells being cast in this tick. Cooldown of 10 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Information Wizards</i> all start with an <i>Evergreen staff</i> and up to 5 random <i>Rare</i> or <i>Special</i> spells.<br></p><p class="minion-note">
+<i>We must use a new framework for these spells! Are you still using Magicon 2.7? Wow those spells were obsolete 2 years ago! What are you, a dino-wizard?</i></p></div>
+</div>
+</div>
+</div>
+<div class="sheet">
+<div class="minion">
+<div class="minion-title">Guard</div>
+<div class="minion-icon" style="background-image:url(./icons/guard.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">4 + 1d6</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">2 + 1d3</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to the <i>Villain</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Security and maintenance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Bonk!: </b>The <i>Guard</i> uses the <i>Forget-me-stick</i> to attack.<br><b>HALT!: </b>Deal 1 sound damage to a target within 3 hexes. Additionally there's a 15% chance the target is immobilized in the next tick.<br><b style="font-variant: small-caps;">Abilities</b><br><b>None shall pass (passive): </b><i>Guards</i> possess the lock to the stairs. A floor with a guard cannot be cleared without first confronting the guard.<br><b>The port is by the seaside!: </b>Once every 10 ticks, <i>Guards</i> can convince you that in order to obtain <i>Permit A38</i>, you need to go up to 2 floors down with a 10% chance (7%: 1 floor, 3%: 2 floors).<br><b style="font-variant: small-caps;">Equipment</b><br><i>Guards</i> all start with the <i>Permit A38</i> and the <i>Forget-me-stick</i>.<br></p><p class="minion-note">
+<i>Halt! Who are you? What are you carrying? Yes, but how many are you? One florin.</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Janitor</div>
+<div class="minion-icon" style="background-image:url(./icons/mop.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">3 + 1d4</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>Friends</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Security and maintenance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Sweep: </b>The <i>Janitor</i> uses the <i>Magical Mop</i> to attack.<br><b>Splash!: </b>Throw the smelly content of the bucket to a target within 3 hexes. Deal 1 poison damage. The water is soapy so the target also has a 15% chance to slip and fall for an additional 1 damage.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Theeere, pretty as a picture (passive): </b>If the <i>Janitor</i> is not in a fight, they always move to the nearest piece of litter on the floor and sweep it clean with a 1 tick action (adventurer’s corpses and their equipment are pieces of… litter in their point of view).<br><b>Mentiroso (passive): </b><i>Janitors</i> can see the very deep inside of your soul: they cannot be lied to with any ability or item.<br><b>Penny: </b>Throw a penny up to 3 hexes away. The penny jams a weapon for 3 ticks. All <i>Accountants</i> within 3 hexes use their ability <i>Oh… it’s only a dime</i>, if they are able to. Cooldown of 10 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Janitors</i> all start with a <i>Magical mop</i>.<br></p><p class="minion-note">
+<i>Cleanup on floor 3! Janitors are a vital part of every tower. Your potion master just spilled their chocolate milk potion?  Your baby dragon puked on the floor?  No problem the janitor will keep everything squeaky clean!</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Technical Operator</div>
+<div class="minion-icon" style="background-image:url(./icons/operator.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">2 + 1d3</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">2 + 1d3</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>Friends</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - Security and maintenance</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Wrench Throw: </b>As a 1 tick action, deal 1 damage to a single target in a 2 hexes radius.<br><b>Leaky Pipe: </b>With a 1-2 tick(s) (suspendable) action, wet a 1-2 hexes radius area centered up to 3 hexes away. Everyone in the area trying to perform movement actions or abilities, has a 30-50% chance to slip, fall and take 1 damage instead.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Roger roger (passive): </b>If someone gives this minion a task, a <i>Technical Operator</i> can choose either to obtain 1 additional hexes movement per tick or 1 additional damage in their attacks until the task is complete or failed.<br><b>Labor union: </b>With a 1 tick action, a <i>Technical Operator</i> that has received a task, can instantly recall an existing <i>Technical Operator</i> in the floor to accomplish the task together. Cooldown of 10 ticks.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Technical Operators</i> all start with a <i>Blowtorch</i> and <i>La maglia della salute</i>.<br></p><p class="minion-note">
+<i> 'The power went out!', 'Why is the lift still out of service?', 'I need more light at this angle!', 'There is a water leak!'. No fear, there will always be a Technical Operator out there waiting for your need of help.</i></p></div>
+</div>
+</div>
+</div>
+<div class="sheet">
+<div class="minion">
+<div class="minion-title">Intern</div>
+<div class="minion-icon" style="background-image:url(./icons/intern.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>Friends</i>, <i>Neutral</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - The lowest of the low</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Is that how you do it?: </b>The <i>Intern</i> attacks an adjacent target for an equal chance to deal 1 or 2 damage, heal the target by 1 HP, or deal 1 damage to themselves or an adjacent allied unit (chosen randomly).<br><b style="font-variant: small-caps;">Abilities</b><br><b>Nothing to lose (passive): </b>A <i>Neutral</i> <i>Intern</i> will automatically join in your quest if you ask, without needing to be bribed.<br><b>Overworked (passive): </b>At the beginning of a fight and then once every 10 ticks (regardless of whether the fight is still going), an <i>Intern</i> decides whether to quit with a 25% chance. If they do, they don’t drop any loot or give any experience, going towards dismissal. A non-<i>friendly</i> <i>Intern</i> who didn’t quit twice, permanently becomes a <i>Lost Soul</i>.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Interns</i> all start with an <i>Intern Soul</i><br></p><p class="minion-note">
+<i>Why did I even accept this job?</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">Lost Soul</div>
+<div class="minion-icon" style="background-image:url(./icons/soul.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">1 + 1d2</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to <i>Friends</i>, <i>Hostile</i>.</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - The lowest of the low</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>Soul's Wail: </b>Deal 1 sound damage in a 2 hexes radius.<br><b style="font-variant: small-caps;">Abilities</b><br><b>Homicidal frustration (passive): </b>The attitude of these minions cannot be changed in any way.<br><b style="font-variant: small-caps;">Equipment</b><br><i>Lost Souls</i> all start with <i>Nothing</i>.<br></p><p class="minion-note">
+<i>The interns who accepted their fate (and their unpaid contract) are doomed. No soul remained into these poor fellows. They do not believe in anything… anymore.</i></p></div>
+</div>
+</div>
+<div class="minion">
+<div class="minion-title">PlaceHolder</div>
+<div class="minion-icon" style="background-image:url(./icons/soul.svg)">
+</div>
+<div class="minion-stats">
+<div class="minion-stat-item"><div class="stat-description">HP</div><div class="stat-value">0</div></div><div class="minion-stat-item"><div class="stat-description">MP</div><div class="stat-value">0</div></div><div class="minion-stat-item"><div class="stat-description">EP</div><div class="stat-value">0</div></div><div class="minion-stat-item" style="width:35mm"><div class="stat-description" >Default stance</div><div class="stat-value">Loyal to filler</div></div></div>
+<div class="minion-description">
+<div class="minion-department">
+Minion - filler</div>
+<div class="minion-atk-abl-note">
+<p class="minion-atk-abl">
+<b style="font-variant: small-caps;">Attacks</b><br><b>None: </b>None<br></p><p class="minion-note">
+<i>None</i></p></div>
+</div>
+</div>
+</div>
+     </body>
+</html>

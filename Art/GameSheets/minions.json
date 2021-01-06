@@ -1,0 +1,355 @@
+{
+  "Administration and Finance": [
+    {
+      "name": "Assistant Coordinator",
+      "note": "The Boss can be very busy sometimes… that’s why the Assistant Coordinators has been invented! Everybody knows they are running the hut.",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "3 + 1d4",
+        "EP": "1 + 1d2",
+        "XP": "4",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Hostile</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Smash them with a hammer!": "As a 1 tick action, deal 1 damage to a single adjacent target."
+          },
+          {
+            "Put them in a box": "As a 1 tick action, select an adjacent target to <i>put them in a box</i>. For the duration of 3 ticks, they take 2 additional damage from <i>Smash them with a hammer!</i>."
+          },
+          {
+            "Or… to save on postage": "As a 1 tick action, poison an adjacent target for 1 poison damage, 15% chance they turn into a llama instead as if they drank <i>Extract of Llama</i>."
+          }
+        ],
+        "abilities": [
+          {
+            "Very good! Here, get the snack (passive)": "Any minion within 5 hexes, gain 1 additional hex of movement per tick."
+          },
+          {
+            "Very well, Mr. Wu kærs": "With a 1 tick action, a target minion within 5 hexes gains permanently 1 additional damage. Cooldown of 10 ticks."
+          }
+        ],
+        "equipment": "<i>Assistant Coordinators</i> all start with <i>Baby seal leather boots</i> and <i>Extract of llama</i>.",
+        "specialization": {
+          "note": "Up to two <i>Assistant coordinators</i> per floor can have one of the following specializations, with 2 additional XP in case of defeat. They cannot commission tasks to each other. ",
+          "types": [
+            {
+              "Responsible": "With a 1 tick action, any minion in a 5 hexes area changes his attitude and loyalty according to the <i>Responsible</i>’s will. Cooldown of 10 ticks. The <i>Responsible</i> can also perform <b>Kill them, they murdered the emperor:</b> With a 1 tick action, they give the order to attack the same target to all minions loyal to the <i>Villain</i> they can assign tasks to. There can be up to a <i>Responsible</i> for each floor."
+            },
+            {
+              "Boss delegate": "With a 1 tick action, a <i>Boss delegate</i> can change the job of any minion within 3 hexes, giving them the appropriate equipment and changing their stats immediately (damage is not healed this way). Cooldown of 10 ticks. There can be up to a <i>Boss delegate</i> for each floor."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Accountant",
+      "note": "Even villains need to keep their finances in order. The accountant’s job may seem tedious but it is a vital one. Villains don’t fear heroes nearly as much as they do the Evil Revenue Agency. Accountants make sure they never have to deal with the latter by guaranteeing all their taxes and fees are regularly paid.",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "1 + 1d2",
+        "EP": "2 + 1d3",
+        "XP": "4",
+        "Default stance": "Loyal to <i>No One</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Get anxious with me": "An <i>Accountant</i> can use a calculator to show all the financial problems they have to solve, dealing 1 sound damage to any adventurer within 3 hexes."
+          }
+        ],
+        "abilities": [
+          {
+            "Time is money (passive)": "Every 10 ticks <i>Accountants</i> get more nervous, gaining 1 additional damage with their attacks and abilities."
+          },
+          {
+            "Oh… it’s only a dime": "Dart across the room as a 1 tick action, dealing 1 damage and knocking aside by 1 hex every entity on the line. Cooldown of 10 ticks."
+          }
+        ],
+        "equipment": "<i>Accountants</i> all start with <i>Peter Parker’s glasses</i> and a <i>Work uniform</i>."
+      }
+    },
+    {
+      "name": "Market Master",
+      "note": "My precioussssss... ",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "1 + 1d2",
+        "EP": "4 + 1d6",
+        "XP": "3",
+        "Default stance": "Loyal to <i>No One</i>, <i>Friendly</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Untrained": "<i>Market masters</i> do not attend any fight course, hence they cannot perform attacks."
+          }
+        ],
+        "abilities": [
+          {
+            "Free market (passive)": "You can trade items with these felons, but watch out for their prices. The adventurers can exchange 6 unique items of any rarity for 1 item which rarity is up to 1 tier higher than the mode of the traded items (e.g. if you exchange 3 rare items, 2 uncommon and 1 common you can get 1 epic item, in case of ties the mode of the lowest tier item counts). However the <i>Market Master</i> does not trade <i>Legendary</i> Items. When trading for an item labeled as <i>Multiple item loot</i>, apply the same rules as looting."
+          },
+          {
+            "Spread peak": "As a 1 tick action, an unpleased (mocked or robbed) <i>Market Master</i> can cry so loud their disappointment that any non-loyal to <i>No One</i> Minion in the floor, that is not in the adventurers' party, is instantly recalled next to them and turn <i>Hostile</i> to the adventurers."
+          }
+        ],
+        "equipment": "All <i>Market Masters</i> start with a <i>Precious</i>."
+      }
+    },
+    {
+      "name": "Minion Resources",
+      "note": "We are looking for interested newcomers fresh out of villain university with at least 5 years of  experience for an intern job paid in 'e x p e r i e n c e'.",
+      "stats": {
+        "HP": "4 + 1d6",
+        "MP": "1 + 1d2",
+        "EP": "1 + 1d2",
+        "XP": "5",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Intern Throw": "<i>Minion Resources</i> can yeet any <i>Intern</i> or <i>Lost Soul</i> adjacent to them to a target between 2 and 3 hexes away. The target takes as much damage as the maximum HPs of the poor soul that was thrown, but the projectile also takes 1 damage."
+          }
+        ],
+        "abilities": [
+          {
+            "Recruitment Season": "<i>Minion Resources</i> can hire new <i>Interns</i> straight out of Evil University. <i>Minion Resources</i> must choose a free tile within 2 hexes of themselves where the new <i>Intern</i> is teleported to start working immediately (a task is given as an instantaneous action). Once defeated, there’s a 10% chance that all remaining <i>Interns</i> summoned this way will join you, if they don't, they'll use this chance to go back to Uni to get their master's degree, leaving behind <i>Nothing</i>. Cooldown of 10 ticks."
+          },
+          {
+            "A work opportunity you cannot miss": "<i>Minion Resources</i> can ask you with a 1 tick action to join their cause with a 10% chance of succeeding. You then work for Evil Villainy Inc. for the duration of 3 ticks as an <i>Intern</i> loyal to the <i>Villain</i> and with <i>Neutral</i> attitude. Unpaid, of course. Cooldown of 10 ticks."
+          }
+        ],
+        "equipment": "<i>Minion Resources</i> all start with a <i>Cup of coffee</i> and a <i>Work uniform</i>."
+      }
+    }
+  ],
+  "Magic": [
+    {
+      "name": "Potion Seller",
+      "note": "Don’t ask them to sell you their strongest potion.",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "3 + 1d4",
+        "EP": "2 + 1d3",
+        "XP": "4",
+        "Default stance": "Loyal to <i>No One</i>, <i>Hostile</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "To win, you must attack!": "<i>Potion Sellers</i> can throw their potions up to 3 hexes away as a 1 tick action, in order to give the effects of the thrown potion."
+          }
+        ],
+        "abilities": [
+          {
+            "Turn to page 394 (passive)": "<i>Potion Sellers</i> produce 1 <i>Strongest Potion</i> every 10 ticks."
+          },
+          {
+            "Bertie Bott's every flavour pots": "As a 1 tick action, a <i>Potion seller</i> can add to their inventory any potion they want, but the <i>Strongest potion</i>. Cooldown of 5 ticks."
+          }
+        ],
+        "equipment": "<i>Potion sellers</i> can start with up to 3 potions of any kind, 3 <i>Toxic mixtures</i> and 1 <i>Strongest potion</i>."
+      }
+    },
+    {
+      "name": "Information Wizard",
+      "note": "We must use a new framework for these spells! Are you still using Magicon 2.7? Wow those spells were obsolete 2 years ago! What are you, a dino-wizard?",
+      "stats": {
+        "HP": "2 + 1d3",
+        "MP": "5 + 1d8",
+        "EP": "1 + 1d2",
+        "XP": "6",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Ping": "Ping a target within 3 hexes for 1 magic damage. The ping then comes back to the <i>Information Wizard</i> dealing 1 magic damage to all entities in the line."
+          },
+          {
+            "Traceroute": "Select a target on the floor. The <i>Information WIzard</i> launches a projectile to a target within 2 hexes. Each tick the projectile jumps to a new unvisited target within 2 hexes, prioritizing the selected target, and deals 1 damage. If the projectile can't jump it's destroyed. If <i>Traceroute</i> hits successfully the target, they take as damage the number of jumps the projectile did. The <i>Information Wizard</i> cannot use <i>Traceroute</i> while another one is active."
+          }
+        ],
+        "abilities": [
+          {
+            "You have no power here (passive)": "All adventurers’ damaging spells deal 1 less damage when you're in fight with an <i>Information Wizard</i>."
+          },
+          {
+            "kill -STOP %WIZARD": "With a 1 tick action, a target <i>Wizard</i> within 3 hexes can’t cast spells or use their abilities for 3 ticks. Cooldown of 5 ticks."
+          },
+          {
+            "Rewrite from scratch": "As an instantaneous action, interrupt all spells being cast in this tick. Cooldown of 10 ticks."
+          }
+        ],
+        "equipment": "<i>Information Wizards</i> all start with an <i>Evergreen staff</i> and up to 5 random <i>Rare</i> or <i>Special</i> spells.",
+        "specialization": {
+          "note": "A single <i>Information wizard</i> on the floor can have the specialization",
+          "types": [
+            {
+              "haxxor": "With a 1 tick action, any minion an <i>Information Wizard</i> could commission a task to within 5 hexes, gives up their tasks and receives a new task."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Security and maintenance": [
+    {
+      "name": "Guard",
+      "note": "Halt! Who are you? What are you carrying? Yes, but how many are you? One florin.",
+      "stats": {
+        "HP": "4 + 1d6",
+        "MP": "1 + 1d2",
+        "EP": "2 + 1d3",
+        "XP": "6",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Bonk!": "The <i>Guard</i> uses the <i>Forget-me-stick</i> to attack."
+          },
+          {
+            "HALT!": "Deal 1 sound damage to a target within 3 hexes. Additionally there's a 15% chance the target is immobilized in the next tick."
+          }
+        ],
+        "abilities": [
+          {
+            "None shall pass (passive)": "<i>Guards</i> possess the lock to the stairs. A floor with a guard cannot be cleared without first confronting the guard."
+          },
+          {
+            "The port is by the seaside!": "Once every 10 ticks, <i>Guards</i> can convince you that in order to obtain <i>Permit A38</i>, you need to go up to 2 floors down with a 10% chance (7%: 1 floor, 3%: 2 floors)."
+          }
+        ],
+        "equipment": "<i>Guards</i> all start with the <i>Permit A38</i> and the <i>Forget-me-stick</i>.",
+        "specialization": {
+          "note": "A single <i>Guard</i> per floor can add 1 additional XP in case of defeat if they have the specialization",
+          "types": [
+            {
+              "Security officer": "With a 1 tick action, the <i>Security officer</i> can instantaneously recall an existing <i>Guard</i> on the floor or promote an <i>Intern</i> into a <i>Guard</i>, giving them the appropriate equipment and changing their attitude at the <i>Security officer</i>’s will. Cooldown of 10 ticks."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Janitor",
+      "note": "Cleanup on floor 3! Janitors are a vital part of every tower. Your potion master just spilled their chocolate milk potion?  Your baby dragon puked on the floor?  No problem the janitor will keep everything squeaky clean!",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "1 + 1d2",
+        "EP": "1 + 1d2",
+        "XP": "4",
+        "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Sweep": "The <i>Janitor</i> uses the <i>Magical Mop</i> to attack."
+          },
+          {
+            "Splash!": "Throw the smelly content of the bucket to a target within 3 hexes. Deal 1 poison damage. The water is soapy so the target also has a 15% chance to slip and fall for an additional 1 damage."
+          }
+        ],
+        "abilities": [
+          {
+            "Theeere, pretty as a picture (passive)": "If the <i>Janitor</i> is not in a fight, they always move to the nearest piece of litter on the floor and sweep it clean with a 1 tick action (adventurer’s corpses and their equipment are pieces of… litter in their point of view)."
+          },
+          {
+            "Mentiroso (passive)": "<i>Janitors</i> can see the very deep inside of your soul: they cannot be lied to with any ability or item."
+          },
+          {
+            "Penny": "Throw a penny up to 3 hexes away. The penny jams a weapon for 3 ticks. All <i>Accountants</i> within 3 hexes use their ability <i>Oh… it’s only a dime</i>, if they are able to. Cooldown of 10 ticks."
+          }
+        ],
+        "equipment": "<i>Janitors</i> all start with a <i>Magical mop</i>."
+      }
+    },
+    {
+      "name": "Technical Operator",
+      "note": " 'The power went out!', 'Why is the lift still out of service?', 'I need more light at this angle!', 'There is a water leak!'. No fear, there will always be a Technical Operator out there waiting for your need of help.",
+      "stats": {
+        "HP": "2 + 1d3",
+        "MP": "1 + 1d2",
+        "EP": "2 + 1d3",
+        "XP": "4",
+        "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Wrench Throw": "As a 1 tick action, deal 1 damage to a single target in a 2 hexes radius."
+          },
+          {
+            "Leaky Pipe": "With a 1-2 tick(s) (suspendable) action, wet a 1-2 hexes radius area centered up to 3 hexes away. Everyone in the area trying to perform movement actions or abilities, has a 30-50% chance to slip, fall and take 1 damage instead."
+          }
+        ],
+        "abilities": [
+          {
+            "Roger roger (passive)": "If someone gives this minion a task, a <i>Technical Operator</i> can choose either to obtain 1 additional hexes movement per tick or 1 additional damage in their attacks until the task is complete or failed."
+          },
+          {
+            "Labor union": "With a 1 tick action, a <i>Technical Operator</i> that has received a task, can instantly recall an existing <i>Technical Operator</i> in the floor to accomplish the task together. Cooldown of 10 ticks."
+          }
+        ],
+        "equipment": "<i>Technical Operators</i> all start with a <i>Blowtorch</i> and <i>La maglia della salute</i>."
+      }
+    }
+  ],
+  "The lowest of the low": [
+    {
+      "name": "Intern",
+      "note": "Why did I even accept this job?",
+      "stats": {
+        "HP": "1 + 1d2",
+        "MP": "1 + 1d2",
+        "EP": "1 + 1d2",
+        "XP": "2",
+        "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Is that how you do it?": "The <i>Intern</i> attacks an adjacent target for an equal chance to deal 1 or 2 damage, heal the target by 1 HP, or deal 1 damage to themselves or an adjacent allied unit (chosen randomly)."
+          }
+        ],
+        "abilities": [
+          {
+            "Nothing to lose (passive)": "A <i>Neutral</i> <i>Intern</i> will automatically join in your quest if you ask, without needing to be bribed."
+          },
+          {
+            "Overworked (passive)": "At the beginning of a fight and then once every 10 ticks (regardless of whether the fight is still going), an <i>Intern</i> decides whether to quit with a 25% chance. If they do, they don’t drop any loot or give any experience, going towards dismissal. A non-<i>friendly</i> <i>Intern</i> who didn’t quit twice, permanently becomes a <i>Lost Soul</i>."
+          }
+        ],
+        "equipment": "<i>Interns</i> all start with an <i>Intern Soul</i>"
+      }
+    },
+    {
+      "name": "Lost Soul",
+      "note": "The interns who accepted their fate (and their unpaid contract) are doomed. No soul remained into these poor fellows. They do not believe in anything… anymore.",
+      "stats": {
+        "HP": "1 + 1d2",
+        "MP": "1 + 1d2",
+        "EP": "1 + 1d2",
+        "XP": "2",
+        "Default stance": "Loyal to <i>Friends</i>, <i>Hostile</i>."
+      },
+      "description": {
+        "attacks": [
+          {
+            "Soul's Wail": "Deal 1 sound damage in a 2 hexes radius."
+          }
+        ],
+        "abilities": [
+          {
+            "Homicidal frustration (passive)": "The attitude of these minions cannot be changed in any way."
+          }
+        ],
+        "equipment": "<i>Lost Souls</i> all start with <i>Nothing</i>."
+      }
+    }
+  ]
+}
