@@ -5,7 +5,6 @@
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="cardsStyle.css">
 </head>
 <body>
@@ -27,8 +26,8 @@ $(document).ready( function() {
 <div class="item">
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
-<div class="item-title">Long sword-nothing-special</div>
-<div class="item-description"><p>If you are a fighter, you can consume 1 use and spend 2 EP to perform an additional attack with Long sword-nothing-special in the same tick, enemies targeted by the second attack have a 60% chance to dodge.<br><br><i>Another boring weapon.</i></p></div>
+<div class="item-title">Longsword-nothing-special</div>
+<div class="item-description"><p>If you are a fighter, you can consume 1 use and spend 2 EP to perform an additional attack with <i>Longsword-nothing-special</i> in the same tick, enemies targeted by the second attack have a 60% chance to dodge.<br><br><i style="font-weight: lighter; color: lightslategrey;">Another boring weapon.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:15&nbsp;</div>
@@ -40,11 +39,11 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/ranged.svg)">
 </div>
 <div class="item-title">Java-elin-nothing-special</div>
-<div class="item-description"><p>Your target must be at least 3 hexes away. If your target is 6 or more hexes away, double the damage. You have to recover this item any time you throw it.<br><br><i>public static void retrieve()</i></p></div>
+<div class="item-description"><p>Your target must be at least 3 hexes away. If your target is 6 or more hexes away, double the damage. You have to recover this item any time you throw it.<br><br><i style="font-weight: lighter; color: lightslategrey;">public static void retrieve()</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:20&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
-<div class="stat"><img class="stat-icon" src="./icons/range.svg">:15&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/range.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/damage.svg">:3&nbsp;</div>
 </div>
 </div>
@@ -52,7 +51,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Flamethrower</div>
-<div class="item-description"><p>Lets you emit a jet of glowing fire in a 5 hexes line. Any target in the area suffers 4 fire damage.<br><br><i>Hans… get ze flammenwerfer!</i></p></div>
+<div class="item-description"><p>Lets you emit a jet of glowing fire in a 5 hexes line. Any target in the area suffers 4 fire damage.<br><br><i style="font-weight: lighter; color: lightslategrey;">Hans… get ze flammenwerfer!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:15&nbsp;</div>
@@ -63,7 +62,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Invisible hammer</div>
-<div class="item-description"><p>You cannot use invisible items, unless you can see them.<br><br><i>It is thou cannot see it. You don’t know if you have it. Maybe It doesn't exist, but still you can try to sell it.</i></p></div>
+<div class="item-description"><p>You cannot use invisible items, unless you can see them.<br><br><i style="font-weight: lighter; color: lightslategrey;">It is thou cannot see it. You don’t know if you have it. Maybe It doesn't exist, but still you can try to sell it.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:20&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -74,7 +73,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Sensational Sentient Sentry</div>
-<div class="item-description"><p>The SSS hovers around you. You can ask it to defend you or attack with an instantaneous action (but it stays in any mode for at least 3 ticks). In defense mode the sentry will shoot at projectiles approaching you and remove up to 2 damage from them. In attack mode, they attack the same target as you, dealing 2 damage. Any action the SSS performs reduces the uses of SSS by 1. Unfortunately the SSS also loves to talk and never shuts up, distracting you and making you lose 5% AG. If you have Earplugs you can ignore this debuff.<br><br><i>Oh let’s attack that guy. Oooh watch out with that sword you could hit me! Hey am I the only one who’s hungry? I’m getting dizzy hovering around.</i></p></div>
+<div class="item-description"><p>The <i>SSS</i> hovers around you. You can ask it to defend you or attack with an instantaneous action (but it stays in any mode for at least 3 ticks). In defense mode the sentry will shoot at projectiles approaching you and remove up to 2 damage from them. In attack mode, they attack the same target as you, dealing 2 damage. Any action the <i>SSS</i> performs reduces the uses of <i>SSS</i> by 1. Unfortunately the <i>SSS</i> also loves to talk and never shuts up, distracting you and making you lose 5% AG. If you have <i>Earplugs</i>, ignore this debuff.<br><br><i style="font-weight: lighter; color: lightslategrey;">Oh let’s attack that guy. Oooh watch out with that sword you could've hit me! Hey am I the only one who’s hungry? I’m getting dizzy hovering around.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:15&nbsp;</div>
 </div>
@@ -83,7 +82,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/melee.svg)">
 </div>
 <div class="item-title">Cotton Candy Mace</div>
-<div class="item-description"><p>You can consume 3 uses of the Cotton Candy Mace as a bribe or consume 4 hits to restore 3 HPs. Hitting a minion with this weapon makes them sticky. They have to spend 1 tick cleaning themselves up or they are stuck in place. If you get hit with water when holding the Cotton Candy Mace, it melts.<br><br><i>Thousands of clouds are killed every year to make cotton candy.</i></p></div>
+<div class="item-description"><p>You can consume 3 uses of the <i>Cotton Candy Mace</i> as a bribe or consume 4 hits to restore 3 HPs. Hitting a minion with this weapon makes them sticky. They have to spend 1 tick cleaning themselves up or they are stuck in place. If you get hit with water when holding the <i>Cotton Candy Mace</i>, it melts.<br><br><i style="font-weight: lighter; color: lightslategrey;">Thousands of clouds are killed every year to make cotton candy.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:20&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/damage.svg">:1&nbsp;</div>
@@ -93,7 +92,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Invisibility clock</div>
-<div class="item-description"><p>Your AG versus ranged weapons becomes 50%. Consume 1 hit of Invisibility clock to become invisible for as long as you want. You can only perform movement actions if you want to remain unseen. After 10 ticks the clock rings revealing your position to entities in a 3 hexes radius area.<br><br><i>What’s that mysterious ticking noise? It’s kinda catchy...</i></p></div>
+<div class="item-description"><p>Your AG versus ranged weapons increases up to 50%. Consume 1 hit of <i>Invisibility clock</i> to become invisible for as long as you want. You can only perform movement actions if you want to remain unseen. After 10 ticks the clock rings revealing your position to entities in a 3 hexes radius area.<br><br><i style="font-weight: lighter; color: lightslategrey;">What’s that mysterious ticking noise? It’s kinda catchy...</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
@@ -103,7 +102,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Gargoyle tiara</div>
-<div class="item-description"><p>This item can absorb any kind of damage with its resistance, but poison, holy and unholy damage. You obtain the ability Stone power activate: As a 1 tick action, emit a blinding glow so that anyone within 2 hexes radius from you becomes blind for 5 ticks. You turn yourself into stone for 3 ticks in the process. You cannot perform any action for the duration, but you dodge any attack or spell intended for you in this state.<br><br><i>The dawn will take you all!</i></p></div>
+<div class="item-description"><p>This item can absorb any kind of damage with its resistance, but poison, holy and unholy damage. You obtain the ability <b>Stone power activate:</b> As a 1 tick action, emit a blinding glow so that anyone within 2 hexes radius from you becomes blind for 5 ticks. You turn yourself into stone for 3 ticks in the process. You cannot perform any action for the duration, but you dodge any attack or spell intended for you in this state.<br><br><i style="font-weight: lighter; color: lightslategrey;">The dawn will take you all!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:0&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:1&nbsp;</div>
@@ -114,7 +113,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Thorn chest</div>
-<div class="item-description"><p>Any time you receive a melee attack, you give back 2 damage. Lose 10% AG.<br><br><i>Oke.</i></p></div>
+<div class="item-description"><p>Any time you receive a melee attack, you give back 2 damage. Lose 10% AG.<br><br><i style="font-weight: lighter; color: lightslategrey;">Oke.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:6&nbsp;</div>
@@ -124,7 +123,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Batman’ suit</div>
-<div class="item-description"><p>You spend 1 EP less than usual. No one can understand what you’re saying, so minions give up demanding an answer from you. Half the resistance of this item (rounded down) can be applied to fire damage too. You cannot wear other armour items. As Batman’ suit reaches zero hits, discard it and replace it with a Ratman’ suit.<br><br><i>Because I’m Batman.</i></p></div>
+<div class="item-description"><p>You spend 1 EP less than usual. No one can understand what you’re saying, so minions give up demanding an answer from you. Half the resistance of this item (rounded down) can be applied to fire damage too. You cannot wear other armour items. As <i>Batman’ suit</i> reaches zero hits, discard it and replace it with a <i>Ratman’ suit</i> from the Special Armours’ pile.<br><br><i style="font-weight: lighter; color: lightslategrey;">Because I’m Batman.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:15&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:5&nbsp;</div>
@@ -134,7 +133,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">Turtle shell</div>
-<div class="item-description"><p>You can consume 3 hits from this item with an instantaneous action, to retreat into the shell and completely negate an attack or a spell that targets you. Lose 10% AG.<br><br><i>Maremma impestata Alvaruccio! Te tu m’ha fatto rompere tutt’l mi guscio.</i></p></div>
+<div class="item-description"><p>You can consume 3 hits from this item with an instantaneous action, to retreat into the shell and completely negate an attack or a spell that targets you. Lose 10% AG.<br><br><i style="font-weight: lighter; color: lightslategrey;">Maremma impestata Alvaruccio! Te tu m’ha fatto rompere tutt’l mi guscio.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:15&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:3&nbsp;</div>
@@ -144,7 +143,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/armour.svg)">
 </div>
 <div class="item-title">The ugliest Holiday’s sweater</div>
-<div class="item-description"><p>The ugliest holiday’s  sweater itches like crazy making you lose your AG. However, if you’re also wearing La maglia della salute, you lose this debuff.<br><br><i>I’m wearing a shirt under it, how does it still itch?!</i></p></div>
+<div class="item-description"><p>The ugliest holiday’s  sweater itches like crazy making you lose your AG. However, if you’re also wearing <i>La maglia della salute</i>, you lose this debuff.<br><br><i style="font-weight: lighter; color: lightslategrey;">I’m wearing a shirt under it, how does it still itch?!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:4&nbsp;</div>
@@ -154,7 +153,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Fire Bowl!</div>
-<div class="item-description"><p>Summon a burning bowl overturned on the heads of the enemies in a 3 hexes radius area for a duration of 3 ticks. They become temporarily blind and take 3 fire damage each tick.<br><br><i>Enjoy your meal.</i></p></div>
+<div class="item-description"><p>Summon a burning bowl overturned on the heads of the enemies in a 3 hexes radius area for a duration of 3 ticks. They become temporarily blind and take 3 fire damage each tick.<br><br><i style="font-weight: lighter; color: lightslategrey;">Enjoy your meal.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -165,7 +164,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Let it snow!</div>
-<div class="item-description"><p>Bring forth a flurry of snow of radius 2 that lingers for 5 ticks. Targets caught in the flurry take 1 tick more to perform any action and lose their AG. Targets that stay in the flurry for at least 3 consecutive ticks are frozen for 3 additional ticks and take 3 magic damage.<br><br><i>Let it gooooo. Let it gooooooo.</i></p></div>
+<div class="item-description"><p>Bring forth a flurry of snow of radius 2 that lingers for 5 ticks. Targets caught in the flurry take 1 tick more to perform any action and lose their AG. Targets that stay in the flurry for at least 3 consecutive ticks are frozen, taking 3 magic damage and remaining stunned for 3 additional ticks.<br><br><i style="font-weight: lighter; color: lightslategrey;">Let it gooooo. Let it gooooooo.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:2&nbsp;</div>
@@ -176,7 +175,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Kira Queen Da Ichi No Bakudan!</div>
-<div class="item-description"><p>Enchant an item or tile. If someone touches it, an explosion occurs that deals 5 magic damage and 3 fire damage<br><br><i>Click!</i></p></div>
+<div class="item-description"><p>Enchant an item or tile. If someone touches it, an explosion occurs that deals 5 magic damage and 3 fire damage<br><br><i style="font-weight: lighter; color: lightslategrey;">Click!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -187,7 +186,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Divination</div>
-<div class="item-description"><p>Choose a target within 5 hexes. For the next 4 ticks, you know any action the target is going to do before you decide yours.<br><br><i>Your next line is...</i></p></div>
+<div class="item-description"><p>Choose a target within 5 hexes. For the next 4 ticks, you know any action the target is going to do before you decide yours.<br><br><i style="font-weight: lighter; color: lightslategrey;">Your next line is...</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -200,7 +199,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">There you are</div>
-<div class="item-description"><p>Draw an ancient rune on the floor. Reveal permanently all the invisible units in a 6 hexes radius area from the tile where the rune has been placed.<br><br><i>Magic is not always powerful.</i></p></div>
+<div class="item-description"><p>Draw an ancient rune on the floor. Reveal permanently all the invisible units in a 6 hexes radius area from the tile where the rune has been placed.<br><br><i style="font-weight: lighter; color: lightslategrey;">Magic is not always powerful.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -211,7 +210,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/spell.svg)">
 </div>
 <div class="item-title">Dehydrate</div>
-<div class="item-description"><p>Select a target within 3 hexes, transform it into a neat little cube for up to 5 ticks or until you splash it with water.<br><br><i>Sir, you really need to empty your pockets more often!</i></p></div>
+<div class="item-description"><p>Select a target within 3 hexes, transform it into a neat little cube for up to 5 ticks or until you splash it with water.<br><br><i style="font-weight: lighter; color: lightslategrey;">Sir, you really need to empty your pockets more often!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -222,7 +221,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Fireworks</div>
-<div class="item-description"><p>Multiple item loot. Fires a crackling shows of burning lights in a chosen direction. Anyone in a 10 hexes line, takes 7 damage and 1 fire damage.<br><br><i>Memare is a lifestyle.</i></p></div>
+<div class="item-description"><p>Multiple item loot. Fires a crackling shows of burning lights in a chosen direction. Anyone in a 10 hexes line, takes 7 damage and 1 fire damage.<br><br><i style="font-weight: lighter; color: lightslategrey;">Memare is a lifestyle.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:2&nbsp;</div>
@@ -232,7 +231,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Hammer and Chisel</div>
-<div class="item-description"><p>Can be used to make a hole in the floor or a wall. You can also use this item to free the Sword from the stone: you gain the item Excalibur. Occupy 1 slot in the backpack.<br><br><i>Rolling stones gathers no moss. But they really wanna kill Bucciarati.</i></p></div>
+<div class="item-description"><p>Can be used to make a hole in the floor or a wall. You can also use this item to free the Sword from the stone: you gain the item Excalibur. Occupy 1 slot in the <i>backpack</i>.<br><br><i style="font-weight: lighter; color: lightslategrey;">Rolling stones gathers no moss. But they really wanna kill Bucciarati.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
@@ -243,7 +242,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Jacque-Hammer</div>
-<div class="item-description"><p>Can be used to make a hole in the floor or a wall. You can also use this item to free the Sword from the stone: you gain the item Excalibur. Alternatively fall 1 floor when digging. If there’s a target under you, they take 10 damage.<br><br><i>HonHonHonHonHonHonHon.</i></p></div>
+<div class="item-description"><p>Can be used to make a hole in the floor or a wall. You can also use this item to free the Sword from the stone: you gain the item <i>Excalibur</i> from the Special weapons’ pile. Alternatively fall 1 floor when digging. If there’s a target under you, they take 10 damage.<br><br><i style="font-weight: lighter; color: lightslategrey;">HonHonHonHonHonHonHon.</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/slots.svg">:2&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
@@ -254,7 +253,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Evil necktie</div>
-<div class="item-description"><p>You can perform a 1 tick action to convince a minion to wear this necktie with a 40% chance of success. If they have already lost an action admiring your Superior moral boots, you automatically lend this item to them, forcing him to wear it. Any unit that wears Evil necktie runs away never to be seen again.<br><br><i>Muahahahah ahahhaah!</i></p></div>
+<div class="item-description"><p>You can perform a 1 tick action to convince a minion to wear this necktie with a 40% chance of success. If they have ever already lost an action admiring your <i>Superior moral boots</i>, you automatically lend this item to them, forcing him to wear it. Any unit that wears <i>Evil necktie</i> runs away never to be seen again.<br><br><i style="font-weight: lighter; color: lightslategrey;">Muahahahah ahahhaah!</i></p></div>
 <div class="item-stats">
 </div>
 </div>
@@ -262,7 +261,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Potion of agility</div>
-<div class="item-description"><p>Multiple item loot. Increase your AG up to 70% for the duration of 4 ticks.<br><br><i>Now it's time for some wishy back and forth banter. You go first!</i></p></div>
+<div class="item-description"><p>Multiple item loot. Increase your AG up to 70% for the duration of 4 ticks.<br><br><i style="font-weight: lighter; color: lightslategrey;">Now it's time for some wishy back and forth banter. You go first!</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
@@ -272,7 +271,7 @@ $(document).ready( function() {
 <div class="item-icon" style="background-image:url(./icons/misc.svg)">
 </div>
 <div class="item-title">Flex glue</div>
-<div class="item-description"><p>Multiple item loot. Glue a target adjacent to you in place for 5 ticks. They can’t perform movement actions.<br><br><i>Certified by Phil Very Fast</i></p></div>
+<div class="item-description"><p>Multiple item loot. Glue a target adjacent to you in place for 5 ticks. They are immobilized for the duration.<br><br><i style="font-weight: lighter; color: lightslategrey;">Certified by Phil Very Fast</i></p></div>
 <div class="item-stats">
 <div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
 <div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>

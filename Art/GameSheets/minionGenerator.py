@@ -145,7 +145,7 @@ def generate(i):
 
                 page += '</p>'
 
-                page += openNote + f'<i>{minion["note"]}</i></p>'
+                page += openNote + f'{minion["note"]}</p>'
 
                 page += closeDiv
 

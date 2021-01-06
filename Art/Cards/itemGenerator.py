@@ -2,8 +2,14 @@ import json
 import math
 from multiprocessing import Process
 
-files = ["common", "uncommon", "rare", "epic", "legendary", "special"]
-copies = [3, 2, 1, 1, 1, 3]
+file = "items.json"
+copies = {
+        "Common Items": 3,
+         "Uncommon Items": 2,
+         "Rare Items": 1,
+         "Epic Items": 1,
+         "Legendary Items": 1,
+         "Special Items": 3}
 
 webPageHeader = """ <!DOCTYPE html>
 <html>
@@ -68,9 +74,7 @@ def getStatIcon(statName, statValue):
         return f'<div class="stat"><img class="stat-icon" src="{iconPaths[statName]}">:{statValue}&nbsp;</div>\n'
 
 
-def generate(i):
-    file = files[i]
-
+def generate(itemCategory, data):
     page = webPageHeader
 
     openPage = """<div class="page">\n"""
@@ -81,92 +85,93 @@ def generate(i):
 
     closeDiv = """</div>\n"""
 
-    with open(f'./{file}.json', encoding='utf-8', mode='r') as cardsFileJ:
-        data = json.load(cardsFileJ)
 
-        for k, v in data.items():
-            if k != "role_change":
-                data[k] *= copies[i]
+    for k, v in data.items():
+        if k != "role change":
+            data[k] *= copies[itemCategory]
 
-        itemsNo = 0
-        for _k, v in data.items():
-            itemsNo += len(v)
+    itemsNo = 0
+    for _k, v in data.items():
+        itemsNo += len(v)
 
-        if((itemsNo % 4) != 0):
-            data["filler"] = (
-                4-(itemsNo % 4)) * [{"name": "PlaceHolder", "description": "None", "note": "None"}]
+    if((itemsNo % 4) != 0):
+        data["filler"] = (
+            4-(itemsNo % 4)) * [{"name": "PlaceHolder", "description": "None", "note": "None"}]
 
-        itemsNo += (4-(itemsNo % 4))
+    itemsNo += (4-(itemsNo % 4))
 
-        currentItem = 0
+    currentItem = 0
 
-        page += openPage
+    page += openPage
 
-        for category, itemList in data.items():
+    for category, itemList in data.items():
 
-            for item in itemList:
-                page += openItem
+        for item in itemList:
+            page += openItem
 
-                itemIcon = category
+            itemIcon = category
 
-                if category == "weapons":
-                    if "range" in item:
-                        itemIcon = "ranged"
-                    else:
-                        itemIcon = "melee"
-
-                page += getIconOpeningTag(itemIcon) + closeDiv
-                page += openTitle + f'{item["name"]}' + closeDiv
-
-                page += openDescription
-                if "description" in item:
-                    page += item["description"] + "<br><br>"
-
-                page += f'<i>{item["note"]}</i></p>'
-                page += closeDiv
-
-                page += openStats
-
-                if "slots" in item:
-                    page += getStatIcon("slots", item["slots"])
-                if "uses" in item:
-                    page += getStatIcon("uses", item["uses"])
-                if "hits" in item:
-                    page += getStatIcon("hits", item["hits"])
-                if "ticks" in item:
-                    page += getStatIcon("ticks", item["ticks"])
+            if category == "weapons":
                 if "range" in item:
-                    page += getStatIcon("range", item["range"])
-                if "mana" in item:
-                    page += getStatIcon("mana", item["mana"])
-                if "damage" in item:
-                    page += getStatIcon("damage", item["damage"])
-                if "resistance" in item:
-                    page += getStatIcon("resistance", item["resistance"])
+                    itemIcon = "ranged"
+                else:
+                    itemIcon = "melee"
 
-                page += closeDiv
+            page += getIconOpeningTag(itemIcon) + closeDiv
+            page += openTitle + f'{item["name"]}' + closeDiv
 
-                page += closeDiv
+            page += openDescription
+            if "description" in item:
+                page += item["description"] + "<br><br>"
 
-                if currentItem % 16 == 15 and currentItem != 0 and currentItem != itemsNo-1:
-                    page += closeDiv + openPage
+            page += f'<i style="font-weight: lighter; color: lightslategrey;">{item["note"]}</i></p>'
+            page += closeDiv
 
-                currentItem += 1
+            page += openStats
 
-        page += closeDiv
-        page += webPageFooter
+            if "slots" in item:
+                page += getStatIcon("slots", item["slots"])
+            if "uses" in item:
+                page += getStatIcon("uses", item["uses"])
+            if "hits" in item:
+                page += getStatIcon("hits", item["hits"])
+            if "ticks" in item:
+                page += getStatIcon("ticks", item["ticks"])
+            if "range" in item:
+                page += getStatIcon("range", item["range"])
+            if "mana" in item:
+                page += getStatIcon("mana", item["mana"])
+            if "damage" in item:
+                page += getStatIcon("damage", item["damage"])
+            if "resistance" in item:
+                page += getStatIcon("resistance", item["resistance"])
 
-        with open(f'./{file}.html', encoding='utf-8', mode='w') as htmlFile:
-            htmlFile.write(page)
+            page += closeDiv
+
+            page += closeDiv
+
+            if currentItem % 16 == 15 and currentItem != 0 and currentItem != itemsNo-1:
+                page += closeDiv + openPage
+
+            currentItem += 1
+
+    page += closeDiv
+    page += webPageFooter
+
+    with open(f'./{itemCategory}.html', encoding='utf-8', mode='w') as htmlFile:
+        htmlFile.write(page)
 
 
 if __name__ == '__main__':
     processes = []
 
-    for i in range(len(files)):
-        p = Process(target=generate, args=(i,))
-        p.start()
-        processes.append(p)
+    with open(f'./{file}', encoding='utf-8', mode='r') as cardsFileJ:
+        data = json.load(cardsFileJ)
 
-    for p in processes:
-        p.join()
+        for k,v in data.items():
+            p = Process(target=generate, args=(k,v,))
+            p.start()
+            processes.append(p)
+
+        for p in processes:
+            p.join()

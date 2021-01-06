@@ -6,7 +6,7 @@ body {
     font-size: 3mm;
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -25,6 +25,8 @@ p{
     height: 67mm;
     width: 47mm;
     background-color: linen;
+    border: 1px solid black;
+    border-radius: 2mm;
     box-sizing: border-box;
     margin-top: 2mm;
 }
@@ -38,7 +40,8 @@ p{
     height: 10mm;
     right: 0;
     top: 0;
-    border: 1px solid red;
+    border: solid black;
+    border-width: 0 0 1px 1px;
     box-sizing: border-box;
 }
 
@@ -52,9 +55,12 @@ p{
     width: 37mm;
     height: 10mm;
     flex-grow: 0;
-    border: 1px solid black;
+    border: solid black;
+    border-width: 0px 0px 1px 0;
     padding: 1mm;
     box-sizing: border-box;
+    font-variant: all-small-caps;
+    font-weight: bold;
 }
 
 .item-description {
@@ -62,31 +68,31 @@ p{
     width: 47mm;
     height: 52mm;
     top: 10mm;
-    border: 1px solid black;
     padding: 1mm;
     box-sizing: border-box;
     flex-grow: 2;
     font-size: 3mm;
 }
 
-.item-stats{
+.item-stats {
     display: flex;
     align-items: center;
     position: absolute;
     width: 47mm;
     height: 5mm;
     bottom: 0;
-    border: 1px solid black;
+    border: solid black;
+    border-width: 1px 0 0 0;
     box-sizing: border-box;
     padding-left: 1mm;
 }
 
-.stat{
+.stat {
     display: flex;
     align-items: center;
 }
 
-.stat-icon{
+.stat-icon {
     width: 3.5mm;
     height: 3.5mm;
 }
