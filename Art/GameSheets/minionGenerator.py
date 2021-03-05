@@ -14,11 +14,23 @@ webPageHeader = """ <!DOCTYPE html>
 
 <body>
     <script type="text/javascript">
-    function adjustTextSize(textElement, containingElement) {
-        while (textElement.height() > containingElement.height()) {
-            let currentHeight = parseFloat(textElement.css("font-size"));
-            console.log(currentHeight);
-            textElement.css("font-size", currentHeight - 0.1);
+
+    function totalHeight(elements){
+        let elementsHeight = 0;
+        elements.each(function(){
+            elementsHeight += $(this).height();
+        });
+
+        return elementsHeight;
+    }
+
+    function adjustTextSize(textElements, containingElement) {
+        while (totalHeight(textElements) > containingElement.height()-15) {
+            textElements.each( function(){
+                let textElement = $(this);
+                let currentHeight = parseFloat(textElement.css("font-size"));
+                textElement.css("font-size", currentHeight - 0.1);        
+            });
         }
     };
 
@@ -26,10 +38,7 @@ webPageHeader = """ <!DOCTYPE html>
         $(".minion-atk-abl-note").each(function() {
             let descriptionDiv = $(this);
             let descriptions = descriptionDiv.children("p");
-            descriptions.each( function() { 
-                adjustTextSize( $(this), descriptionDiv); 
-                }
-            );
+            adjustTextSize( descriptions, descriptionDiv); 
         });
     });
     </script>
@@ -44,17 +53,22 @@ webPageFooter = """     </body>
 
 def getIconOpeningTag(iconName):
     iconPaths = {
-        "Assistant Coordinator": "./icons/coordinator.svg",
+        "Boss delegate": "./icons/coordinator.svg",
+        "Floor responsible": "./icons/responsible.svg",
+        "Lawyer": "./icons/law-book.svg",
+        "Public relations": "./icons/public-relation.svg",
         "Accountant": "./icons/accountant.svg",
-        "Market Master": "./icons/market.svg",
-        "Minion Resources": "./icons/minion_resources.svg",
-        "Potion Seller": "./icons/cauldron.svg",
-        "Information Wizard": "./icons/wizard.svg",
+        "Market master": "./icons/market.svg",
+        "Minion resources": "./icons/minion-resources.svg",
+        "Potion seller": "./icons/cauldron.svg",
+        "Information wizard": "./icons/wizard.svg",
         "Guard": "./icons/guard.svg",
+        "Security officer": "./icons/badge.svg",
         "Janitor": "./icons/mop.svg",
-        "Technical Operator": "./icons/operator.svg",
+        "Technical operator": "./icons/operator.svg",
         "Intern": "./icons/intern.svg",
-        "Lost Soul": "./icons/soul.svg",
+        "Lost soul": "./icons/soul.svg",
+        "Right hand man": "./icons/broccoli.svg",
         "PlaceHolder": "./icons/soul.svg"
     }
 
@@ -71,7 +85,9 @@ def generate(i):
     openTitle = """<div class="minion-title">"""
     openStats = """<div class="minion-stats">\n"""
     openDescription = """<div class="minion-description">\n"""
+    openDepXp = """<div class="minion-dep-xp">\n"""
     openDepartment = """<div class="minion-department">\n"""
+    openXp = """<div class="minion-xp">\n"""
     openAtkAblNote = """<div class="minion-atk-abl-note">\n"""
     openAtkAbl = """<p class="minion-atk-abl">\n"""
     openNote = """<p class="minion-note">\n"""
@@ -87,7 +103,7 @@ def generate(i):
 
         if((minionNo % 3) != 0):
             data["filler"] = (
-                3-(minionNo % 3)) * [{"name": "PlaceHolder", "stats": {"HP": "0", "MP": "0", "EP": "0", "Default stance": "Loyal to filler"}, "description": {"attacks": [{"None": "None"}]}, "note": "None"}]
+                3-(minionNo % 3)) * [{"name": "PlaceHolder", "stats": {"HP": "0", "MP": "0", "EP": "0", "XP":"0", "Default stance": "Loyal to filler"}, "description": {"attacks": [{"None": "None"}]}, "note": "None"}]
 
         minionNo += (3-(minionNo % 3))
 
@@ -121,7 +137,12 @@ def generate(i):
                 #--------------------------------------------------#
                 page += openDescription
 
+                #--------------------------------------------------#
+                page += openDepXp
                 page += openDepartment + f'Minion - {department}' + closeDiv
+                page += openXp + f'XP: {stats["XP"]}' + closeDiv
+                page += closeDiv
+                #--------------------------------------------------#
 
                 description = minion["description"]
 
@@ -144,6 +165,8 @@ def generate(i):
                     page += f'<b style="font-variant: small-caps;">Equipment</b><br>{description["equipment"]}<br>'
 
                 page += '</p>'
+
+                page += '<hr class="description-separator">'
 
                 page += openNote + f'{minion["note"]}</p>'
 

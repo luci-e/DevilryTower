@@ -10,6 +10,10 @@ p {
     margin: 0;
 }
 
+b {
+    font-size: inherit;
+}
+
 .pages {
     display: flex;
     flex-direction: column;
@@ -24,7 +28,7 @@ p {
 
 .minion {
     position: relative;
-    height: 195mm;
+    height: 200mm;
     width: 96mm;
     padding: 3mm;
     background-color: linen;
@@ -56,7 +60,7 @@ p {
     right: 3mm;
     border: 1px solid black;
     box-sizing: border-box;
-    background-size: 90% 90%;
+    background-size: 85% 85%;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 1mm;
@@ -84,7 +88,8 @@ p {
     text-align: center;
 }
 
-.stat-value, .stat-value * {
+.stat-value,
+.stat-value * {
     font-size: 3.75mm;
 }
 
@@ -126,8 +131,29 @@ p {
     text-align: justify;
 }
 
+.minion-dep-xp {
+    width: 89mm;
+    height: 10mm;
+    display: flex;
+    justify-content: space-between;
+}
+
 .minion-department {
-    width: 100%;
+    width: 71mm;
+    height: 10mm;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 2mm;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 4.16mm;
+    display: flex;
+    align-items: center;
+    border-radius: 1mm;
+}
+
+.minion-xp {
+    width: 16mm;
     height: 10mm;
     border: 1px solid black;
     box-sizing: border-box;
@@ -148,22 +174,29 @@ p {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 2mm 3mm;
     border-radius: 1mm;
 }
 
 .minion-atk-abl {
     width: 100%;
-    height: 125mm;
     margin-top: 0;
+}
+
+.description-separator {
+    height: 0px;
+    width: 95%;
+    margin-left: auto;
+    border-style: groove;
+    border-top: 1px lightslategray;
 }
 
 .minion-note {
     width: 100%;
+    text-align: center;
     font-weight: lighter;
     color: lightslategrey;
     font-style: italic;
     font-size: 3.5mm;
+    margin: auto;
 }
-

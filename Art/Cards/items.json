@@ -1,445 +1,19 @@
 {
-  "Common Items": {
-    "weapons": [
-      {
-        "name": "Stick",
-        "uses": 3,
-        "ticks": 1,
-        "damage": 1,
-        "description": "Multiple item loot.",
-        "note": "By the shape you can tell that it’s the humerus of a tree. This one is not particularly funny."
-      },
-      {
-        "name": "Coconut",
-        "uses": 1,
-        "ticks": 1,
-        "damage": 1,
-        "range": 3,
-        "note": "The coconut nut is a giant nut and kills more people than sharks do (Warning: not a nut)."
-      },
-      {
-        "name": "Blunt tip scissors",
-        "uses": 3,
-        "ticks": 1,
-        "damage": 1,
-        "note": "Non pointed: Muciaccia approved."
-      },
-      {
-        "name": "Very small rock",
-        "uses": 1,
-        "ticks": 1,
-        "damage": 1,
-        "range": 2,
-        "description": "Multiple item loot. Throw it at the same range to make a weird noise in a 2 hex range. All minions that are facing away from the noise have a 10% chance to look behind them in the next tick, losing their actions.",
-        "note": "Can also be used to make strange noises resembling a BOAR!"
-      },
-      {
-        "name": "3-Tines fork",
-        "uses": 1,
-        "ticks": 1,
-        "damage": 1,
-        "description": "Multiple item loot",
-        "note": "A very small trident to rule the seven forking seas."
-      },
-      {
-        "name": "Throwing knife",
-        "uses": 1,
-        "ticks": 1,
-        "range": 5,
-        "damage": 1,
-        "description": "Multiple item loot. You can spend 1+2+3 EP to throw up to 2 additional knives in the same tick.",
-        "note": "MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDA! MUDAAAAA!"
-      },
-      {
-        "name": "Boxing Gloves",
-        "uses": 1,
-        "ticks": 1,
-        "slots": 2,
-        "damage": 1,
-        "description": "Spend 1 EP to attack twice the same target in the same tick with <i>Boxing Gloves</i>. Occupy only 1 slot in the <i>backpack</i>.",
-        "note": "Give ‘em the old 1-2!"
-      }
-    ],
-    "armour": [
-      {
-        "name": "Cup-head helmet",
-        "hits": 1,
-        "resistance": 1,
-        "description": "Spend 1 additional EP after jumping to perform a <b>Double jump</b>: Instead of landing in the selected destination, you can land in an adjacent hex in the next tick. If there’s an enemy near the landing location you can parry them, dealing 1 damage.",
-        "note": "Do not deal with the Devil!"
-      },
-      {
-        "name": "Earplugs",
-        "hits": 5,
-        "slots": 0,
-        "description": "Multiple item loot. Ignore the sound damage or effects that you could suffer and reduce the hits of <i>Earplugs</i> by 1.",
-        "note": "Deaf people do not understand the effort."
-      },
-      {
-        "name": "Cotton T-Shirt",
-        "hits": 1,
-        "resistance": 1,
-        "slots": 0,
-        "description": "With a 1 tick action T-pose in front of a minion for a 50% chance to stun them in the next tick. Discard <i>Cotton T-Shirt</i> if the action was successful.",
-        "note": "T pose to assert dominance."
-      },
-      {
-        "name": "Oven mittens",
-        "hits": 1,
-        "slots": 2,
-        "resistance": 1,
-        "description": "<i>Oven mittens</i> absorb 1 additional fire damage. <i>Oven mittens</i> occupy only 1 slot in the backpack",
-        "note": "Watch it! They’re still hot!"
-      },
-      {
-        "name": "Fashionable cloak",
-        "hits": 1,
-        "slots": 0,
-        "resistance": 1,
-        "description": "<i>Fashionable cloak</i> absorbs 1 additional damage from ranged attacks.",
-        "note": "NO CAPES!"
-      },
-      {
-        "name": "Cool shades",
-        "hits": 1,
-        "slots": 0,
-        "resistance": 1,
-        "description": "If you can come up with a witty pun when an enemy is defeated, gain 5 XP and discard <i>Cool Shades</i>.",
-        "note": "YEAAAAAAAAAAAAH!"
-      },
-      {
-        "name": "Bowler hat",
-        "hits": 1,
-        "resistance": 1,
-        "description": "When you loot, if it’s a multiple item loot of rarity uncommon or common, loot 1 more and eat <i>Bowler hat</i> to heal 1 HP.",
-        "note": "I say good sir, this investment turned out quite profitable!"
-      }
-    ],
-    "spells": [
-      {
-        "name": "Senility",
-        "uses": 2,
-        "mana": 1,
-        "ticks": 1,
-        "description": "Transfigure yourself in an innocent old man for the duration of 5 ticks. You can only move awkwardly in these conditions. Minions always ignore old men.",
-        "note": "I’m an old man. I’m an old human!"
-      },
-      {
-        "name": "Tele Chinesis",
-        "uses": 3,
-        "mana": 1,
-        "ticks": 1,
-        "description": "Moves an item in a 3 hexes radius by up to 3 hexes or move a character by 1 hex",
-        "note": "你可以搬家吗?"
-      },
-      {
-        "name": "Magical spitball",
-        "uses": 3,
-        "mana": 1,
-        "ticks": 1,
-        "range": 3,
-        "damage": 1,
-        "note": "A magical projectile that is cast through a hollowed out pen. Possibly not magical and… ew stop that!"
-      },
-      {
-        "name": "Wingardium Heliosà",
-        "uses": 2,
-        "mana": 1,
-        "ticks": 1,
-        "range": 3,
-        "description": "Make the target <i>fly</i> for 3 ticks. Additionally make their voices high-pitched.",
-        "note": "It’s HeliÒsa, not Heliosàààà."
-      },
-      {
-        "name": "Magical Bandaid",
-        "uses": 3,
-        "mana": 1,
-        "ticks": 2,
-        "interruptibility": "suspendable",
-        "range": 3,
-        "description": "Heal a target by 2 HPs.",
-        "note": "Woosh your wound gone."
-      },
-      {
-        "name": "Aurora borealis",
-        "uses": 2,
-        "mana": 1,
-        "ticks": 1,
-        "range": 2,
-        "description": "Magical flames start dancing over the head of the target dealing 2 fire damage.",
-        "note": "Just the northern lights."
-      },
-      {
-        "name": "Intimidating appearance",
-        "uses": 1,
-        "mana": 1,
-        "ticks": 1,
-        "description": "Your face turns terribly twisted with anger: minions in a 2 hexes radius area have a 20% chance to run away as fast as possible for the duration of 3 ticks.",
-        "note": "Prepare to meet Mr angry eyes!"
-      }
-    ],
-    "miscellaneous": [
-      {
-        "name": "Out of tune bell",
-        "uses": 3,
-        "description": "You can consume 1 use to perform a melee attack with a 1 tick action, dealing 1 damage. It counts as an instrument for a <i>Bard</i>.",
-        "note": "Hope the toss of your coin doesn’t lead you to madness."
-      },
-      {
-        "name": "Shabby harp",
-        "uses": 5,
-        "description": "It counts as an instrument for a <i>Bard</i>.",
-        "note": "Warning: find something better to put an infernal hound to sleep."
-      },
-      {
-        "name": "Cute little cactus",
-        "description": "Multiple item loot. Discard 10 of them while you are holding at least one in your hands: as an instantaneous action, look for the <i>Fiery Sword</i> in the <i>Special Weapon</i> pile and wield it or add it to your <i>backpack</i>.",
-        "note": "Did you ask for a Fiery Sword?"
-      },
-      {
-        "name": "Cute bandaid",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Heal an adjacent target for 1 HP. Spend an additional tick to kiss the wound and heal 1 additional HP.",
-        "note": "Kiss the wound cause saliva has antimicrobial properties."
-      },
-      {
-        "name": "Cup of Tea",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Heal for 1 HP. If you also have <i>Scones</i> you can call for <b>Tea time:</b> Everyone stops what they’re doing and restores 2 HP, MP and EP. <i>Tea</i> can only be consumed when the ticker ends in 5.",
-        "note": "There’s always time for a cup of tea!"
-      },
-      {
-        "name": "Scones",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Heal for 1 HP. If you also have <i>Cup of tea</i> you can call for <b>Tea time:</b> Everyone stops what they’re doing and restores 2 HP, MP and EP. <i>Scones</i> can only be consumed when the ticker ends in 5.",
-        "note": "Delicious scones with jam and clotted cream."
-      },
-      {
-        "name": "Cheese",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Throw it for 1 damage up to 3 hexes away or eat it to restore 1 HP. Additionally, after 30 ticks <i>Cheese</i> ages and restores 3 additional HP or deals 3 more damage.",
-        "note": "Particularly effective against flying saucers."
-      }
-    ],
-    "role change": [
-      {
-        "name": "Yer a wizard, Harry",
-        "uses": 1,
-        "description": "<i>Enchanter</i> role change card",
-        "note": "I’m a what?"
-      },
-      {
-        "name": "Legolas, what do your elf-eyes see?",
-        "uses": 1,
-        "description": "<i>Explorer</i> role change card",
-        "note": "Same as yours! What the fork do you think they see?"
-      },
-      {
-        "name": "Well hello my name is Sona",
-        "uses": 1,
-        "description": "<i>Support</i> role change card",
-        "note": "And I’m a special supp!"
-      },
-      {
-        "name": "That’s a big spiky meatball",
-        "uses": 1,
-        "description": "<i>Tank</i> role change card",
-        "note": "Oke."
-      },
-      {
-        "name": "Leeroy Jenkins!",
-        "uses": 1,
-        "description": "<i>Fighter</i> role change card",
-        "note": "Goddammit Leeroy!"
-      },
-      {
-        "name": "Are you gonna use that?",
-        "uses": 1,
-        "description": "Swap role with another player",
-        "note": "Change now!"
-      },
-      {
-        "name": "Everybody panic!",
-        "uses": 1,
-        "description": "You must shuffle all your team’ roles NOW!",
-        "note": "I am Abaddon the destroyer and I will be your support today!"
-      }
-    ]
-  },
   "Uncommon Items": {
-    "weapons": [
-      {
-        "name": "Bananarang",
-        "uses": 2,
-        "ticks": 1,
-        "damage": 1,
-        "range": 4,
-        "description": "A ranged weapon that automatically comes back when you use it. Eat it to restore 1 HP",
-        "note": "Its name is Jack and it comes back. Also a great source of Potassium."
-      },
-      {
-        "name": "Papier-mâchéte",
-        "uses": 2,
-        "ticks": 1,
-        "damage": 2,
-        "note": "Gives you particularly nasty paper cuts."
-      },
-      {
-        "name": "Lock pick",
-        "uses": 5,
-        "ticks": 1,
-        "damage": 1,
-        "note": "Ouch! It’s pointy!"
-      },
-      {
-        "name": "Wet towel",
-        "uses": 3,
-        "ticks": 1,
-        "damage": 1,
-        "description": "Range 2. Does not count as a ranged weapon.",
-        "note": "Don’t make me run bitte. I’m full of chocolate."
-      },
-      {
-        "name": "Rolling Pin",
-        "uses": 3,
-        "ticks": 1,
-        "damage": 1,
-        "description": "With a 2 ticks atomic action and 1 use of <i>Rolling Pin</i>, you can make <b>Tagliatelle</b>: restore 2 HPs, MPs and EPs.",
-        "note": "Un pieno di energia, effetto vitamina!"
-      },
-      {
-        "name": "Shuriken",
-        "uses": 1,
-        "ticks": 1,
-        "damage": 1,
-        "range": 10,
-        "description": "Multiple item loot.",
-        "note": "So many ninja stars in the sky."
-      }
-    ],
     "armour": [
-      {
-        "name": "Lucky charm helmet",
-        "hits": 2,
-        "description": "Deny a magical effect you would suffer (not the damage of a spell) and reduce by 1 the hits of <i>Lucky charm helmet</i>. If you are wearing this item while looting, increase your LK by 1 and destroy <i>Lucky charm helmet</i>.",
-        "note": "It kinda forgot to be actually protective."
-      },
       {
         "name": "Superior moral boots",
         "hits": 5,
         "resistance": 1,
-        "description": "You gain 5% AG. You can consume 1 hit of <i>Superior moral boots</i> as a 1 tick action to show a minion how cool you think they are: 30% chance they lose their action in this tick.",
+        "description": "You gain 5% AG. You can consume 1 hit of <i>Superior moral boots</i> as a 1 tick action to show a minion how cool you think they are: 30% chance their actions are denied in this tick.",
         "note": "They are so cool! Yeah… Awesome! Definitely not a lie."
-      },
-      {
-        "name": "Glass slippers",
-        "hits": 1,
-        "resistance": 5,
-        "description": "You lose 5% AG. Furthermore, you can’t throw the item <i>Very small rock</i>.",
-        "note": "People in glass slippers should not throw rocks."
-      },
-      {
-        "name": "Chain mail",
-        "hits": 3,
-        "resistance": 2,
-        "note": "Forward it to at least 10 other people!"
-      },
-      {
-        "name": "Plate of certainties",
-        "hits": 3,
-        "resistance": 2,
-        "description": "You lose 5% AG. If you also own <i>Superior moral boots</i>, <i>Plate of certainties</i> increases its resistance by 2. Whenever you lose <i>Superior moral boots</i>, <i>Plate of certainties</i> collapses, so discard it.",
-        "note": "Improves over the years."
       },
       {
         "name": "Magazines",
         "hits": 5,
         "resistance": 1,
-        "description": "<i>Magazines</i> completely negate the effect of <i>Throwing knives</i>.",
+        "description": "<i>Magazines</i> interrupts an attack made with <i>Throwing knives</i>.",
         "note": "Yare yare daze. Now my valuable uniform is full of holes!"
-      },
-      {
-        "name": "Gold Armour",
-        "hits": 2,
-        "resistance": 3,
-        "description": "You have no AG. Not so great as armour, but can be used as a bribing tool.",
-        "note": "Those dwarves have too much gold for their own good!"
-      }
-    ],
-    "spells": [
-      {
-        "name": "Wait and see!",
-        "uses": 2,
-        "mana": 2,
-        "ticks": 1,
-        "description": "Your next action will require 1 tick less than usual.",
-        "note": "Do not question my GENIUS!"
-      },
-      {
-        "name": "F is for Flash",
-        "uses": 2,
-        "mana": 2,
-        "ticks": 1,
-        "description": "Blink to target location within 5 hexes",
-        "note": "Because it just makes sense. Yours is on the wrong keeey."
-      },
-      {
-        "name": "Blow me to Bermuda!",
-        "uses": 1,
-        "mana": 2,
-        "ticks": 2,
-        "interruptibility": "suspendable",
-        "description": "Move up to 3 floors upstair, take 2 damage per floor.",
-        "note": "Of all the idiotic… Y-Y-Y…I..."
-      },
-      {
-        "name": "Ghost punch",
-        "uses": 3,
-        "mana": 2,
-        "ticks": 1,
-        "range": 2,
-        "damage": 2,
-        "description": "Summon an evil spirit to punch the shirt out of a target. You can repeat this spell up to 3 times in the same tick by using the corresponding amount of mana.",
-        "note": "ORA! ORA! ORA!"
-      },
-      {
-        "name": "Water gun",
-        "uses": 3,
-        "mana": 2,
-        "ticks": 1,
-        "range": 3,
-        "damage": 2,
-        "description": "Sprays a target with a powerful jet of water extinguishing any burning flame. The target then has a 30% chance to slip and fall to take 1 additional damage. A <i>dehydrated</i> unit can be <i>rehydrated</i> with this effect.",
-        "note": "Use Water gun! Go!"
-      },
-      {
-        "name": "Yoink!",
-        "uses": 2,
-        "mana": 2,
-        "ticks": 1,
-        "role": [
-          "Support",
-          "Explorer"
-        ],
-        "description": "Tries to steal an item from a target. Choose: steal specific item with 10% probability, Item from type with 20% probability or random item with 60% probability.",
-        "note": "OUR equipment!"
-      },
-      {
-        "name": "Yeet!!",
-        "uses": 3,
-        "mana": 2,
-        "ticks": 1,
-        "range": 4,
-        "role": [
-          "Support",
-          "Explorer"
-        ],
-        "description": "Throw a weapon to a target. If the target is friendly, they have a 60% chance to catch it, otherwise it drops in front of them on the line of throw. If the target is <i>Hostile</i> they take the damage from the weapon without consuming uses. Does not apply special effects.",
-        "note": "This bitch for ‘nother class! YEET!"
       }
     ],
     "miscellaneous": [
@@ -447,133 +21,23 @@
         "name": "Jean-Paul Gaultier's pour homme",
         "uses": 1,
         "ticks": 1,
-        "description": "Multiple item loot. Lie shamelessly to a <i>Neutral</i> minion without any consequences.",
+        "description": "Multiple item loot. Lie shamelessly to a <i>Neutral</i> minion with success.",
         "note": "It’s just my natural musk!"
-      },
-      {
-        "name": "Mysterious lever",
-        "uses": 1,
-        "ticks": 1,
-        "description": "A lever to hang on a wall. A minion cannot resist taking a 1 tick action to pull the lever and fall 1 floor down.",
-        "note": "WRONG LEVEEEEEER!"
-      },
-      {
-        "name": "Mana potion",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Multiple item loot. Regen up to 4 MPs.",
-        "note": "Wuju pass me that potion?"
-      },
-      {
-        "name": "Health potion",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Multiple item loot. Regen up to 3 HPs.",
-        "note": "I'm fine, I'm fine… I'm gonna die!"
-      },
-      {
-        "name": "Stamina potion",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Multiple item loot. Regen up to 4 EPs and gain 15% AG in this tick.",
-        "note": "Please Asterix let me have just a drop!"
-      },
-      {
-        "name": "Muffin",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Multiple item loot. Eat it to restore 2 HP. If you own a muffin’s factory, you can throw the <i>Muffin</i> for 1 damage at 2 range.",
-        "note": "They really wanna die!"
-      },
-      {
-        "name": "Die Die Die",
-        "uses": 1,
-        "description": "When you’re looting, you can consume 1 use, if you don’t like the item you’ve picked, put it back and roll the die again. Alternatively, consume 1 use before looting, then roll the die, but with 1 more LK.",
-        "note": "He gave me loaded dice!"
       }
     ]
   },
   "Rare Items": {
     "weapons": [
       {
-        "name": "Crossbow-nothing-special",
+        "name": "Cotton Candy Mace",
         "uses": 10,
-        "ticks": 2,
-        "interruptibility": "suspendable",
-        "slots": 2,
-        "range": 10,
-        "damage": 3,
-        "description": "One tick to load the crossbow. One to fire.",
-        "note": "Beware about the safety of your ol' Betsy."
-      },
-      {
-        "name": "Sword in the stone",
-        "uses": 5,
-        "ticks": 1,
-        "slots": 2,
+        "damage": 1,
         "role": [
           "Fighter",
-          "Tank"
+          "Support"
         ],
-        "damage": 4,
-        "description": "The sword is still stuck in the stone... So basically, you hit your enemies with the stone.",
-        "note": "A sword! Archimedes, a sword!"
-      },
-      {
-        "name": "Evergreen staff",
-        "uses": 5,
-        "ticks": 1,
-        "class": [
-          "Wizard"
-        ],
-        "damage": 2,
-        "description": "Consume 1 use of <i>Evergreen staff</i> as an instantaneous action to increase the damage dealt by a damaging spell cast within 2 hexes.",
-        "note": "You would not part an old man from his walking stick?"
-      },
-      {
-        "name": "Poisonous blowgun",
-        "uses": 10,
-        "ticks": 1,
-        "class": [
-          "Rogue"
-        ],
-        "range": 5,
-        "damage": 1,
-        "description": "The target suffers 2 additional poison damage.",
-        "note": "That’s gotta sting."
-      },
-      {
-        "name": "YOU-are-coming Spear",
-        "uses": 5,
-        "ticks": 1,
-        "range": 3,
-        "damage": 3,
-        "description": "Any time you throw this spear you are teleported in a random free adjacent tile to the one in which the spear landed, at the end of the tick. If there are no available tiles, you remain in your position and take 1 magic damage.",
-        "note": "You can feel some sort of attachment."
-      },
-      {
-        "name": "Bow and sparrow",
-        "uses": 5,
-        "ticks": 1,
-        "slots": 2,
-        "class": [
-          "Ranger"
-        ],
-        "range": 5,
-        "damage": 2,
-        "description": "After you hit a target, Jack the sparrow pecks anyone in a 2 hexes radius area around the target, dealing 1 damage each. Occupy 1 slot in the <i>backpack</i>.",
-        "note": "You are without doubt the worst ranged weapon I’ve ever heard of."
-      },
-      {
-        "name": "Tuba",
-        "uses": 5,
-        "ticks": 1,
-        "slots": 2,
-        "class": [
-          "Bard"
-        ],
-        "description": "Makes a deafening sound that deals 2 sound damage in a 3 hexes radius area. Alternatively, you can consume 1 use to follow a target adjacent to you for the duration of 3 ticks, dealing 2 sound damage to him each tick. <i>Tuba</i> counts as an instrument for a <i>Bard</i>. Occupy 1 slot in the <i>backpack</i>.",
-        "note": "Pom pom pom po pom."
+        "description": "You can consume 2 uses of the <i>Cotton Candy Mace</i> as a bribe or consume 1 use to restore 2 HPs. Hitting a minion with this weapon makes them sticky. They have to spend 1 tick cleaning themselves up or they are immobilized. If you get hit with water when holding the <i>Cotton Candy Mace</i>, it melts.",
+        "note": "Thousands of clouds are killed every year to make cotton candy."
       }
     ],
     "armour": [
@@ -581,130 +45,25 @@
         "name": "Black Mambaaaaa",
         "hits": 10,
         "resistance": 2,
-        "description": "You can take a 1 tick action to argue with an enemy about being a villain. There is a 50% chance they reply and lose their actions in the current tick.",
+        "description": "You can take a 1 tick action to argue with an enemy about being a villain. There is a 50% chance they reply and their actions are denied in the current tick.",
         "note": "The best presentation!"
-      },
-      {
-        "name": "Plot armor",
-        "description": "If you would take damage that reduces you to 0 HP, dodge that attack or effect and discard <i>Plot armor</i>.",
-        "note": "Oh my, 20 dollars!"
-      },
-      {
-        "name": "Ring mail leggings-nothing-special",
-        "hits": 15,
-        "resistance": 2,
-        "note": "Absolutely noteworthy."
       },
       {
         "name": "Cousin Itt’s fluff",
         "hits": 10,
         "resistance": 3,
-        "description": "You are immune to ranged attacks, but you suffer twice the fire damage. Lose 5% AG.",
+        "description": "You are immune to ranged attacks, you take half the sound damage (rounded up), but you suffer twice the fire damage. Lose 5% AG.",
         "note": "Can you hear me down there?"
-      },
-      {
-        "name": "Viking helmet",
-        "hits": 10,
-        "role": [
-          "Fighter",
-          "Tank"
-        ],
-        "resistance": 2,
-        "description": "You can consume a hit of <i>Viking helmet</i> to perform a 1 tick action to head an adjacent target dealing 2 damage with a 20% chance they stay stunned the next tick.",
-        "note": "Evening brother!"
-      },
-      {
-        "name": "Beekeeper's vest",
-        "hits": 10,
-        "resistance": 2,
-        "description": "You are immune to <i>Poisonous blowgun</i>. You lose 5% AG and gain the ability <b>Not the bees, not the bees! :</b> With a 1 tick action you can pull out your personal beehive. Then, a swarm of loyal bees buzz around you dealing 1 poison damage to anyone that would enter in contact with you. With another 1 tick action you can put away the beehive and call back the bees.",
-        "note": "Bee our vest, bee our vest, bee our vest!"
-      },
-      {
-        "name": "Iron chestplate-nothing-special",
-        "hits": 10,
-        "resistance": 5,
-        "description": "Any time you are dealt fire damage, you suffer 1 additional damage. Lose 10% AG.",
-        "note": "No iron golem was hurt to make this."
       }
     ],
     "spells": [
-      {
-        "name": "Encouraging compliments",
-        "uses": 3,
-        "mana": 3,
-        "ticks": 1,
-        "role": [
-          "Support"
-        ],
-        "description": "Target ally increases the damage they deal in the next tick by 2. Also, their LK grows by 1 for their next looting (no more than 1 LK can be given to the same ally with this spell before the next looting).",
-        "note": "You are not quite a complete failure!"
-      },
-      {
-        "name": "It was him!",
-        "uses": 2,
-        "mana": 3,
-        "ticks": 1,
-        "class": [
-          "Bard",
-          "Wizard"
-        ],
-        "description": "Target minion is convinced they have been hit by another minion, becoming <i>Hostile</i> to him next tick. There is a 10% chance a feud begins and they will remain permanently <i>Hostile</i> to each other.",
-        "note": "It’s treason, then."
-      },
       {
         "name": "Left alone",
         "uses": 2,
         "mana": 3,
         "ticks": 1,
-        "description": "Target minion stinks so badly in this tick so that anyone in a 2 hexes radius area loses their action and spends this tick walking away in disgust. The smelly one also loses their action crying with shame.",
+        "description": "Target minion stinks so badly in this tick so that anyone in a 1 hexes radius area gets their actions denied and spends this tick walking away in disgust. The smelly one also interrupts their actions crying with shame.",
         "note": "Why doesn’t anyone love me?"
-      },
-      {
-        "name": "Spicy meatball!",
-        "uses": 2,
-        "mana": 3,
-        "ticks": 1,
-        "damage": 3,
-        "range": 3,
-        "class": [
-          "Wizard"
-        ],
-        "description": "Lob a giant spicy meatball to a target. Target takes 2 additional fire damage.",
-        "note": "Mamma mia! That’s a spicy meatball."
-      },
-      {
-        "name": "Harden",
-        "uses": 2,
-        "mana": 2,
-        "ticks": 1,
-        "role": [
-          "Tank"
-        ],
-        "description": "An armor piece of your choice gains 3 additional resistance and an extra hit.",
-        "note": "Go Tankapod, use Harden!"
-      },
-      {
-        "name": "Scale along Z",
-        "uses": 2,
-        "mana": 3,
-        "ticks": 1,
-        "role": [
-          "Fighter"
-        ],
-        "description": "A melee weapon of your choice gains 2 range and 2 damage for the duration of 4 ticks.",
-        "note": "Behold my scaling matrices!"
-      },
-      {
-        "name": "Quicksilver",
-        "mana": 3,
-        "ticks": 1,
-        "uses": 3,
-        "class": [
-          "Rogue"
-        ],
-        "description": "You gain <b>Ludicrous speed</b>: in the next tick you can perform up to 5 ticks of movement actions or movement abilities and gain 50% AG.",
-        "note": "My brains… are going into my feet!"
       }
     ],
     "miscellaneous": [
@@ -712,52 +71,21 @@
         "name": "Dandelion",
         "uses": 1,
         "ticks": 1,
-        "description": "Eat it to heal 2 HP. Consuming <i>Dandelion</i> while looting increases your LK by 2.",
+        "description": "Eat it to heal 3 HPs. Consuming <i>Dandelion</i> while looting increases your LK by 2.",
         "note": "Must be the last one of the season!"
-      },
-      {
-        "name": "Gargaleo’s flute",
-        "uses": 10,
-        "ticks": 1,
-        "slots": 2,
-        "class": [
-          "Bard"
-        ],
-        "description": "Summon a rainy cloud in a target hex. Anyone in the cloud cannot see anything or ignite any flame. Furthermore, they lose their AG. A <i>dehydrated</i> unit can be <i>rehydrated</i> with this effect. This item counts as an instrument for a <i>Bard</i>. Occupy 1 slot in the <i>backpack</i>.",
-        "note": "Once belonged to the famous enchanter flutist Gargaleo."
-      },
-      {
-        "name": "Forget-me-spray",
-        "uses": 5,
-        "ticks": 1,
-        "description": "Target minion falls asleep the next tick for a duration of 3 ticks. If the target is a <i>Hostile</i> minion, they turn <i>Neutral</i> as they wake up, but you have to convince them that you’re not a threat otherwise they’ll turn back to <i>Hostile</i>. When you discard this item, pick up the <i>Forget-me-stick</i> from the Special Weapons' pile.",
-        "note": "Yeah, I'm like your space Dad!"
-      },
-      {
-        "name": "Fire extinguisher",
-        "uses": 5,
-        "ticks": 1,
-        "description": "Negate a fire effect or extinguish a burning flame within 3 hexes.",
-        "note": "Seymour! The house is on fire!"
       },
       {
         "name": "Extract of llama",
         "uses": 1,
         "ticks": 1,
-        "description": "Turn into a llama for 5 ticks. You keep your equipment but your only attack is replaced by <i>Magical Spitball</i> at no mana cost",
+        "description": "Turn into a llama for 5 ticks. You keep your equipment but your only attack is replaced by <i>Magical Spitball</i> at no mana cost. Alternatively you can launch this item up to 3 hexes away to apply the same effect. Unfriendly entities can try to dodge this as if it was a ranged attack.",
         "note": "A llama? He’s supposed to be dead!"
-      },
-      {
-        "name": "Strong black potion",
-        "uses": 1,
-        "description": "Multiple item loot. You get 1 additional damage in your melee attacks for 5 ticks.",
-        "note": "Can you feel its dark power?"
       },
       {
         "name": "Werehorn",
         "uses": 5,
         "ticks": 1,
-        "description": "This item makes you emulate a wolf’s call: for any minion in a 5 hexes radius area, there is a 25% chance they lose their action in this tick. <i>Werehorn</i> counts as an instrument for a <i>Bard</i>.",
+        "description": "This item makes you emulate a wolf’s call: for any minion in a 5 hexes radius area, there is a 25% chance their actions are denied in this tick. <i>Werehorn</i> counts as an instrument for a <i>Bard</i>.",
         "note": "There horn. There castle."
       }
     ]
@@ -765,323 +93,27 @@
   "Epic Items": {
     "weapons": [
       {
-        "name": "Longsword-nothing-special",
-        "uses": 15,
-        "ticks": 1,
-        "slots": 2,
-        "damage": 5,
-        "description": "If you are a fighter, you can consume 1 use and spend 2 EP to perform an additional attack with <i>Longsword-nothing-special</i> in the same tick, enemies targeted by the second attack have a 60% chance to dodge.",
-        "note": "Another boring weapon."
-      },
-      {
         "name": "Java-elin-nothing-special",
         "uses": 20,
         "ticks": 1,
-        "range": 10,
+        "range": 7,
         "damage": 3,
-        "description": "Your target must be at least 3 hexes away. If your target is 6 or more hexes away, double the damage. You have to recover this item any time you throw it.",
+        "description": "Your target must be at least 2 hexes away. If your target is 4 or more hexes away, double the damage. You have to recover this item any time you throw it.",
         "note": "public static void retrieve()"
-      },
-      {
-        "name": "Flamethrower",
-        "uses": 15,
-        "ticks": 1,
-        "slots": 2,
-        "description": "Lets you emit a jet of glowing fire in a 5 hexes line. Any target in the area suffers 4 fire damage.",
-        "note": "Hans… get ze flammenwerfer!"
-      },
-      {
-        "name": "Invisible hammer",
-        "uses": 20,
-        "ticks": 1,
-        "damage": 10,
-        "description": "You cannot use invisible items, unless you can see them.",
-        "note": "It is thou cannot see it. You don’t know if you have it. Maybe It doesn't exist, but still you can try to sell it."
-      },
-      {
-        "name": "Sensational Sentient Sentry",
-        "uses": 15,
-        "description": "The <i>SSS</i> hovers around you. You can ask it to defend you or attack with an instantaneous action (but it stays in any mode for at least 3 ticks). In defense mode the sentry will shoot at projectiles approaching you and remove up to 2 damage from them. In attack mode, they attack the same target as you, dealing 2 damage. Any action the <i>SSS</i> performs reduces the uses of <i>SSS</i> by 1. Unfortunately the <i>SSS</i> also loves to talk and never shuts up, distracting you and making you lose 5% AG. If you have <i>Earplugs</i>, ignore this debuff.",
-        "note": "Oh let’s attack that guy. Oooh watch out with that sword you could've hit me! Hey am I the only one who’s hungry? I’m getting dizzy hovering around."
-      },
-      {
-        "name": "Cotton Candy Mace",
-        "uses": 20,
-        "damage": 1,
-        "role": [
-          "Fighter",
-          "Support"
-        ],
-        "description": "You can consume 3 uses of the <i>Cotton Candy Mace</i> as a bribe or consume 4 hits to restore 3 HPs. Hitting a minion with this weapon makes them sticky. They have to spend 1 tick cleaning themselves up or they are stuck in place. If you get hit with water when holding the <i>Cotton Candy Mace</i>, it melts.",
-        "note": "Thousands of clouds are killed every year to make cotton candy."
       }
     ],
     "armour": [
-      {
-        "name": "Invisibility clock",
-        "hits": 5,
-        "slots": 0,
-        "description": "Your AG versus ranged weapons increases up to 50%. Consume 1 hit of <i>Invisibility clock</i> to become invisible for as long as you want. You can only perform movement actions if you want to remain unseen. After 10 ticks the clock rings revealing your position to entities in a 3 hexes radius area.",
-        "note": "What’s that mysterious ticking noise? It’s kinda catchy..."
-      },
-      {
-        "name": "Gargoyle tiara",
-        "hits": 1,
-        "slots": 0,
-        "resistance": 10,
-        "description": "This item can absorb any kind of damage with its resistance, but poison, holy and unholy damage. You obtain the ability <b>Stone power activate:</b> As a 1 tick action, emit a blinding glow so that anyone within 2 hexes radius from you becomes blind for 5 ticks. You turn yourself into stone for 3 ticks in the process. You cannot perform any action for the duration, but you dodge any attack or spell intended for you in this state.",
-        "note": "The dawn will take you all!"
-      },
-      {
-        "name": "Thorn chest",
-        "hits": 10,
-        "resistance": 6,
-        "description": "Any time you receive a melee attack, you give back 2 damage. Lose 10% AG.",
-        "note": "Oke."
-      },
-      {
-        "name": "Batman’ suit",
-        "hits": 15,
-        "resistance": 5,
-        "description": "You spend 1 EP less than usual. No one can understand what you’re saying, so minions give up demanding an answer from you. Half the resistance of this item (rounded down) can be applied to fire damage too. You cannot wear other armour items. As <i>Batman’ suit</i> reaches zero hits, discard it and replace it with a <i>Ratman’ suit</i> from the Special Armours’ pile.",
-        "note": "Because I’m Batman."
-      },
       {
         "name": "Turtle shell",
         "hits": 15,
         "resistance": 3,
-        "description": "You can consume 3 hits from this item with an instantaneous action, to retreat into the shell and completely negate an attack or a spell that targets you. Lose 10% AG.",
+        "description": "You can consume 3 hits from this item with an instantaneous action, to retreat into the shell and interrupt an attack or a spell that targets you. Lose 10% AG.",
         "note": "Maremma impestata Alvaruccio! Te tu m’ha fatto rompere tutt’l mi guscio."
-      },
-      {
-        "name": "The ugliest Holiday’s sweater",
-        "hits": 10,
-        "resistance": 4,
-        "description": "The ugliest holiday’s  sweater itches like crazy making you lose your AG. However, if you’re also wearing <i>La maglia della salute</i>, you lose this debuff.",
-        "note": "I’m wearing a shirt under it, how does it still itch?!"
-      }
-    ],
-    "spells": [
-      {
-        "name": "Fire Bowl!",
-        "uses": 2,
-        "mana": 4,
-        "ticks": 1,
-        "description": "Summon a burning bowl overturned on the heads of the enemies in a 3 hexes radius area for a duration of 3 ticks. They become temporarily blind and take 3 fire damage each tick.",
-        "note": "Enjoy your meal."
-      },
-      {
-        "name": "Let it snow!",
-        "uses": 2,
-        "mana": 4,
-        "ticks": 2,
-        "interruptibility": "atomic",
-        "description": "Bring forth a flurry of snow of radius 2 that lingers for 5 ticks. Targets caught in the flurry take 1 tick more to perform any action and lose their AG. Targets that stay in the flurry for at least 3 consecutive ticks are frozen, taking 3 magic damage and remaining stunned for 3 additional ticks.",
-        "note": "Let it gooooo. Let it gooooooo."
-      },
-      {
-        "name": "Kira Queen Da Ichi No Bakudan!",
-        "uses": 2,
-        "mana": 4,
-        "ticks": 1,
-        "description": "Enchant an item or tile. If someone touches it, an explosion occurs that deals 5 magic damage and 3 fire damage",
-        "note": "Click!"
-      },
-      {
-        "name": "Divination",
-        "uses": 3,
-        "mana": 4,
-        "ticks": 1,
-        "description": "Choose a target within 5 hexes. For the next 4 ticks, you know any action the target is going to do before you decide yours.",
-        "note": "Your next line is..."
-      },
-      {
-        "name": "There you are",
-        "uses": 5,
-        "mana": 2,
-        "ticks": 1,
-        "description": "Draw an ancient rune on the floor. Reveal permanently all the invisible units in a 6 hexes radius area from the tile where the rune has been placed.",
-        "note": "Magic is not always powerful."
-      },
-      {
-        "name": "Dehydrate",
-        "uses": 3,
-        "mana": 4,
-        "ticks": 1,
-        "description": "Select a target within 3 hexes, transform it into a neat little cube for up to 5 ticks or until you splash it with water.",
-        "note": "Sir, you really need to empty your pockets more often!"
-      }
-    ],
-    "miscellaneous": [
-      {
-        "name": "Fireworks",
-        "uses": 1,
-        "ticks": 2,
-        "interruptibility": "suspendable",
-        "description": "Multiple item loot. Fires a crackling shows of burning lights in a chosen direction. Anyone in a 10 hexes line, takes 7 damage and 1 fire damage.",
-        "note": "Memare is a lifestyle."
-      },
-      {
-        "name": "Hammer and Chisel",
-        "uses": 3,
-        "ticks": 4,
-        "interruptibility": "atomic",
-        "slots": 2,
-        "description": "Can be used to make a hole in the floor or a wall. You can also use this item to free the Sword from the stone: you gain the item Excalibur. Occupy 1 slot in the <i>backpack</i>.",
-        "note": "Rolling stones gathers no moss. But they really wanna kill Bucciarati."
-      },
-      {
-        "name": "Jacque-Hammer",
-        "uses": 5,
-        "ticks": 3,
-        "interruptibility": "atomic",
-        "slots": 2,
-        "description": "Can be used to make a hole in the floor or a wall. You can also use this item to free the Sword from the stone: you gain the item <i>Excalibur</i> from the Special weapons’ pile. Alternatively fall 1 floor when digging. If there’s a target under you, they take 10 damage.",
-        "note": "HonHonHonHonHonHonHon."
-      },
-      {
-        "name": "Evil necktie",
-        "description": "You can perform a 1 tick action to convince a minion to wear this necktie with a 40% chance of success. If they have ever already lost an action admiring your <i>Superior moral boots</i>, you automatically lend this item to them, forcing him to wear it. Any unit that wears <i>Evil necktie</i> runs away never to be seen again.",
-        "note": "Muahahahah ahahhaah!"
-      },
-      {
-        "name": "Potion of agility",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Multiple item loot. Increase your AG up to 70% for the duration of 4 ticks.",
-        "note": "Now it's time for some wishy back and forth banter. You go first!"
-      },
-      {
-        "name": "Flex glue",
-        "uses": 3,
-        "ticks": 1,
-        "description": "Multiple item loot. Glue a target adjacent to you in place for 5 ticks. They are immobilized for the duration.",
-        "note": "Certified by Phil Very Fast"
       }
     ]
   },
   "Legendary Items": {
-    "weapons": [
-      {
-        "name": "Debugging wand",
-        "uses": "Infinity",
-        "ticks": 1,
-        "damage": 5,
-        "class": [
-          "Wizard"
-        ],
-        "range": "4",
-        "description": "Lets you write breakpoints in reality. When a user defined action occurs you can change its outcome or delete it from reality. Maximum of 1 active breakpoint. Cooldown of 10 ticks.",
-        "note": "Why is my spell doing what I’m telling it to do and not what I want it to do?"
-      },
-      {
-        "name": "Perfectly tuned harp",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 2,
-        "class": [
-          "Bard"
-        ],
-        "description": "The sound of this instrument is too in tune: anyone in a 3 hexes radius area gets 4 sound damage. Alternatively, you can play a song from the following list, as a 1 tick action.<br><b>Killer queen:</b> deals 3 sound damage to the two closest enemies (you choose in case of ambiguity) and your allies in a 2 hexes radius get 2 additional magic damage in their next attack.<br><b>Crazy diamond:</b> restores 5 HPs to you and 3 HPs to your allies within 2 hexes.<br><b>Bites the dust:</b> the two closest enemies cannot move for 2 ticks and allies within 2 hexes can move 1 additional hex per tick for the same duration.<br>Cooldown of 10 ticks. <i>Perfectly tuned harp</i> counts as an instrument for a <i>Bard</i>. Occupy 1 slot in the backpack.",
-        "note": "Allegrissimo!"
-      },
-      {
-        "name": "Elderwood Staff",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 2,
-        "damage": 3,
-        "class": [
-          "Wizard"
-        ],
-        "description": "Your damaging spells deal twice the damage. This effect does not apply to spells casted with <i>Double trouble</i>. You gain the ability <b>Shool of magic:</b> With a 1 tick action, choose a spell of yours. That spell can be casted with 1 tick less than usual (no more than 2 spells can be casted this way) until you own that spell. Only one kind of spell can be the target of this ability at a time.",
-        "note": "Now don’t you get any foolish idea as magic will solve all your problems. Because it won’t!"
-      },
-      {
-        "name": "My bow!",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 2,
-        "damage": 4,
-        "class": [
-          "Ranger"
-        ],
-        "range": "Infinity",
-        "description": "Lets you shoot multiple targets at once or the same target multiple times up to 5 arrows. Cooldown of 10 ticks. Occupy only 1 slot in the <i>backpack</i>.",
-        "note": "That still only counts as one!"
-      }
-    ],
-    "armour": [
-      {
-        "name": "Robert’s Breastplate",
-        "hits": "Infinity",
-        "role": [
-          "Tank"
-        ],
-        "resistance": 4,
-        "description": "The resistance of this item increases by 1 for each 15 maximum HP you have. Lose 5% AG.",
-        "note": "Look at this idiot, one ball and no brain!"
-      },
-      {
-        "name": "Very-special-Armour",
-        "hits": "Infinity",
-        "resistance": 4,
-        "description": "The resistance of this item is increased by 2 if you own a <i>nothing-special</i> item. Your AG is increased by 20% if you own at least two <i>nothing-special</i> items. If you own 3 or more <i>nothing-special</i> items, you cannot be the target of any unsolicited spell.",
-        "note": "Which is another way to say no other Armour is special."
-      },
-      {
-        "name": "Flaming Armour",
-        "hits": "Infinity",
-        "resistance": 4,
-        "description": "You are immune to fire damage. Anybody that enters in contact with you takes 2 fire damage.",
-        "note": "A thousand years bad juju for killing fire-king!"
-      },
-      {
-        "name": "Superman’ suit",
-        "hits": "Infinity",
-        "resistance": 4,
-        "description": "Spending 1 EP, you can <i>fly</i> at the speed of 2 hexes per tick for the duration of 5 ticks. While you are flying you get 35% AG with <i>Superman’ suit</i>. You cannot wear other armour items.",
-        "note": "Let it be clear: you cannot revert time!"
-      },
-      {
-        "name": "Juggernaut’s coating",
-        "hits": "Infinity",
-        "resistance": 10,
-        "description": "You lose your AG. You can't perform movement abilities and you cannot wear other armour items. Your melee attacks deal 6 additional damage.",
-        "note": "Demaciaaaa!"
-      }
-    ],
     "spells": [
-      {
-        "name": "ZA WARUDO!",
-        "mana": 11,
-        "uses": 1,
-        "description": "Stops time for up to 11 ticks. You can move freely and perform any actions.",
-        "note": "TOKI WO TOMARE!"
-      },
-      {
-        "name": "Warp Orb!",
-        "uses": 2,
-        "mana": 5,
-        "ticks": 2,
-        "interruptibility": "suspendable",
-        "role": [
-          "Enchanter"
-        ],
-        "description": "Launch a sphere that tracks down all <i>Hostile</i> targets. The sphere moves at the speed of 2 hexes per tick and deals 3 magic damage to each target it touches as well as stunning them for 2 ticks. It always moves towards the next nearest target.",
-        "note": "How many apples do you have?!"
-      },
-      {
-        "name": "Dracarys",
-        "uses": 1,
-        "mana": 10,
-        "ticks": 1,
-        "class": [
-          "Wizard"
-        ],
-        "description": "All units in a 5 hexes radius cone get 2 magic damage and 5 fire damage. They also keep burning for 3 ticks, suffering 2 fire damage each tick.",
-        "note": "I swear to you, that those who would harm you will die screaming."
-      },
       {
         "name": "Hamlet",
         "uses": 3,
@@ -1091,229 +123,34 @@
           "Enchanter",
           "Support"
         ],
-        "description": "Summon a powerful hurricane that sweeps enemies 3 hexes away making them lose their actions in this tick. If they bump into a wall, they take 3 damage and stay stunned the next tick.",
+        "description": "Summon a powerful hurricane that sweeps enemies 3 hexes away denying their actions in this tick. If they bump into a wall, they take 3 damage and stay stunned the next tick.",
         "note": "Hi Ophelia, I’m a tornado! Brawlrllrlrrlrlrl."
-      },
-      {
-        "name": "Fire Wall! Fire Wall!",
-        "uses": 2,
-        "mana": 7,
-        "ticks": 2,
-        "interruptibility": "suspendable",
-        "class": [
-          "Wizard"
-        ],
-        "description": "A magical wall of fire of radius 3 surrounds the caster for 7 ticks. The wall deals 3 fire damage per tick to anyone standing in it. Furthermore any projectile passing through the wall directed to the caster is incinerated, however any projectile coming from inside the wall is engulfed in flames, giving it 1 additional fire damage.",
-        "note": "Can’t we just point it at the bad guys?"
-      }
-    ],
-    "miscellaneous": [
-      {
-        "name": "Liquid luck",
-        "uses": 1,
-        "description": "Multiple item loot. Consume while looting to obtain a LK score of 7 and loot an additional time. If your LK is already equal to 7, you can discard any item looted you don’t like to loot again.",
-        "note": "Drink me."
-      },
-      {
-        "name": "Holy hand grenade",
-        "uses": 1,
-        "description": "Multiple item loot. You can throw <i>Holy hand grenade</i> in a tile up to 5 hexes away with a 1 tick action. You secretly decide a number between 1 and 4. The radius of the hexplosion increases with the number of ticks selected. The damage falls off as 11 holy damage / 1 + distance, rounded up.",
-        "note": "AAAAAllelujah!!"
-      },
-      {
-        "name": "Muffin’s factory deed of ownership",
-        "description": "You own a muffin’s factory. With a 2 ticks atomic action you can offer to minions in a 4 hexes area a blue collar job in your factory: for each minion there is a 40% chance they accept the next tick and go to work in your factory. Each worker produces 1 <i>Muffin</i> every 10 ticks. Cooldown of 10 ticks.",
-        "note": "Let me lend you an invisible hand."
-      },
-      {
-        "name": "Evil Villainy Inc. majority shares",
-        "description": "You’ve acquired the property of EV Inc. Congratulations! You can switch places with the tower master.",
-        "note": "Oh, you are a villain, alright… just not a super one."
-      },
-      {
-        "name": "Portable portals",
-        "uses": "Infinity",
-        "description": "This machine gives you the ability <b>Sorry about the mess:</b> With a 1 tick action, you secretly choose two tiles from the ceiling and/or the floor within 8 hexes from you. At the end of the tick, those tiles are connected with an interdimensional portal until you close it with an instantaneous action. Cooldown of 10 ticks.<br><i>Both tiles chosen are on the floor</i>: entering a portal makes you appear in the tile adjacent to the second portal following the same direction you approached the first.<br><i>One tile is on the floor and the other on the ceiling</i>: entering a portal on the floor makes you fall from the ceiling taking 2 damage and spending the next tick stunned. A loop is definitely an option.<br><i>Both tiles chosen are on the ceiling</i>: Nonsense! Unless you can fly or revert gravity… then look at the first case.",
-        "note": "First you will be baked, and then there will be cake."
       }
     ]
   },
   "Special Items": {
-    "weapons": [
-      {
-        "name": "Excalibur",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 2,
-        "damage": 7,
-        "class": [
-          "Warrior"
-        ],
-        "description": "You could have been the ruler of England, but that offer expired centuries ago. Still you can emit a 7 hexes ray of light that deals 7 holy damage to the enemies in the line. Cooldown 10 ticks.",
-        "note": "Hail, King Arthur! Long live the king!"
-      },
-      {
-        "name": "Fiery sword",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 2,
-        "damage": 8,
-        "class": [
-          "Warrior"
-        ],
-        "description": "At your command the sword is engulfed in flames for 5 ticks, dealing 2 additional fire damage. Cooldown of 10 ticks.",
-        "note": "But I wanted a cactus!"
-      },
-      {
-        "name": "Blowtorch",
-        "uses": 20,
-        "description": "The <i>Blowtorch</i> can be switched on or off with a 1 tick action. Any unit in front of a flame produced by this item is dealt 3 fire damage. Additionally, you gain the ability <b>Yeah, I got that there:</b> with a 5 ticks suspendable action, you can pierce a wall or the floor in a chosen point. Each tick this weapon stays on consumes 1 use.",
-        "note": "Got it!"
-      },
-      {
-        "name": "Ram",
-        "uses": 5,
-        "ticks": 1,
-        "damage": 3,
-        "description": "There is a 25% chance an enemy hit by the <i>Ram</i> stays stunned the next tick. You can also spend 1 use to perform a 3 ticks suspendable action to break down a closed door.",
-        "note": "Break it down? Are ya kidding me? This is hand-carved mahogany."
-      },
-      {
-        "name": "Magical Mop",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 2,
-        "damage": 3,
-        "description": "The <i>Magical mop</i> can clean up any over time spell in a 1 tick action. WIth a 1 tick action you can create a 2 hexes radius slippery zone. Moving a hex in the slippery zone carries a 20% of slipping and taking 1 damage.",
-        "note": "I’m Dr Itor: Jan Itor."
-      },
-      {
-        "name": "Forget-me-stick",
-        "uses": 5,
-        "ticks": 1,
-        "damage": 1,
-        "description": "The <i>Forget-me-stick</i> can be used on a minion to make them fall asleep the next tick.  When the minion wakes up, their attitude is <i>Neutral</i>, but you must convince them that you’re not a threat,  otherwise they’ll turn <i>Hostile</i>. If used on an adventurer, a minion has a 15% chance to convince them to be loyal to the Villain for 3 ticks (the adventurer is then considered an Intern).",
-        "note": "For when you’re all out of forget-me-spray."
-      }
-    ],
     "armour": [
       {
-        "name": "Baby seal leather boots",
-        "hits": 10,
-        "resistance": 2,
-        "description": "Whenever you loot, you can decide to discard the item you looted to obtain <i>Black Mambaaaaa</i> from the Rare Armours’ pile instead.",
-        "note": "I’m shaking in my custom baby seal leather boots!"
-      },
-      {
-        "name": "Ratman’ cloak",
-        "hits": 5,
-        "slots": 0,
-        "resistance": 1,
-        "description": "Consuming 1 use of <i>Ratman’ cloak</i>, you can <i>fly</i> at the speed of 1 hex per tick for 3 ticks.",
-        "note": "Flap its wings into a cave."
-      },
-      {
         "name": "Best employee’ suit",
-        "hits": 15,
-        "resistance": 2,
-        "description": "Even if you are lying, any minion has a 25% chance to believe you.",
+        "hits": 7,
+        "resistance": 1,
+        "description": "When you fail lying to a minion, you can consume one hit to make them believe you with a 25% chance after all.",
         "note": "Insert a funny joke about dressing."
       },
       {
         "name": "Work uniform",
         "hits": 5,
-        "resistance": 2,
-        "description": "Consuming 1 hit, you can ignore an incoming stun.",
-        "note": "It’s called formal speed-walking."
-      },
-      {
-        "name": "Peter Parker’s eyeglasses",
-        "slots": 0,
-        "description": "You can see invisible units. Your spider senses increase your AG by 30%. Discard <i>Peter Parker’s eyeglasses</i> as soon as you are dealt 3 or more physical damage all at once.",
-        "note": "Oh! I was carrying a hammer this all time!"
-      },
-      {
-        "name": "La maglia della salute",
-        "hits": 15,
-        "slots": 0,
         "resistance": 1,
-        "description": "You are immune to <i>Let it snow!</i> This item can be found on minions.",
-        "note": "What are you doing? I’m freezing! You should wear something under that shirt!"
-      }
-    ],
-    "spells": [
-      {
-        "name": "Open Sesame",
-        "uses": "3",
-        "mana": 2,
-        "ticks": 2,
-        "description": "Open a closed door.",
-        "note": "Wait master, it might be dangerous… you go first."
-      },
-      {
-        "name": "Abra Kadabra",
-        "uses": "Infinity",
-        "mana": 3,
-        "ticks": 1,
-        "description": "Turn a target minion or adventurer into a bat for 1+1d4 ticks. They cannot perform any action but they can <i>fly</i> at the speed of 2 hexes per tick and their AG increases up to 70%. Furthermore, they get <b>Hocus pocus:</b> Turn back into your beautiful self with a 1 tick action.",
-        "note": "I am a vampire!"
-      },
-      {
-        "name": "Forgotten songs",
-        "uses": "Infinity",
-        "mana": 2,
-        "ticks": 1,
-        "description": "This spell makes old depressing songs resonate into any unit’s head within 5 hexes for the duration of 4 ticks. They all lose 2 damage from their attacks, while spells obtain a 20% chance to fail. <i>Earplugs</i> do not negate this effect. If a <i>Bard</i> casts this spell with their instrument the damage lost is 3 instead, while the failing chance of other spells is 30%.",
-        "note": "How the hell do you know Claudio Lolli!?"
+        "description": "Consuming 1 hit you gain a 25% additional chance to successfully lie to a minion.",
+        "note": "It’s called formal speed-walking."
       }
     ],
     "miscellaneous": [
       {
-        "name": "Toxic mixture",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Throw up to 3 hexes away from you. A toxic cloud is released in the target tile for the duration of 4 ticks, dealing 2 poison damage per tick.",
-        "note": "Use smokescreen attack, go!"
-      },
-      {
-        "name": "Strongest Potion",
-        "uses": 1,
-        "ticks": 1,
-        "description": "This dense mixture has a random effect as you drink it:<br>1: you die;<br>2-30: you heal 5 HPs and regen 3 MPs and 3 EPs;<br>31-50: you suffer 4 poison damage for 3 ticks and stay immobilized for the duration;<br>51-79: you get 30% AG and your melee attacks deal 3 additional damage for 3 ticks;<br>80-99: for the duration of 3 ticks you lose your AG and any action you would perform requires double the ticks;<br>100: you obtain 10 resistance for the duration of 10 ticks.",
-        "note": "My strongest potions would kill you traveler. You can’t handle my potions."
-      },
-      {
         "name": "Permit A38",
         "uses": 1,
-        "description": "Use it to lie without consequences to another minion.",
+        "description": "Use it to lie to another minion with success.",
         "note": "I already told you once the port is down by the seaside!"
-      },
-      {
-        "name": "Cup of coffee",
-        "uses": 1,
-        "ticks": 1,
-        "description": "You gain 10% AG for 3 ticks.",
-        "note": "A nice warm cup of covfefe."
-      },
-      {
-        "name": "Precious",
-        "uses": "Infinity",
-        "ticks": 1,
-        "slots": 0,
-        "description": "You are invisible until you take this item off, but you can only perform movement actions. If an entity spots you moving in your tile when you are invisible, you do not turn visible. However for every 2 ticks you've worn <i>Precious</i>, you take 1 unholy damage when you take it off.",
-        "note": "After all why not? Why shouldn't I keep it?."
-      },
-      {
-        "name": "Intern Soul",
-        "uses": 1,
-        "ticks": 1,
-        "description": "Summon a <i>Lost Soul</i> to fight by your side.",
-        "note": "This will go on my CV!"
-      },
-      {
-        "name": "Nothing",
-        "description": "If you have 2*rarity copies of nothing discard them to get something from the appropriate pile (e.g. discard 2 <i>Nothing</i> to get a common item).",
-        "note": "You get nothing! You lose! Good day sir!"
       }
     ]
   }

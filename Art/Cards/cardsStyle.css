@@ -33,7 +33,7 @@ p {
 
 .item-icon {
     position: absolute;
-    background-size: 90% 90%;
+    background-size: 85% 85%;
     background-position: center;
     background-repeat: no-repeat;
     width: 10mm;
@@ -48,30 +48,69 @@ p {
 .item-title {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
-    font-size: 4mm;
+    font-size: 3.5mm;
     top: 0;
     left: 0;
     width: 37mm;
     height: 10mm;
-    flex-grow: 0;
     border: solid black;
     border-width: 0px 0px 1px 0;
-    padding: 1mm;
     box-sizing: border-box;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 1.5mm;
+    padding-right: 1.5mm;
+}
+
+.item-type-rarity {
+    text-align: center;
     font-variant: all-small-caps;
     font-weight: bold;
 }
 
+.item-class-role {
+    text-align: center;
+    font-variant: all-small-caps;
+    font-weight: bold;
+}
+
+.description-separator {
+    height: 0px;
+    width: 95%;
+    margin-left: auto;
+    border-style: groove;
+    border-top: 1px lightslategray;
+    margin-top: 0.5mm;
+    margin-bottom: 0.5mm;
+}
+
 .item-description {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 47mm;
     height: 52mm;
     top: 10mm;
-    padding: 1mm;
+    padding-top: 1mm;
+    padding-left: 2mm;
+    padding-right: 2mm;
     box-sizing: border-box;
-    flex-grow: 2;
+}
+
+.item-description-note {
     font-size: 3mm;
+    text-align: justify;
+}
+
+.item-note {
+    font-style: italic;
+    font-weight: lighter;
+    color: lightslategrey;
+    text-align: justify;
 }
 
 .item-stats {

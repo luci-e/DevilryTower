@@ -1,8 +1,8 @@
 {
-  "Administration and Finance": [
+  "Administration": [
     {
-      "name": "Assistant Coordinator",
-      "note": "The Boss can be very busy sometimes… that’s why the Assistant Coordinators has been invented! Everybody knows they are running the hut.",
+      "name": "Boss delegate",
+      "note": "The Boss can be very busy sometimes… that’s why the delegates have been invented! Everybody knows they are running the hut.",
       "stats": {
         "HP": "3 + 1d4",
         "MP": "3 + 1d4",
@@ -11,39 +11,151 @@
         "Default stance": "Loyal to the <i>Villain</i>, <i>Hostile</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Smash them with a hammer!": "As a 1 tick action, deal 1 damage to a single adjacent target."
-          },
-          {
-            "Put them in a box": "As a 1 tick action, select an adjacent target to <i>put them in a box</i>. For the duration of 3 ticks, they take 2 additional damage from <i>Smash them with a hammer!</i>."
-          },
-          {
-            "Or… to save on postage": "As a 1 tick action, poison an adjacent target for 1 poison damage, 15% chance they turn into a llama instead as if they drank <i>Extract of Llama</i>."
-          }
-        ],
         "abilities": [
           {
             "Very good! Here, get the snack (passive)": "Any minion within 5 hexes, gain 1 additional hex of movement per tick."
           },
           {
-            "Very well, Mr. Wu kærs": "With a 1 tick action, a target minion within 5 hexes gains permanently 1 additional damage. Cooldown of 10 ticks."
+            "Smash them with a hammer! (offensive)": "As a 1 tick action, deal 2 damage to a single adjacent target. Consume 1 ability slot."
+          },
+          {
+            "Put them in a box (utility)": "As a 1 tick action, select an adjacent target to <i>put them in a box</i>. For the next 3 ticks, they take 1 additional damage from <i>Smash them with a hammer!</i>."
+          },
+          {
+            "Or… to save on postage (offensive)": "As a 1 tick action, poison an adjacent target for 2 poison damage, 15% chance they turn into a llama instead as if they drank <i>Extract of Llama</i>.  Consume 1 ability slot."
+          },
+          {
+            "Kill them, they murdered the emperor (utility)": "With a 1 tick action, the <i>Boss delegate</i> gives the order to attack the same target to all minions loyal to the <i>Villain</i> they can assign tasks to.  Consume 2 ability slots."
           }
         ],
-        "equipment": "<i>Assistant Coordinators</i> all start with <i>Baby seal leather boots</i> and <i>Extract of llama</i>.",
-        "specialization": {
-          "note": "Up to two <i>Assistant coordinators</i> per floor can have one of the following specializations, with 2 additional XP in case of defeat. They cannot commission tasks to each other. ",
-          "types": [
-            {
-              "Responsible": "With a 1 tick action, any minion in a 5 hexes area changes his attitude and loyalty according to the <i>Responsible</i>’s will. Cooldown of 10 ticks. The <i>Responsible</i> can also perform <b>Kill them, they murdered the emperor:</b> With a 1 tick action, they give the order to attack the same target to all minions loyal to the <i>Villain</i> they can assign tasks to. There can be up to a <i>Responsible</i> for each floor."
-            },
-            {
-              "Boss delegate": "With a 1 tick action, a <i>Boss delegate</i> can change the job of any minion within 3 hexes, giving them the appropriate equipment and changing their stats immediately (damage is not healed this way). Cooldown of 10 ticks. There can be up to a <i>Boss delegate</i> for each floor."
-            }
-          ]
-        }
+        "equipment": "<i>Boss delegates</i> all start with <i>Baby seal leather boots</i>, <i>Extract of llama</i> one uncommon weapon and a rare miscellaneous item."
       }
     },
+    {
+      "name": "Floor responsible",
+      "note": "A tower is like an enormous clock. It only works if all the little cogs mesh together! The floor responsible makes sure their cog is clean, well lubricated and wound tight!",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "3 + 1d4",
+        "EP": "1 + 1d2",
+        "XP": "6",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "abilities": [
+          {
+            "Performance anxiety (passive)": "This minion can move 2 hexes each tick instead of 1. There can be only one <i>Floor responsible</i> per floor."
+          },
+          {
+            "Instant retraining (utility)": "With a 1 tick action, a <i>Floor responsible</i> can change the job of a single minion within 3 hexes, giving them the appropriate equipment and changing their stats immediately (damage is not healed this way). Consume 1 ability slot."
+          },
+          {
+            "Formal reminder (offensive)": "As a 1 tick action, a single adjacent target gets a post-it stuck on their forehead. Moreover, refresh the slot ability that went in cooldown earlier. A post-it is magically bound to its victim, so it can be removed, but only with a 1 tick action spending 1 EP or MP and taking 1 unholy damage."
+          },
+          {
+            "Mass layoffs (offensive)": "As a 1 tick action, every post-it within 5 hexes magically burns dealing 1 magic damage and 1 fire damage. Runes branched in fire take the place of each post-it. This rune can be removed with a 2 tick atomic action, spending 2 MPs and suffering 2 unholy damage. Consume 2 ability slot."
+          },
+          {
+            "You threw off my groove (offensive)": "As a 1 tick action, everyone within 3 hexes that has a rune on their forehead is magically thrown out of the nearest window.  Consume 3 ability slot."
+          },
+          {
+            "Cause I outrank you, that’s why (utility)": "With a 1 tick action, any minion in a 5 hexes area changes his attitude and loyalty according to the <i>Floor responsible</i>’s will, until they are under the <i>Floor responsible</i>’ supervision.  Consume 2 ability slots."
+          }
+        ],
+        "equipment": "<i>Floor responsibles</i> all start with a <i>Work uniform</i> and a <i>Quicksilver</i>."
+      }
+    },
+    {
+      "name": "Minion resources",
+      "note": "We are looking for interested newcomers fresh out of villain university with at least 5 years of  experience for an intern job paid in 'e x p e r i e n c e'.",
+      "stats": {
+        "HP": "4 + 1d6",
+        "MP": "1 + 1d2",
+        "EP": "1 + 1d2",
+        "XP": "5",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "abilities": [
+          {
+            "Intern Throw (offensive)": "<i>Minion Resources</i> can yeet any <i>Intern</i> or <i>Lost Soul</i> adjacent to them to a target between 2 and 3 hexes away. The target takes as much damage as the maximum HPs of the poor soul that was thrown, but the projectile also takes 1 damage. Consume 1 ability slot."
+          },
+          {
+            "Recruitment Season (utility)": "<i>Minion Resources</i> can hire new <i>Interns</i> straight out of Evil University. <i>Minion Resources</i> must choose a free tile within 2 hexes of themselves where the new <i>Intern</i> is teleported to start working immediately (a task is given as an instantaneous action). Once defeated, there’s a 10% chance that all remaining <i>Interns</i> summoned this way will join you, if they don't, they'll use this chance to go back to Uni to get their master's degree, leaving behind <i>Nothing</i>. Consume 2 ability slots."
+          },
+          {
+            "A work opportunity you cannot miss (utility)": "<i>Minion Resources</i> can ask you with a 1 tick action to join their cause with a 10% chance of succeeding. You then work for Evil Villainy Inc. for the duration of 3 ticks as an <i>Intern</i> loyal to the <i>Villain</i> and with <i>Neutral</i> attitude. Unpaid, of course. Consume 2 ability slots."
+          }
+        ],
+        "equipment": "<i>Minion Resources</i> all start with a <i>Cup of coffee</i>, a <i>Work uniform</i> and a rare weapon."
+      }
+    }
+  ],
+  "External affairs": [
+    {
+      "name": "Lawyer",
+      "note": "Many inhabitants of the realm have tried to sue Evil Villainy Inc. for innocuous stuff like poisoning the water supply or withering all the crops. So far the legal eagles of Evil Villainy have managed to keep the peasants in place and then eat their livers.",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "3 + 1d4",
+        "EP": "2 + 1d3",
+        "XP": "5",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "abilities": [
+          {
+            "Objection! (offensive)": "As a 1 tick action, the <i>Lawyer</i> deals 2 sound damage to a target within 3 hexes. If the <i>Lawyer</i> has <i>Incriminating evidence</i> against them, <i>Objection!</i> can be performed as an instantaneous action. Consume 1 ability slot."
+          },
+          {
+            "Incriminating evidence (utility)": "As a 1 tick action, the <i>Lawyer</i> selects a target within 3 hexes. They set up the evidence against them for 3 ticks. The next <i>Objection!</i> performed after using <i>Incriminating evidence</i> deals no damage, but interrupts a target action instead and consumes <i>Incriminating evidence</i>. Consume 1 ability slot."
+          },
+          {
+            "Stop breaking the law, ashholes! (passive)": "If an <i>Incriminating evidence</i> was set up the last tick, the <i>Lawyer</i> can draw up a new rule that everyone must abide to for the duration of the current tick instead of picking an action. The rule must be announced before everyone else has chosen their action and can only be more restrictive than the existing rules (new superpowers cannot therefore arise), but no existing rule can be overwritten or contradicted in the process and all the effects of this ability end at the end of the tick. Furthermore, the rule must affect everyone and cannot order anyone to do anything (i.e. no rules such as «only adventurers cannot attack» or «everyone must donate their equipment to the <i>Lawyer</i>»). The entity with <i>incriminating evidence</i> can commit a crime and ignore this rule, consuming the <i>incriminating evidence</i> but taking 3 unholy damage."
+          },
+          {
+            "Legal loophole in spacetime (offensive)": "The <i>Lawyer</i> selects a target within 2 hexes. They teleport behind them and deal 1 damage.  Consume 1 ability slot."
+          },
+          {
+            "Surprise witness from a parallel dimension (defensive)": "Consume 2 ability slots: as an instantaneous action a <i>Lawyer</i> can introduce a surprise witness from a dimension slightly different than this one. The <i>Lawyer</i> can then change up to one target of a single attack, spell or ability that targets at least one entity, according to their will."
+          }
+        ],
+        "equipment": "<i>Lawyers</i> all start with <i>The Law</i>, a <i>Work uniform</i> an uncommon weapon and an uncommon spell."
+      }
+    },
+    {
+      "name": "Public relations",
+      "note": "The mission of our company is simple: more evil, less good. Now, some may say that's bad, but guess what? That's fake news! We've made many many many polls and all the peasants that said we should keep doing evil are not dead!",
+      "stats": {
+        "HP": "2 + 1d4",
+        "MP": "2 + 1d4",
+        "EP": "3 + 1d3",
+        "XP": "4",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Hostile</i>."
+      },
+      "description": {
+        "abilities": [
+          {
+            "Bing bing bong! (utility)": "<i>Public relations</i> knows a lot about trucks. They choose 2 free tiles on a line separated by up to 3 hexes in a 5 hexes radius around them in which to spawn two trucks. The trucks move towards each other at a speed of 1 hex per tick. If they hit a target, they deal 1 damage. If they collide with each other they explode, dealing 3 fire damage in a 2 hexes radius. If only 1 truck remains, it disappears once it reaches the middle of the line. There can only be one <i>Bing bing bong!</i> active at any time.  Consume 1 ability slot."
+          },
+          {
+            "Spray tan (offensive)": "<i>Public relations</i> deals 1 poison damage to a target up to 2 hexes away. The target is orange until they wash themselves at a <i>Fresh water fountain</i> and deals 1 less  (but at least 1) damage with their attack, spells or abilities."
+          },
+          {
+            "Chirp ray! (utility)": "<i>Public relations<i/> chooses a target within 3 hexes. The target loses the ability to defend unless they spend 1 tick writing a counter-chirp debunking <i>Chirp ray!</i>.  Consume 1 ability slot."
+          },
+          {
+            "We need to build a wall! (utility)": "<i>Public relations<i/> can place up to 5 walls anywhere in a 3 hexes radius around them. Consume 2 ability slots."
+          },
+          {
+            "This guy is a liar (utility)": "A single target within 3 hexes radius is considered a threat for all <i>Neutral</i> minions within 2 hexes for the duration of 5 ticks.  Consume 2 ability slots."
+          }
+        ],
+        "equipment": "<i>Public relations</i> all start with <i>Baby seal leather boots</i>, a rare weapon and an uncommon miscellaneous item."
+      }
+    }
+  ],
+  "Finance": [
     {
       "name": "Accountant",
       "note": "Even villains need to keep their finances in order. The accountant’s job may seem tedious but it is a vital one. Villains don’t fear heroes nearly as much as they do the Evil Revenue Agency. Accountants make sure they never have to deal with the latter by guaranteeing all their taxes and fees are regularly paid.",
@@ -55,24 +167,22 @@
         "Default stance": "Loyal to <i>No One</i>, <i>Neutral</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Get anxious with me": "An <i>Accountant</i> can use a calculator to show all the financial problems they have to solve, dealing 1 sound damage to any adventurer within 3 hexes."
-          }
-        ],
         "abilities": [
+          {
+            "Get anxious with me (offensive)": "An <i>Accountant</i> can use a calculator to show all the financial problems they have to solve, dealing 2 sound damage to any adventurer within 3 hexes.  Consume 1 ability slot."
+          },
           {
             "Time is money (passive)": "Every 10 ticks <i>Accountants</i> get more nervous, gaining 1 additional damage with their attacks and abilities."
           },
           {
-            "Oh… it’s only a dime": "Dart across the room as a 1 tick action, dealing 1 damage and knocking aside by 1 hex every entity on the line. Cooldown of 10 ticks."
+            "Oh… it’s only a dime (movement)": "Dart across the room as a 1 tick action, dealing 1 damage and knocking aside by 1 hex every entity on the line.  Consume 2 ability slots."
           }
         ],
-        "equipment": "<i>Accountants</i> all start with <i>Peter Parker’s glasses</i> and a <i>Work uniform</i>."
+        "equipment": "<i>Accountants</i> all start with <i>Peter Parker’s glasses</i>, a <i>Work uniform</i>, an uncommon weapon and an uncommon miscellaneous."
       }
     },
     {
-      "name": "Market Master",
+      "name": "Market master",
       "note": "My precioussssss... ",
       "stats": {
         "HP": "3 + 1d4",
@@ -82,12 +192,10 @@
         "Default stance": "Loyal to <i>No One</i>, <i>Friendly</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Untrained": "<i>Market masters</i> do not attend any fight course, hence they cannot perform attacks."
-          }
-        ],
         "abilities": [
+          {
+            "Untrained (passive)": "<i>Market masters</i> do not attend any fight course, hence they cannot perform offensive actions."
+          },
           {
             "Free market (passive)": "You can trade items with these felons, but watch out for their prices. The adventurers can exchange 6 unique items of any rarity for 1 item which rarity is up to 1 tier higher than the mode of the traded items (e.g. if you exchange 3 rare items, 2 uncommon and 1 common you can get 1 epic item, in case of ties the mode of the lowest tier item counts). However the <i>Market Master</i> does not trade <i>Legendary</i> Items. When trading for an item labeled as <i>Multiple item loot</i>, apply the same rules as looting."
           },
@@ -95,67 +203,38 @@
             "Spread peak": "As a 1 tick action, an unpleased (mocked or robbed) <i>Market Master</i> can cry so loud their disappointment that any non-loyal to <i>No One</i> Minion in the floor, that is not in the adventurers' party, is instantly recalled next to them and turn <i>Hostile</i> to the adventurers."
           }
         ],
-        "equipment": "All <i>Market Masters</i> start with a <i>Precious</i>."
-      }
-    },
-    {
-      "name": "Minion Resources",
-      "note": "We are looking for interested newcomers fresh out of villain university with at least 5 years of  experience for an intern job paid in 'e x p e r i e n c e'.",
-      "stats": {
-        "HP": "4 + 1d6",
-        "MP": "1 + 1d2",
-        "EP": "1 + 1d2",
-        "XP": "5",
-        "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
-      },
-      "description": {
-        "attacks": [
-          {
-            "Intern Throw": "<i>Minion Resources</i> can yeet any <i>Intern</i> or <i>Lost Soul</i> adjacent to them to a target between 2 and 3 hexes away. The target takes as much damage as the maximum HPs of the poor soul that was thrown, but the projectile also takes 1 damage."
-          }
-        ],
-        "abilities": [
-          {
-            "Recruitment Season": "<i>Minion Resources</i> can hire new <i>Interns</i> straight out of Evil University. <i>Minion Resources</i> must choose a free tile within 2 hexes of themselves where the new <i>Intern</i> is teleported to start working immediately (a task is given as an instantaneous action). Once defeated, there’s a 10% chance that all remaining <i>Interns</i> summoned this way will join you, if they don't, they'll use this chance to go back to Uni to get their master's degree, leaving behind <i>Nothing</i>. Cooldown of 10 ticks."
-          },
-          {
-            "A work opportunity you cannot miss": "<i>Minion Resources</i> can ask you with a 1 tick action to join their cause with a 10% chance of succeeding. You then work for Evil Villainy Inc. for the duration of 3 ticks as an <i>Intern</i> loyal to the <i>Villain</i> and with <i>Neutral</i> attitude. Unpaid, of course. Cooldown of 10 ticks."
-          }
-        ],
-        "equipment": "<i>Minion Resources</i> all start with a <i>Cup of coffee</i> and a <i>Work uniform</i>."
+        "equipment": "All <i>Market Masters</i> start with a <i>Precious</i>, two rare armours and an uncommon miscellaneous."
       }
     }
   ],
-  "Magic": [
+  "Magic and Development": [
     {
-      "name": "Potion Seller",
+      "name": "Potion seller",
       "note": "Don’t ask them to sell you their strongest potion.",
       "stats": {
         "HP": "3 + 1d4",
         "MP": "3 + 1d4",
         "EP": "2 + 1d3",
-        "XP": "4",
+        "XP": "5",
         "Default stance": "Loyal to <i>No One</i>, <i>Hostile</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "To win, you must attack!": "<i>Potion Sellers</i> can throw their potions up to 3 hexes away as a 1 tick action, in order to give the effects of the thrown potion."
-          }
-        ],
         "abilities": [
           {
-            "Turn to page 394 (passive)": "<i>Potion Sellers</i> produce 1 <i>Strongest Potion</i> every 10 ticks."
+            "Turn to page 394 (passive)": "<i>Potion Sellers</i> produce 1 <i>Strongest Potion</i> every 10 ticks (start counting as soon as you enter a floor with a <i>Potion Seller</i>)."
           },
           {
-            "Bertie Bott's every flavour pots": "As a 1 tick action, a <i>Potion seller</i> can add to their inventory any potion they want, but the <i>Strongest potion</i>. Cooldown of 5 ticks."
+            "To win, you must attack! (passive)": "<i>Potion Sellers</i> can throw their potions up to 3 hexes away as a 1 tick action, in order to give the effects of the thrown potion."
+          },
+          {
+            "Bertie Bott's every flavour pots": "As a 1 tick action, a <i>Potion seller</i> can add to their inventory any potion they want, but the <i>Strongest potion</i>. Consume 1 ability slot."
           }
         ],
-        "equipment": "<i>Potion sellers</i> can start with up to 3 potions of any kind, 3 <i>Toxic mixtures</i> and 1 <i>Strongest potion</i>."
+        "equipment": "<i>Potion sellers</i> all start with <i>Baby seal leather boots</i>, 3 <i>Toxic mixtures</i>, 1 <i>Strongest potion</i>, an uncommon weapon, an uncommon armor and a rare spell."
       }
     },
     {
-      "name": "Information Wizard",
+      "name": "Information wizard",
       "note": "We must use a new framework for these spells! Are you still using Magicon 2.7? Wow those spells were obsolete 2 years ago! What are you, a dino-wizard?",
       "stats": {
         "HP": "2 + 1d3",
@@ -165,34 +244,24 @@
         "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Ping": "Ping a target within 3 hexes for 1 magic damage. The ping then comes back to the <i>Information Wizard</i> dealing 1 magic damage to all entities in the line."
-          },
-          {
-            "Traceroute": "Select a target on the floor. The <i>Information WIzard</i> launches a projectile to a target within 2 hexes. Each tick the projectile jumps to a new unvisited target within 2 hexes, prioritizing the selected target, and deals 1 damage. If the projectile can't jump it's destroyed. If <i>Traceroute</i> hits successfully the target, they take as damage the number of jumps the projectile did. The <i>Information Wizard</i> cannot use <i>Traceroute</i> while another one is active."
-          }
-        ],
         "abilities": [
           {
             "You have no power here (passive)": "All adventurers’ damaging spells deal 1 less damage when you're in fight with an <i>Information Wizard</i>."
           },
           {
-            "kill -STOP %WIZARD": "With a 1 tick action, a target <i>Wizard</i> within 3 hexes can’t cast spells or use their abilities for 3 ticks. Cooldown of 5 ticks."
+            "Ping (offensive)": "Ping a target within 3 hexes for 1 magic damage. The ping then comes back to the <i>Information Wizard</i> dealing 1 magic damage to all entities in the line. Consume 1 ability slot."
           },
           {
-            "Rewrite from scratch": "As an instantaneous action, interrupt all spells being cast in this tick. Cooldown of 10 ticks."
+            "Traceroute (offensive)": "Select a target on the floor. The <i>Information WIzard</i> launches a projectile to a target within 2 hexes. Each tick the projectile jumps to a new unvisited target within 2 hexes, prioritizing the selected target, and deals 1 damage. If the projectile can't jump it's destroyed. If <i>Traceroute</i> hits successfully the target, they take as damage the number of jumps the projectile did. The <i>Information Wizard</i> cannot use <i>Traceroute</i> while another one is active. Consume 1 ability slot."
+          },
+          {
+            "kill -STOP %WIZARD (utility)": "With a 1 tick action, a target <i>Wizard</i> within 3 hexes can’t cast spells or use their abilities for 3 ticks.  Consume 1 ability slot."
+          },
+          {
+            "Rewrite from scratch (defensive)": "As an instantaneous action, interrupt all spells being cast in this tick. Consume 2 ability slots."
           }
         ],
-        "equipment": "<i>Information Wizards</i> all start with an <i>Evergreen staff</i> and up to 5 random <i>Rare</i> or <i>Special</i> spells.",
-        "specialization": {
-          "note": "A single <i>Information wizard</i> on the floor can have the specialization",
-          "types": [
-            {
-              "haxxor": "With a 1 tick action, any minion an <i>Information Wizard</i> could commission a task to within 5 hexes, gives up their tasks and receives a new task."
-            }
-          ]
-        }
+        "equipment": "<i>Information Wizards</i> all start with an <i>Evergreen staff</i> a common weapon and up to 5 random <i>Rare</i> or <i>Special</i> spells."
       }
     }
   ],
@@ -208,31 +277,46 @@
         "Default stance": "Loyal to the <i>Villain</i>, <i>Neutral</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Bonk!": "The <i>Guard</i> uses the <i>Forget-me-stick</i> to attack."
-          },
-          {
-            "HALT!": "Deal 1 sound damage to a target within 3 hexes. Additionally there's a 15% chance the target is immobilized in the next tick."
-          }
-        ],
         "abilities": [
           {
             "None shall pass (passive)": "<i>Guards</i> possess the lock to the stairs. A floor with a guard cannot be cleared without first confronting the guard."
           },
           {
-            "The port is by the seaside!": "Once every 10 ticks, <i>Guards</i> can convince you that in order to obtain <i>Permit A38</i>, you need to go up to 2 floors down with a 10% chance (7%: 1 floor, 3%: 2 floors)."
+            "HALT! (offensive)": "Deal 1 sound damage to all adventurers within 2 hexes. Additionally, for each affected adventurer there is a 30% chance they're immobilized in the next tick. Consume 1 ability slot."
+          },
+          {
+            "The port is by the seaside! (utility)": "<i>Guards</i> can convince you that in order to obtain <i>Permit A38</i>, you need to go up to 2 floors down with a 10% chance (7%: 1 floor, 3%: 2 floors). Consume 2 ability slots."
           }
         ],
-        "equipment": "<i>Guards</i> all start with the <i>Permit A38</i> and the <i>Forget-me-stick</i>.",
-        "specialization": {
-          "note": "A single <i>Guard</i> per floor can add 1 additional XP in case of defeat if they have the specialization",
-          "types": [
-            {
-              "Security officer": "With a 1 tick action, the <i>Security officer</i> can instantaneously recall an existing <i>Guard</i> on the floor or promote an <i>Intern</i> into a <i>Guard</i>, giving them the appropriate equipment and changing their attitude at the <i>Security officer</i>’s will. Cooldown of 10 ticks."
-            }
-          ]
-        }
+        "equipment": "<i>Guards</i> all start with the <i>Permit A38</i>, a <i>Forget-me-stick</i> an uncommon weapon and 2 uncommon armours."
+      }
+    },
+    {
+      "name": "Security officer",
+      "note": "I'm gonna give y o u... a SPECIAL training!",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "1 + 1d2",
+        "EP": "4 + 1d6",
+        "XP": "7",
+        "Default stance": "Loyal to the <i>Villain</i>, <i>Hostile</i>."
+      },
+      "description": {
+        "abilities": [
+          {
+            "You and what army (passive)": "<i>Security officers</i> can only be present on a floor where at least a <i>Guard</i> is located. No more than one <i>Security officer</i> can be found on each floor. That said, no more than one entity per tick can select a <i>Security officer</i> as a target of an attack. If more than one attack targets a <i>Security officer</i>, chose randomly one of them and deny the rest."
+          },
+          {
+            "Bullshit, you didn’t convince me (offensive)": "A single target in front of a <i>Security officer</i> is dealt 3 unholy damage and their actions in the tick are denied. Consume 1 ability slot."
+          },
+          {
+            "Hey you maggots, understand that? (utility)": "As a 1 tick action, everybody within 3 hexes is forced to answer your intimidating questions and their actions in the tick are denied. Each entity in the area must declare if they wish to carry out the next tick the task<br><b>On the floor! Give me 50!:</b> For the duration of 2 ticks, spend 3 EPs per tick to do some push-ups or, if you can’t, take 1 unholy damage. No other action can be performed. All entities that refuse to complete this task take 5 unholy damage. No minion attacks an entity busy carrying out this task.<br>Consume 2 ability slots."
+          },
+          {
+            "Let me see your war face (utility)": "With a 1 tick action, the <i>Security officer</i> can instantaneously recall an existing <i>Guard</i> on the floor or promote an <i>Intern</i> into a <i>Guard</i>, giving them the appropriate equipment and changing their attitude at the <i>Security officer</i>’s will. The rest of their stats stay the same.  Consume 2 ability slots."
+          }
+        ],
+        "equipment": "<i>Security officers</i> all start with a <i>Ram</i>, a <i>Plate of certainties</i> a rare weapon and a rare miscellaneous."
       }
     },
     {
@@ -246,15 +330,10 @@
         "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Sweep": "The <i>Janitor</i> uses the <i>Magical Mop</i> to attack."
-          },
-          {
-            "Splash!": "Throw the smelly content of the bucket to a target within 3 hexes. Deal 1 poison damage. The water is soapy so the target also has a 15% chance to slip and fall for an additional 1 damage."
-          }
-        ],
         "abilities": [
+          {
+            "Splash! (offensive)": "Throw the smelly content of the bucket to a target within 3 hexes. Deal 1 poison damage. The water is soapy so the target also has a 15% chance to slip and fall for an additional 1 damage. Consume 1 ability slot."
+          },
           {
             "Theeere, pretty as a picture (passive)": "If the <i>Janitor</i> is not in a fight, they always move to the nearest piece of litter on the floor and sweep it clean with a 1 tick action (adventurer’s corpses and their equipment are pieces of… litter in their point of view)."
           },
@@ -262,14 +341,14 @@
             "Mentiroso (passive)": "<i>Janitors</i> can see the very deep inside of your soul: they cannot be lied to with any ability or item."
           },
           {
-            "Penny": "Throw a penny up to 3 hexes away. The penny jams a weapon for 3 ticks. All <i>Accountants</i> within 3 hexes use their ability <i>Oh… it’s only a dime</i>, if they are able to. Cooldown of 10 ticks."
+            "Penny (utility)": "Throw a penny up to 3 hexes away. The penny jams a weapon for 3 ticks. All <i>Accountants</i> within 3 hexes use their ability <i>Oh… it’s only a dime</i>, if they are able to. Consume 2 ability slots."
           }
         ],
-        "equipment": "<i>Janitors</i> all start with a <i>Magical mop</i>."
+        "equipment": "<i>Janitors</i> all start with a <i>Magical mop</i> an uncommon weapon and an uncommon miscellaneous."
       }
     },
     {
-      "name": "Technical Operator",
+      "name": "Technical operator",
       "note": " 'The power went out!', 'Why is the lift still out of service?', 'I need more light at this angle!', 'There is a water leak!'. No fear, there will always be a Technical Operator out there waiting for your need of help.",
       "stats": {
         "HP": "2 + 1d3",
@@ -279,23 +358,21 @@
         "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
       },
       "description": {
-        "attacks": [
+        "abilities": [
           {
-            "Wrench Throw": "As a 1 tick action, deal 1 damage to a single target in a 2 hexes radius."
+            "Wrench Throw": "As a 1 tick action, deal 3 damage to a single target in a 2 hexes radius. Consume 1 ability slot."
           },
           {
-            "Leaky Pipe": "With a 1-2 tick(s) (suspendable) action, wet a 1-2 hexes radius area centered up to 3 hexes away. Everyone in the area trying to perform movement actions or abilities, has a 30-50% chance to slip, fall and take 1 damage instead."
-          }
-        ],
-        "abilities": [
+            "Leaky Pipe": "With a 1-2 tick(s) (suspendable) action, wet a 1-2 hexes radius area centered up to 3 hexes away. Everyone in the area trying to perform movement actions or abilities, has a 30-50% chance to slip, fall and take 1 damage instead. Consume 1 ability slot."
+          },
           {
             "Roger roger (passive)": "If someone gives this minion a task, a <i>Technical Operator</i> can choose either to obtain 1 additional hexes movement per tick or 1 additional damage in their attacks until the task is complete or failed."
           },
           {
-            "Labor union": "With a 1 tick action, a <i>Technical Operator</i> that has received a task, can instantly recall an existing <i>Technical Operator</i> in the floor to accomplish the task together. Cooldown of 10 ticks."
+            "Labor union": "With a 1 tick action, a <i>Technical Operator</i> that has received a task, can instantly recall an existing <i>Technical Operator</i> in the floor to accomplish the task together. Consume 2 ability slot."
           }
         ],
-        "equipment": "<i>Technical Operators</i> all start with a <i>Blowtorch</i> and <i>La maglia della salute</i>."
+        "equipment": "<i>Technical Operators</i> all start with a <i>Blowtorch</i> , <i>La maglia della salute</i> an uncommon weapon, an uncommon armour and 2 uncommon miscellaneous.."
       }
     }
   ],
@@ -311,12 +388,10 @@
         "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
       },
       "description": {
-        "attacks": [
-          {
-            "Is that how you do it?": "The <i>Intern</i> attacks an adjacent target for an equal chance to deal 1 or 2 damage, heal the target by 1 HP, or deal 1 damage to themselves or an adjacent allied unit (chosen randomly)."
-          }
-        ],
         "abilities": [
+          {
+            "Is that how you do it?": "The <i>Intern</i> attacks an adjacent target for an equal chance to deal 1 or 2 damage, heal the target by 1 HP, or deal 1 damage to themselves or an adjacent allied unit (chosen randomly). Consume 1 ability slot."
+          },
           {
             "Nothing to lose (passive)": "A <i>Neutral</i> <i>Intern</i> will automatically join in your quest if you ask, without needing to be bribed."
           },
@@ -324,31 +399,57 @@
             "Overworked (passive)": "At the beginning of a fight and then once every 10 ticks (regardless of whether the fight is still going), an <i>Intern</i> decides whether to quit with a 25% chance. If they do, they don’t drop any loot or give any experience, going towards dismissal. A non-<i>friendly</i> <i>Intern</i> who didn’t quit twice, permanently becomes a <i>Lost Soul</i>."
           }
         ],
-        "equipment": "<i>Interns</i> all start with an <i>Intern Soul</i>"
+        "equipment": "<i>Interns</i> all start with an <i>Intern Soul</i>, and a common item of every type."
       }
     },
     {
-      "name": "Lost Soul",
+      "name": "Lost soul",
       "note": "The interns who accepted their fate (and their unpaid contract) are doomed. No soul remained into these poor fellows. They do not believe in anything… anymore.",
       "stats": {
         "HP": "1 + 1d2",
         "MP": "1 + 1d2",
         "EP": "1 + 1d2",
         "XP": "2",
-        "Default stance": "Loyal to <i>Friends</i>, <i>Hostile</i>."
+        "Default stance": "Loyal to <i>No one</i>, <i>Hostile</i>."
       },
       "description": {
-        "attacks": [
+        "abilities": [
           {
             "Soul's Wail": "Deal 1 sound damage in a 2 hexes radius."
-          }
-        ],
-        "abilities": [
+          },
           {
             "Homicidal frustration (passive)": "The attitude of these minions cannot be changed in any way."
           }
         ],
         "equipment": "<i>Lost Souls</i> all start with <i>Nothing</i>."
+      }
+    },
+    {
+      "name": "Right hand man",
+      "note": "Every manager needs an assistant. They often change every couple of years. No one knows what happens to the old ones when a new model takes their place but rumour has it there's a special dungeon where they're all kept and refurbished.",
+      "stats": {
+        "HP": "3 + 1d4",
+        "MP": "1 + 1d2",
+        "EP": "3 + 1d4",
+        "XP": "3",
+        "Default stance": "Loyal to <i>Friends</i>, <i>Neutral</i>."
+      },
+      "description": {
+        "abilities": [
+          {
+            "And I say that in the nicest of ways": "The <i>Right hand man</i> can use <i>Broccoli</i> to attack"
+          },
+          {
+            "Yeah I got that there": "The <i>Right hand man</i> attacks an adjacent target for 3 damage. There's a 30% chance they instead hit themselves, and go to sleep for the next tick. Consume 1 ability slot."
+          },
+          {
+            "Strange, that usually works": "The <i>Right hand man</i> makes a chandelier fall from the ceiling up to 3 hexes away for 3 damage. There's a 30% chance the target is unscathed by this attack and can then use <b>And so does this!</b>: the <i>Right hand man</i> is taken through a series of tunnels and emerges up to 3 hexes away from their original location after 2 ticks. Consume 1 ability slot."
+          },
+          {
+            "Drink? R I G H T...": "Everyone adjacent to <i>Right hand man</i> drink a thirst-quenching drink. For each entity affected roll a d100.<br>1-10: get 2 poison damage;<br>11-50: turn into a llama, as if <i>Extract of llama</i>was drank;<br>51-75: regen all MPs;<br>76-100: regen all EPs.<br> Consume 1 ability slot."
+          }
+        ],
+        "equipment": " <i>Right hand men</i> all start with <i>Broccoli</i>, a  <i>Robe</i> a common weapon a common armour and a rare miscellaneous."
       }
     }
   ]

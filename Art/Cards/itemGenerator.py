@@ -21,20 +21,35 @@ webPageHeader = """ <!DOCTYPE html>
 <link rel="stylesheet" href="cardsStyle.css">
 </head>
 <body>
-<script type="text/javascript">
+    <script type="text/javascript">
 
-$(document).ready( function() {
-    $(".item-description").each( function(){
-        let descriptionDiv = $(this);
-        let descriptionText = descriptionDiv.children("p").first();
+    function totalHeight(elements){
+        let elementsHeight = 0;
+        elements.each(function(){
+            elementsHeight += $(this).height();
+        });
 
-        while( descriptionText.height() > descriptionDiv.height() ){
-            let currentHeight = parseFloat(descriptionText.css("font-size"));
-            descriptionText.css("font-size", currentHeight - 0.5);
+        return elementsHeight;
+    }
+
+    function adjustTextSize(textElements, containingElement) {
+        while (totalHeight(textElements) > (containingElement.height()-10)) {
+            textElements.each( function(){
+                let textElement = $(this);
+                let currentHeight = parseFloat(textElement.css("font-size"));
+                textElement.css("font-size", currentHeight - 0.1);        
+            });
         }
-    } )
-});
-</script>
+    };
+
+    $(document).ready(function() {
+        $(".item-description").each(function() {
+            let descriptionDiv = $(this);
+            let descriptions = descriptionDiv.children("p");
+            adjustTextSize( descriptions, descriptionDiv); 
+        });
+    });
+    </script>
 """
 
 webPageFooter = """     </body>
@@ -75,12 +90,22 @@ def getStatIcon(statName, statValue):
 
 
 def generate(itemCategory, data):
+    itemNames = {
+        "melee": "Melee Weapon",
+        "ranged": "Ranged Weapon",
+        "armour": "Armour",
+        "spells": "Spell",
+        "miscellaneous": "Miscellaneous",
+        "role change": "Role Change",
+        "filler": "Filler"
+    }
+
     page = webPageHeader
 
     openPage = """<div class="page">\n"""
     openItem = """<div class="item">\n"""
     openTitle = """<div class="item-title">"""
-    openDescription = """<div class="item-description"><p>"""
+    openDescription = """<div class="item-description">"""
     openStats = """<div class="item-stats">\n"""
 
     closeDiv = """</div>\n"""
@@ -121,10 +146,16 @@ def generate(itemCategory, data):
             page += openTitle + f'{item["name"]}' + closeDiv
 
             page += openDescription
-            if "description" in item:
-                page += item["description"] + "<br><br>"
 
-            page += f'<i style="font-weight: lighter; color: lightslategrey;">{item["note"]}</i></p>'
+            page += f'<p class="item-type-rarity">{itemCategory[:itemCategory.find(" ")]} - {itemNames[itemIcon]}</p>'
+            page += '<hr class="description-separator">'
+
+            page += ''
+
+            if "description" in item:
+                page += f'<p class="item-description-note">{item["description"]}<br><br></p>'
+
+            page += f'<p class="item-note">{item["note"]}</p>'
             page += closeDiv
 
             page += openStats

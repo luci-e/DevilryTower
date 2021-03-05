@@ -1,0 +1,386 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="cardsStyle.css">
+</head>
+<body>
+    <script type="text/javascript">
+
+    function totalHeight(elements){
+        let elementsHeight = 0;
+        elements.each(function(){
+            elementsHeight += $(this).height();
+        });
+
+        return elementsHeight;
+    }
+
+    function adjustTextSize(textElements, containingElement) {
+        while (totalHeight(textElements) > (containingElement.height()-10)) {
+            textElements.each( function(){
+                let textElement = $(this);
+                let currentHeight = parseFloat(textElement.css("font-size"));
+                textElement.css("font-size", currentHeight - 0.1);        
+            });
+        }
+    };
+
+    $(document).ready(function() {
+        $(".item-description").each(function() {
+            let descriptionDiv = $(this);
+            let descriptions = descriptionDiv.children("p");
+            adjustTextSize( descriptions, descriptionDiv); 
+        });
+    });
+    </script>
+<div class="page">
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Superior moral boots</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Armour</p><hr class="description-separator"><p class="item-description-note">You gain 5% AG. You can consume 1 hit of <i>Superior moral boots</i> as a 1 tick action to show a minion how cool you think they are: 30% chance their actions are denied in this tick.<br><br></p><p class="item-note">They are so cool! Yeah… Awesome! Definitely not a lie.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Magazines</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Armour</p><hr class="description-separator"><p class="item-description-note"><i>Magazines</i> interrupts an attack made with <i>Throwing knives</i>.<br><br></p><p class="item-note">Yare yare daze. Now my valuable uniform is full of holes!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Superior moral boots</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Armour</p><hr class="description-separator"><p class="item-description-note">You gain 5% AG. You can consume 1 hit of <i>Superior moral boots</i> as a 1 tick action to show a minion how cool you think they are: 30% chance their actions are denied in this tick.<br><br></p><p class="item-note">They are so cool! Yeah… Awesome! Definitely not a lie.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Magazines</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Armour</p><hr class="description-separator"><p class="item-description-note"><i>Magazines</i> interrupts an attack made with <i>Throwing knives</i>.<br><br></p><p class="item-note">Yare yare daze. Now my valuable uniform is full of holes!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Jean-Paul Gaultier's pour homme</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Multiple item loot. Lie shamelessly to a <i>Neutral</i> minion with success.<br><br></p><p class="item-note">It’s just my natural musk!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Jean-Paul Gaultier's pour homme</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Multiple item loot. Lie shamelessly to a <i>Neutral</i> minion with success.<br><br></p><p class="item-note">It’s just my natural musk!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Uncommon - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/melee.svg)">
+</div>
+<div class="item-title">Cotton Candy Mace</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Melee Weapon</p><hr class="description-separator"><p class="item-class-role">Fighter Support </p><p class="item-description-note">You can consume 2 uses of the <i>Cotton Candy Mace</i> as a bribe or consume 1 use to restore 2 HPs. Hitting a minion with this weapon makes them sticky. They have to spend 1 tick cleaning themselves up or they are immobilized. If you get hit with water when holding the <i>Cotton Candy Mace</i>, it melts.<br><br></p><p class="item-note">Thousands of clouds are killed every year to make cotton candy.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:10&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/damage.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Black Mambaaaaa</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Armour</p><hr class="description-separator"><p class="item-description-note">You can take a 1 tick action to argue with an enemy about being a villain. There is a 50% chance they reply and their actions are denied in the current tick.<br><br></p><p class="item-note">The best presentation!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:2&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Cousin Itt’s fluff</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Armour</p><hr class="description-separator"><p class="item-description-note">You are immune to ranged attacks, you take half the sound damage (rounded up), but you suffer twice the fire damage. Lose 5% AG.<br><br></p><p class="item-note">Can you hear me down there?</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:10&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:3&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/spell.svg)">
+</div>
+<div class="item-title">Left alone</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Spell</p><hr class="description-separator"><p class="item-description-note">Target minion stinks so badly in this tick so that anyone in a 1 hexes radius area gets their actions denied and spends this tick walking away in disgust. The smelly one also interrupts their actions crying with shame.<br><br></p><p class="item-note">Why doesn’t anyone love me?</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:2&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/mana.svg">:3&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Dandelion</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Eat it to heal 3 HPs. Consuming <i>Dandelion</i> while looting increases your LK by 2.<br><br></p><p class="item-note">Must be the last one of the season!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Extract of llama</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Turn into a llama for 5 ticks. You keep your equipment but your only attack is replaced by <i>Magical Spitball</i> at no mana cost. Alternatively you can launch this item up to 3 hexes away to apply the same effect. Unfriendly entities can try to dodge this as if it was a ranged attack.<br><br></p><p class="item-note">A llama? He’s supposed to be dead!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Werehorn</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">This item makes you emulate a wolf’s call: for any minion in a 5 hexes radius area, there is a 25% chance their actions are denied in this tick. <i>Werehorn</i> counts as an instrument for a <i>Bard</i>.<br><br></p><p class="item-note">There horn. There castle.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Rare - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+</div>
+<div class="page">
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/ranged.svg)">
+</div>
+<div class="item-title">Java-elin-nothing-special</div>
+<div class="item-description"><p class="item-type-rarity">Epic - Ranged Weapon</p><hr class="description-separator"><p class="item-description-note">Your target must be at least 2 hexes away. If your target is 4 or more hexes away, double the damage. You have to recover this item any time you throw it.<br><br></p><p class="item-note">public static void retrieve()</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:20&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/range.svg">:7&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/damage.svg">:3&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Turtle shell</div>
+<div class="item-description"><p class="item-type-rarity">Epic - Armour</p><hr class="description-separator"><p class="item-description-note">You can consume 3 hits from this item with an instantaneous action, to retreat into the shell and interrupt an attack or a spell that targets you. Lose 10% AG.<br><br></p><p class="item-note">Maremma impestata Alvaruccio! Te tu m’ha fatto rompere tutt’l mi guscio.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:15&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:3&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Epic - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Epic - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/spell.svg)">
+</div>
+<div class="item-title">Hamlet</div>
+<div class="item-description"><p class="item-type-rarity">Legendary - Spell</p><hr class="description-separator"><p class="item-class-role">Enchanter Support </p><p class="item-description-note">Summon a powerful hurricane that sweeps enemies 3 hexes away denying their actions in this tick. If they bump into a wall, they take 3 damage and stay stunned the next tick.<br><br></p><p class="item-note">Hi Ophelia, I’m a tornado! Brawlrllrlrrlrlrl.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:3&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/ticks.svg">:1&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/mana.svg">:5&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Legendary - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Legendary - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Legendary - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Best employee’ suit</div>
+<div class="item-description"><p class="item-type-rarity">Special - Armour</p><hr class="description-separator"><p class="item-description-note">When you fail lying to a minion, you can consume one hit to make them believe you with a 25% chance after all.<br><br></p><p class="item-note">Insert a funny joke about dressing.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:7&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Work uniform</div>
+<div class="item-description"><p class="item-type-rarity">Special - Armour</p><hr class="description-separator"><p class="item-description-note">Consuming 1 hit you gain a 25% additional chance to successfully lie to a minion.<br><br></p><p class="item-note">It’s called formal speed-walking.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Best employee’ suit</div>
+<div class="item-description"><p class="item-type-rarity">Special - Armour</p><hr class="description-separator"><p class="item-description-note">When you fail lying to a minion, you can consume one hit to make them believe you with a 25% chance after all.<br><br></p><p class="item-note">Insert a funny joke about dressing.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:7&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Work uniform</div>
+<div class="item-description"><p class="item-type-rarity">Special - Armour</p><hr class="description-separator"><p class="item-description-note">Consuming 1 hit you gain a 25% additional chance to successfully lie to a minion.<br><br></p><p class="item-note">It’s called formal speed-walking.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Best employee’ suit</div>
+<div class="item-description"><p class="item-type-rarity">Special - Armour</p><hr class="description-separator"><p class="item-description-note">When you fail lying to a minion, you can consume one hit to make them believe you with a 25% chance after all.<br><br></p><p class="item-note">Insert a funny joke about dressing.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:7&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/armour.svg)">
+</div>
+<div class="item-title">Work uniform</div>
+<div class="item-description"><p class="item-type-rarity">Special - Armour</p><hr class="description-separator"><p class="item-description-note">Consuming 1 hit you gain a 25% additional chance to successfully lie to a minion.<br><br></p><p class="item-note">It’s called formal speed-walking.</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/hits.svg">:5&nbsp;</div>
+<div class="stat"><img class="stat-icon" src="./icons/resistance.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Permit A38</div>
+<div class="item-description"><p class="item-type-rarity">Special - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Use it to lie to another minion with success.<br><br></p><p class="item-note">I already told you once the port is down by the seaside!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Permit A38</div>
+<div class="item-description"><p class="item-type-rarity">Special - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Use it to lie to another minion with success.<br><br></p><p class="item-note">I already told you once the port is down by the seaside!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="page">
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">Permit A38</div>
+<div class="item-description"><p class="item-type-rarity">Special - Miscellaneous</p><hr class="description-separator"><p class="item-description-note">Use it to lie to another minion with success.<br><br></p><p class="item-note">I already told you once the port is down by the seaside!</p></div>
+<div class="item-stats">
+<div class="stat"><img class="stat-icon" src="./icons/uses.svg">:1&nbsp;</div>
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Special - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Special - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+<div class="item">
+<div class="item-icon" style="background-image:url(./icons/misc.svg)">
+</div>
+<div class="item-title">PlaceHolder</div>
+<div class="item-description"><p class="item-type-rarity">Special - Filler</p><hr class="description-separator"><p class="item-description-note">None<br><br></p><p class="item-note">None</p></div>
+<div class="item-stats">
+</div>
+</div>
+</div>
+     </body>
+</html>
